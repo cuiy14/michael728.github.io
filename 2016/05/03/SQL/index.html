@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.3.4 -->
+
+    <!-- Title -->
+    
+    <title>
+        
+            SQL基础语法笔记教程整理 | 
+        
+        Michael翔的小窝
+    </title>
+
+    <!-- Meta & Info -->
+    <meta charset="utf-8">
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+        <link rel="dns-prefetch" href="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"/>
+    
+    
+    
+    
+    
+        <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+    
+
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Michael_翔">
+    <meta name="description" content="因上努力，果上随缘;爱折腾app、小众软件--Michael翔">
+    <meta name="keywords" content="null,数据库,SQL">
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.ico">
+    <link rel="icon" sizes="192x192" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Michael翔的小窝">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://michael728.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="SQL基础语法笔记教程整理 | Michael翔的小窝">
+    <meta property="og:description" content="因上努力，果上随缘;爱折腾app、小众软件--Michael翔">
+    <meta property="og:article:tag" content="数据库"> <meta property="og:article:tag" content="SQL"> 
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS & jQuery -->
+    
+        <link rel="stylesheet" href="/css/material.min.css">
+        <link rel="stylesheet" href="/css/style.min.css">
+        <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(/img/bg_big2.jpg);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/queue.js"></script>
+    
+
+    <!-- UC Browser Compatible -->
+    <script>
+        var agent = navigator.userAgent.toLowerCase();
+        if(agent.indexOf('ucbrowser')>0) {
+            document.write("<link rel=\"stylesheet\" href=\"/css/uc.css\">");
+            alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+        }
+    </script>
+
+    
+
+    
+
+
+    <!-- Bing Background -->
+    
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、关系型数据库和SQL"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、关系型数据库和SQL</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-1-SQL语言主要有3个主要的组成部分。"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.1 SQL语言主要有3个主要的组成部分。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-2-主键和外键"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">1.2 主键和外键</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-3-数据类型"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">1.3 数据类型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-3-空值"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">1.3 空值</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、简单增删改查"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、简单增删改查</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-1-查（列名有空格的情况）"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">2.1 查（列名有空格的情况）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查询顺序-SQL执行顺序-2："><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">查询顺序,SQL执行顺序^2：</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-2-增"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.2 增</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-3-改"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">2.3 改</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-4-删"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">2.4 删</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、别名"><span class="post-toc-number">3.</span> <span class="post-toc-text">三、别名</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-1-计算字段"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">3.1 计算字段</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-2-直接量"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">3.2 直接量</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-3-算数运算"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">3.3 算数运算</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-4-别名"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">3.4 别名</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四、使用函数"><span class="post-toc-number">4.</span> <span class="post-toc-text">四、使用函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-1-字符函数"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">4.1 字符函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#LEFT-amp-RIGHT"><span class="post-toc-number">4.1.1.</span> <span class="post-toc-text">LEFT&RIGHT</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#LTRIM-amp-RTRIM"><span class="post-toc-number">4.1.2.</span> <span class="post-toc-text">LTRIM&RTRIM</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SUBSTRING"><span class="post-toc-number">4.1.3.</span> <span class="post-toc-text">SUBSTRING</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-2-日期-时间函数"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">4.2 日期/时间函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GETDATE"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">GETDATE</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DATEPART"><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">DATEPART</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DATEDIFF"><span class="post-toc-number">4.2.3.</span> <span class="post-toc-text">DATEDIFF</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-3-数值函数"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">4.3 数值函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ROUND"><span class="post-toc-number">4.3.1.</span> <span class="post-toc-text">ROUND</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#RAND"><span class="post-toc-number">4.3.2.</span> <span class="post-toc-text">RAND</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PI"><span class="post-toc-number">4.3.3.</span> <span class="post-toc-text">PI</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-4-转换函数"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">4.4 转换函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CAST函数"><span class="post-toc-number">4.4.1.</span> <span class="post-toc-text">CAST函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ISNULL函数，很有用"><span class="post-toc-number">4.4.2.</span> <span class="post-toc-text">ISNULL函数，很有用</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#五、排序函数"><span class="post-toc-number">5.</span> <span class="post-toc-text">五、排序函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-1-添加排序"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">5.1 添加排序</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-2-降序"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">5.2 降序</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-3-根据多列"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">5.3 根据多列</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-4-根据计算字段"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">5.4 根据计算字段</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-5-排序补充内容"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">5.5 排序补充内容</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#六、基于列的逻辑-CASE"><span class="post-toc-number">6.</span> <span class="post-toc-text">六、基于列的逻辑-CASE</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-1-IF-THEN-ELSE逻辑"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">6.1 IF-THEN-ELSE逻辑</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-2-CASE-简单格式"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">6.2 CASE-简单格式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-3-CASE-查询格式"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">6.3 CASE-查询格式</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#七、基于行的逻辑"><span class="post-toc-number">7.</span> <span class="post-toc-text">七、基于行的逻辑</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-1-应用查询条件"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">7.1 应用查询条件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-2-限制行-TOP"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">7.2 限制行-TOP</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-3-TOP和ORDER-BY结合"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">7.3 TOP和ORDER BY结合</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#八、布尔逻辑"><span class="post-toc-number">8.</span> <span class="post-toc-text">八、布尔逻辑</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-1-OR"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">8.1 OR</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-2-使用圆括号"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">8.2 使用圆括号</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-3-NOT操作符"><span class="post-toc-number">8.3.</span> <span class="post-toc-text">8.3 NOT操作符</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-4-BETWEEN操作符"><span class="post-toc-number">8.4.</span> <span class="post-toc-text">8.4 BETWEEN操作符</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-5-IN操作符"><span class="post-toc-number">8.5.</span> <span class="post-toc-text">8.5 IN操作符</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-9-布尔逻辑-IS-NULL"><span class="post-toc-number">8.6.</span> <span class="post-toc-text">8.9 布尔逻辑-IS NULL</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#九、模糊匹配"><span class="post-toc-number">9.</span> <span class="post-toc-text">九、模糊匹配</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9-1-LIKE和-搭配"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">9.1 LIKE和%搭配</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9-2-通配符"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">9.2 通配符</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-3-按照读音匹配"><span class="post-toc-number">9.2.1.</span> <span class="post-toc-text">9.3 按照读音匹配</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#十、汇总数据"><span class="post-toc-number">10.</span> <span class="post-toc-text">十、汇总数据</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#10-1消除重复"><span class="post-toc-number">10.1.</span> <span class="post-toc-text">10.1消除重复</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#10-2-聚合函数"><span class="post-toc-number">10.2.</span> <span class="post-toc-text">10.2 聚合函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#COUNT函数可以有3中不同方式使用它。"><span class="post-toc-number">10.2.1.</span> <span class="post-toc-text">COUNT函数可以有3中不同方式使用它。</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#10-3-分组数据-GROUP-BY"><span class="post-toc-number">10.3.</span> <span class="post-toc-text">10.3 分组数据-GROUP BY</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#10-4-基于聚合查询条件-HAVING"><span class="post-toc-number">10.4.</span> <span class="post-toc-text">10.4 基于聚合查询条件-HAVING</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#十一、组合表"><span class="post-toc-number">11.</span> <span class="post-toc-text">十一、组合表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#11-1-内连接来组合表-Inner-Join"><span class="post-toc-number">11.1.</span> <span class="post-toc-text">11.1 内连接来组合表-Inner Join</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#11-2-外连接"><span class="post-toc-number">11.2.</span> <span class="post-toc-text">11.2 外连接</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#左连接（LEFT-JOIN"><span class="post-toc-number">11.2.1.</span> <span class="post-toc-text">左连接（LEFT  JOIN)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#11-3-自连接"><span class="post-toc-number">11.3.</span> <span class="post-toc-text">11.3 自连接</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#11-4-创建视图"><span class="post-toc-number">11.4.</span> <span class="post-toc-text">11.4 创建视图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#视图的优点"><span class="post-toc-number">11.4.1.</span> <span class="post-toc-text">视图的优点</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#十二、补充"><span class="post-toc-number">12.</span> <span class="post-toc-text">十二、补充</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#12-1-子查询"><span class="post-toc-number">12.1.</span> <span class="post-toc-text">12.1 子查询</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#12-2-索引"><span class="post-toc-number">12.2.</span> <span class="post-toc-text">12.2 索引</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#参考："><span class="post-toc-number">13.</span> <span class="post-toc-text">参考：</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://ww1.sinaimg.cn/large/6d9475f6ly1ff11f0tfpwj21hc0zkgxs.jpg)">
+    
+            <p class="article-headline-p">
+                SQL基础语法笔记教程整理
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/side_logo.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Michael_翔</strong>
+        <span>5月 03, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACa0lEQVR42u3aUY7rIAwF0O5/0+8tYER6bQcSVSdfo5YmnIyErQuffz99ffDw8PDw8PDw8F7G+8TX31+tPll927tneW54eHh4R3hfltrFmNUD8jsn96/+Fg8PD+8kb7XgrsYkRSJ5VjL1ZG54eHh4b+Zdj5+z8fDw8H6Pl4QROwIOPDw8vLfx8tZ2HjpcUx/LWvDw8PBiXr6In//76P4eHh4eXsCrXvlj8qn3ysxyhnh4eHibeflCnAQHyee9kcmrxMPDwzvDSwpANVSdhLz5Sxy11Hh4eHgDXjLRJJ7obXdVi0TSduPh4eE9xUuOSfWW8t7421JqPDw8vFt5Sds6X8TzhrvZvuPh4eFt5hUOMw2a4OqLq94HDw8P7yledVurGltMnpuUBDw8PLz38HrHob6Era0iUY5x8fDw8DbwEkDeHOcRRgJuBsF4eHh4m3nVxTePXPNiUA04vpQNPDw8vM286gPyhjgPFKrF6eZDV3h4eHgD3qSNrh4U6L2aUWHAw8PDu5WXBAT5+OTb/JhXdSZ4eHh4J3nJlv8kOJhHwKPCgIeHh7eBl7Pz2CL5thcTj+oeHh4e3k286lbWpI2ehLZ4eHh47+Hltyu3ucVmPS9FeHh4eOd51St5WNKOX4+vtvh4eHh4J3nVULUaWPTukLyy5T8ADw8P7wivGq3mL6g3pvoi8PDw8J7iVTfvq0t/HvtWn4KHh4f3fl4y9d7hg+qsbjhThoeHh3eQdx0izMtGsrW2sTDg4eHh3RRG9LbEeuWhh8TDw8M7w8sjgEmMmxwOSMrMl/vg4eHhbeb93oWHh4eHh4eHh/eC6z8ktj7awl0IgQAAAABJRU5ErkJggg==">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/SQL/">SQL</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/数据库/">数据库</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/2016/05/03/SQL/" class="leancloud-views_num" data-flag-title="SQL基础语法笔记教程整理">
+     &nbsp;浏览量
+</span>
+
+            </li>
+        </a>
+    
+
+    
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=SQL基础语法笔记教程整理&url=http://michael728.github.io//2016/05/03/SQL/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=SQL基础语法笔记教程整理&url=http://michael728.github.io//2016/05/03/SQL/index.html&via=Michael_翔" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Michael翔的小窝&title=SQL基础语法笔记教程整理&summary=因上努力，果上随缘;爱折腾app、小众软件--Michael翔&pics=http://michael728.github.io/img/favicon.ico&url=http://michael728.github.io/2016/05/03/SQL/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>最近从图书馆借了本介绍SQL的书，打算复习一下基本语法，记录一下笔记，整理一下思路，以备日后复习之用。</p>
+<p>PS：本文适用SQL Server2008语法。</p>
+<a id="more"></a>
+<h1 id="一、关系型数据库和SQL"><a href="#一、关系型数据库和SQL" class="headerlink" title="一、关系型数据库和SQL"></a>一、关系型数据库和SQL</h1><p>实际上准确的讲，SQL是一门语言，而不是一个数据库。</p>
+<p>什么是SQL呢？简而言之，SQL就是维护和使用关系型数据库中的的数据的一种标准的计算机语言。</p>
+<h2 id="1-1-SQL语言主要有3个主要的组成部分。"><a href="#1-1-SQL语言主要有3个主要的组成部分。" class="headerlink" title="1.1 SQL语言主要有3个主要的组成部分。"></a>1.1 SQL语言主要有3个主要的组成部分。</h2><ol>
+<li>DML(Data Manipulation Language)数据操纵语言。这个模块可以让我们检索、修改、增加、删除数据库中的数据。</li>
+<li>DDL(Data Definition Language)数据定义语言。是的我们能够创建和修改数据库本身。如：DDL提供<code>ALTER</code>语句，他让我们可以修改数据库中表的设计。</li>
+<li>DCL(Data Control Language)数据控制语言，用于维护数据库的安全。</li>
+</ol>
+<p>在SQL术语中，记录(record)和字段(field)实际上就称为行(row)和列(column)。  </p>
+<h2 id="1-2-主键和外键"><a href="#1-2-主键和外键" class="headerlink" title="1.2 主键和外键"></a>1.2 主键和外键</h2><p>主键之所以有必要：</p>
+<ul>
+<li>首先使你唯一标识表中单独的一行。主键确保了唯一性。</li>
+<li>可以很容易的将一个表和另一个表关联。</li>
+<li>主键一般就会自动默认创建索引，提高了查询速度。</li>
+</ul>
+<p>外键就是说A表中的某个字段，同时是B中的主键，那么这个字段就是A表中的外键。希望A表中的这个外键的值必须是B中已经存在的值。</p>
+<h2 id="1-3-数据类型"><a href="#1-3-数据类型" class="headerlink" title="1.3 数据类型"></a>1.3 数据类型</h2><p>一般来讲，有3中重要的数据类型：</p>
+<ol>
+<li>数字(Numeric)   </li>
+<li>字符(Character)  </li>
+<li>以及日期/时间(Date/Time)</li>
+</ol>
+<p><code>bit</code>是数字型，它只允许两个值，0和1。</p>
+<p>字符类型区别<a href="[varchar和Nvarchar区别](http://www.cnblogs.com/yelaiju/archive/2010/05/29/1746826.html)">^1</a>：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>长度</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>char</code></td>
+<td>固定长度</td>
+</tr>
+<tr>
+<td><code>nchar</code></td>
+<td>固定长度</td>
+<td>处理unicode数据类型(所有的字符使用两个字节表示)</td>
+</tr>
+<tr>
+<td><code>varchar</code></td>
+<td>可变长度</td>
+<td>效率没char高 灵活</td>
+</tr>
+<tr>
+<td><code>nvarchar</code></td>
+<td>可变长度</td>
+<td>处理unicode数据类型(所有的字符使用两个字节表示)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>1字节=8位</li>
+<li>bit就是位，也叫比特位，是计算机表示数据最小的单位。</li>
+<li>byte就是字节，1byte=8bit，1byte就是1B；</li>
+<li>一个字符=2字节；</li>
+</ul>
+<h2 id="1-3-空值"><a href="#1-3-空值" class="headerlink" title="1.3 空值"></a>1.3 空值</h2><p>空值不等于空格或空白。使用NULL表示空值。</p>
+<h1 id="二、简单增删改查"><a href="#二、简单增删改查" class="headerlink" title="二、简单增删改查"></a>二、简单增删改查</h1><h2 id="2-1-查（列名有空格的情况）"><a href="#2-1-查（列名有空格的情况）" class="headerlink" title="2.1 查（列名有空格的情况）"></a>2.1 查（列名有空格的情况）</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> [ <span class="keyword">last</span> <span class="keyword">name</span>]</div><div class="line"><span class="keyword">FROM</span> Customers</div></pre></td></tr></table></figure>
+<p>用方括号将有空格的列名括起来。<br>PS: MySql中用重音符<strong>`</strong>（~）按键。Oracle用双引号。</p>
+<h3 id="查询顺序-SQL执行顺序-2："><a href="#查询顺序-SQL执行顺序-2：" class="headerlink" title="查询顺序,SQL执行顺序^2："></a>查询顺序,SQL执行顺序<a href="[SQL总结（一）基本查询](http://www.imooc.com/article/1412)">^2</a>：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Select -1&gt;选择列,-2&gt;distinct,-3&gt;top</div><div class="line"><span class="meta">  1&gt;</span><span class="bash">…From 表</span></div><div class="line"><span class="meta">  2&gt;</span><span class="bash">…Where 条件</span></div><div class="line"><span class="meta">  3&gt;</span><span class="bash">…Group by 列</span></div><div class="line"><span class="meta">  4&gt;</span><span class="bash">…Having 筛选条件</span></div><div class="line"><span class="meta">  6&gt;</span><span class="bash">…Order by 列</span></div></pre></td></tr></table></figure>
+<h2 id="2-2-增"><a href="#2-2-增" class="headerlink" title="2.2 增"></a>2.2 增</h2><figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">INSERT INTO tablename</div><div class="line">(<span class="name">columnlist</span>)</div><div class="line">VALUES</div><div class="line">(<span class="name">RowValues1</span>)</div><div class="line">(<span class="name">RowValues2</span>)</div><div class="line">(<span class="name">repeat</span> any number of times)</div></pre></td></tr></table></figure>
+<h2 id="2-3-改"><a href="#2-3-改" class="headerlink" title="2.3 改"></a>2.3 改</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span>  <span class="keyword">table</span></div><div class="line"><span class="keyword">SET</span> column1=expression1,column2=expression2(<span class="keyword">repeat</span> <span class="keyword">any</span> <span class="built_in">number</span> <span class="keyword">of</span> times)</div><div class="line"><span class="keyword">WHERE</span> condition</div></pre></td></tr></table></figure>
+<h2 id="2-4-删"><a href="#2-4-删" class="headerlink" title="2.4 删"></a>2.4 删</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DELETE</span></div><div class="line"><span class="keyword">FROM</span> <span class="keyword">table</span></div><div class="line"><span class="keyword">WHERE</span> condition</div></pre></td></tr></table></figure>
+<p>删除前可以验证一下：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line"><span class="keyword">COUNT</span>（*）</div><div class="line"><span class="keyword">FROM</span> <span class="keyword">table</span></div><div class="line"><span class="keyword">WHERE</span> condition</div></pre></td></tr></table></figure></p>
+<p>如果想要删除所有的行，可以：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> <span class="keyword">table</span></div></pre></td></tr></table></figure></p>
+<p>或者<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">TRUNCATE <span class="keyword">TABLE</span> <span class="keyword">table</span></div></pre></td></tr></table></figure></p>
+<p><code>TRUNCATE TABLE</code>优势在于速度更快，但是不提供记录事务的结果。<br>另外一个不同点是，<code>TRUNCATE TABLE</code>重新设置了用于自增型的列的当前值，<code>DELETE</code>不会。</p>
+<h1 id="三、别名"><a href="#三、别名" class="headerlink" title="三、别名"></a>三、别名</h1><p>关键字：AS</p>
+<h2 id="3-1-计算字段"><a href="#3-1-计算字段" class="headerlink" title="3.1 计算字段"></a>3.1 计算字段</h2><p>使用计算字段可以做如下的事情：</p>
+<ul>
+<li>选择特定的单词或者数值</li>
+<li>对单个或者多个列进行计算</li>
+<li>把列和直接量组合在一起。</li>
+</ul>
+<h2 id="3-2-直接量"><a href="#3-2-直接量" class="headerlink" title="3.2 直接量"></a>3.2 直接量</h2><p>这个直接量和表中的数据没有任何关系，就是为了说明所用，下面这种类型的表达式就叫做直接量(literal value)。<br><img src="http://ww4.sinaimg.cn/large/6d9475f6jw1f2tqc5pnivj207902bjrg.jpg" alt=""></p>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="string">'直接量'</span> <span class="keyword">AS</span> <span class="symbol">`类型`</span>,firstname,lastname </div><div class="line"><span class="keyword">FROM</span> <span class="symbol">`customers`</span> ;</div></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/6d9475f6jw1f2tqcumt9fj206c02jdfy.jpg" alt=""><br>如图，结果中直接量就在一列中了。</p>
+<h2 id="3-3-算数运算"><a href="#3-3-算数运算" class="headerlink" title="3.3 算数运算"></a>3.3 算数运算</h2><p>例子1：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span>  <span class="keyword">num</span>*price <span class="keyword">AS</span> total</div><div class="line"><span class="keyword">FROM</span> orders</div></pre></td></tr></table></figure></p>
+<p>例子2：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span>  firstname+<span class="string">' '</span>+lastname <span class="keyword">AS</span> <span class="string">'fullname'</span></div><div class="line"><span class="keyword">FROM</span> <span class="keyword">users</span></div></pre></td></tr></table></figure></p>
+<p>在MySql中连接要是用<code>CONCAT</code>函数：<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> OrderID,FirstName,LastName,</div><div class="line"><span class="keyword">CONCAT</span>(FirstName,<span class="string">' '</span>,LastName) <span class="keyword">AS</span> <span class="string">'fullname'</span></div><div class="line"><span class="keyword">FROM</span> orders</div></pre></td></tr></table></figure></p>
+<h2 id="3-4-别名"><a href="#3-4-别名" class="headerlink" title="3.4 别名"></a>3.4 别名</h2><p>1）列的别名<br><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> firstname <span class="keyword">AS</span> fn</div><div class="line"><span class="keyword">FROM</span> customers</div></pre></td></tr></table></figure></p>
+<p>2） 表的别名<br><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> firstname </div><div class="line"><span class="keyword">FROM</span> customers <span class="keyword">AS</span> cu</div></pre></td></tr></table></figure></p>
+<p>说明：</p>
+<ol>
+<li>列的别名是为了显示用的，别名会作为查询结果的表头，不能在WHERE中使用列的别名，会出错！！！</li>
+<li>表的别名确实是为了方便操作用的，可以在WHERE中使用列的别名进行！</li>
+</ol>
+<h1 id="四、使用函数"><a href="#四、使用函数" class="headerlink" title="四、使用函数"></a>四、使用函数</h1><p>函数要有一组圆括号跟在关键字后边，圆括号告诉我们，这是一个函数！</p>
+<h2 id="4-1-字符函数"><a href="#4-1-字符函数" class="headerlink" title="4.1 字符函数"></a>4.1 字符函数</h2><h3 id="LEFT-amp-RIGHT"><a href="#LEFT-amp-RIGHT" class="headerlink" title="LEFT&amp;RIGHT"></a>LEFT&amp;RIGHT</h3><p> <code>LEFT(CharacterValue,NumberOfCharacters)</code><br>含义：选择<code>CharacterValue</code>字段的左边<code>NumberOfCharacters</code>几个字符。<br>ps:RIGHT是右边几个字符。</p>
+<h3 id="LTRIM-amp-RTRIM"><a href="#LTRIM-amp-RTRIM" class="headerlink" title="LTRIM&amp;RTRIM"></a>LTRIM&amp;RTRIM</h3><p> <code>LTRIM(CharacterValue)</code><br> 可以删除左边开始的空格。RTRIM作用类似。</p>
+<h3 id="SUBSTRING"><a href="#SUBSTRING" class="headerlink" title="SUBSTRING"></a>SUBSTRING</h3><p><code>SUBSTRING(CharacterValue,StartPositon,NumberOfCharacters)</code><br>含义：选择从开始位置（包括），N个长度的字符。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line"><span class="keyword">SUBSTRING</span>(<span class="string">'thewhitegoat'</span>,<span class="number">4</span>,<span class="number">5</span>) <span class="keyword">AS</span> <span class="string">'The Answer'</span></div></pre></td></tr></table></figure></p>
+<p>返回：white</p>
+<h2 id="4-2-日期-时间函数"><a href="#4-2-日期-时间函数" class="headerlink" title="4.2 日期/时间函数"></a>4.2 日期/时间函数</h2><h3 id="GETDATE"><a href="#GETDATE" class="headerlink" title="GETDATE"></a>GETDATE</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">GETDATE</span>()</div></pre></td></tr></table></figure>
+<p>返回当前日期和时间。<br>PS：在MySql中，等价函数是<code>NOW</code>，在Oracle中是<code>CURRENT_DATE</code>。</p>
+<h3 id="DATEPART"><a href="#DATEPART" class="headerlink" title="DATEPART"></a>DATEPART</h3><p>能够分析具体的日期，并且返回诸如该日期是该月中的第几天，或者该年份中的第几周等信息。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">DATEPART</span><span class="params">(datepart,DateValue)</span></span></div></pre></td></tr></table></figure></p>
+<p>datepart可以是许多不同的值，如下都是有效值：</p>
+<ul>
+<li>year</li>
+<li>quarter</li>
+<li>month</li>
+<li>dayofyear</li>
+<li>day</li>
+<li>week</li>
+<li>weekday</li>
+<li>hour</li>
+<li>minute</li>
+<li>second</li>
+</ul>
+<h3 id="DATEDIFF"><a href="#DATEDIFF" class="headerlink" title="DATEDIFF"></a>DATEDIFF</h3><p>可以让我们得到任意两个日期之间相差的天数（或周数、月数等）。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">DATEDIFF</span><span class="params">(datepart1,startdate1,startdate2)</span></span></div></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>DATEDIFF Function Expression</th>
+<th>Resulting Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DATEDIFF(day,’7/8/2009’,’8/14/2009’)</td>
+<td>37</td>
+</tr>
+<tr>
+<td>DATEDIFF(week,’7/8/2009’,’8/14/2009’)</td>
+<td>5</td>
+</tr>
+<tr>
+<td>DATEDIFF(month,’7/8/2009’,’8/14/2009’)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DATEDIFF(year,’7/8/2009’,’8/14/2009’)</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>PS:MySql中，DATEDIFF函数只允许我们计算两个日期之间的天数，如果想要得到一个正数，结束的日期通常要作为第一个参数:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">DATEDIFF</span><span class="params">(enddate,startdate)</span></span></div></pre></td></tr></table></figure></p>
+<p>Oracle中没有等价函数</p>
+<h2 id="4-3-数值函数"><a href="#4-3-数值函数" class="headerlink" title="4.3 数值函数"></a>4.3 数值函数</h2><h3 id="ROUND"><a href="#ROUND" class="headerlink" title="ROUND"></a>ROUND</h3><p>允许我们四舍五入。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">ROUND</span><span class="params">(numericvalue,decimalpalaces)</span></span></div></pre></td></tr></table></figure></p>
+<h3 id="RAND"><a href="#RAND" class="headerlink" title="RAND"></a>RAND</h3><p>用来产生随机数<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">RAND</span><span class="params">([seed])</span></span></div></pre></td></tr></table></figure></p>
+<p>没有参数时，它会返回0-1之间的一个随机数。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">RAND</span>() <span class="keyword">AS</span> <span class="string">'Random Value'</span></div></pre></td></tr></table></figure></p>
+<p>可选参数seed有的情况下，每次将返回相同的值。这让我想起了Python中的Random包。看来很多时候，一些东西是共通的啊。</p>
+<h3 id="PI"><a href="#PI" class="headerlink" title="PI"></a>PI</h3><p><code>PI()</code>函数<br>如果想要对它保留两位小数，可以通过复合函数进行：<br><figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">SELECT</span> <span class="built_in">ROUND</span>(<span class="built_in">PI</span>(),<span class="number">2</span>)</div></pre></td></tr></table></figure></p>
+<p>将会返回：3.14</p>
+<h2 id="4-4-转换函数"><a href="#4-4-转换函数" class="headerlink" title="4.4 转换函数"></a>4.4 转换函数</h2><h3 id="CAST函数"><a href="#CAST函数" class="headerlink" title="CAST函数"></a>CAST函数</h3><p>允许我们把数据从一种类型转换成另一种类型。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">CAST</span><span class="params">(expression AS DateType)</span></span></div></pre></td></tr></table></figure></p>
+<p>例子：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line"><span class="string">'2009-04-11'</span> <span class="keyword">AS</span> <span class="string">'Original Date'</span>,</div><div class="line"><span class="keyword">CAST</span>(<span class="string">'2009--04-11'</span> <span class="keyword">AS</span> DATETIME) <span class="keyword">AS</span> <span class="string">'Converted Date'</span></div></pre></td></tr></table></figure></p>
+<h3 id="ISNULL函数，很有用"><a href="#ISNULL函数，很有用" class="headerlink" title="ISNULL函数，很有用"></a>ISNULL函数，很有用</h3><p>可以把NULL值转换成一个有意义的值。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> Description,</div><div class="line"><span class="keyword">ISNULL</span>(Color,<span class="string">'Unknown'</span>) <span class="keyword">AS</span> <span class="string">'Color'</span></div><div class="line"><span class="keyword">FROM</span> Products</div></pre></td></tr></table></figure></p>
+<h1 id="五、排序函数"><a href="#五、排序函数" class="headerlink" title="五、排序函数"></a>五、排序函数</h1><h2 id="5-1-添加排序"><a href="#5-1-添加排序" class="headerlink" title="5.1 添加排序"></a>5.1 添加排序</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> columnlist</div><div class="line"><span class="keyword">FROM</span> tablelist</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> columnlist</div></pre></td></tr></table></figure>
+<p>默认是升序，<code>ASC</code>，因此，上面等价于：<br><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> columnlist</div><div class="line"><span class="keyword">FROM</span> tablelist</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> columnlist <span class="keyword">ASC</span></div></pre></td></tr></table></figure></p>
+<h2 id="5-2-降序"><a href="#5-2-降序" class="headerlink" title="5.2 降序"></a>5.2 降序</h2><p>使用<code>DESC</code>关键字：<br><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> columnlist</div><div class="line"><span class="keyword">FROM</span> tablelist</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> columnlist <span class="keyword">DESC</span></div></pre></td></tr></table></figure></p>
+<h2 id="5-3-根据多列"><a href="#5-3-根据多列" class="headerlink" title="5.3 根据多列"></a>5.3 根据多列</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line">FirstName,</div><div class="line">LastName</div><div class="line"><span class="keyword">FROM</span> Customers</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> LastName, FirstName</div></pre></td></tr></table></figure>
+<p>注意：列的顺序很重要，首先按照LastName排序，然后按照FirstName排序。</p>
+<h2 id="5-4-根据计算字段"><a href="#5-4-根据计算字段" class="headerlink" title="5.4 根据计算字段"></a>5.4 根据计算字段</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> LastName+<span class="string">','</span>+FirstName <span class="keyword">AS</span> <span class="string">'Name'</span></div><div class="line"><span class="keyword">FROM</span> Customers</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">Name</span></div></pre></td></tr></table></figure>
+<p>因此，从这儿可以知道，列别名不可以用在WHERE中，但可以用在ORDER BY中。<br>例子<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> FirstName,LastName</div><div class="line"><span class="keyword">FROM</span> Customers</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> LastName+FirstName <span class="keyword">AS</span> <span class="string">'Name'</span></div></pre></td></tr></table></figure></p>
+<h2 id="5-5-排序补充内容"><a href="#5-5-排序补充内容" class="headerlink" title="5.5 排序补充内容"></a>5.5 排序补充内容</h2><p>当数据升序时，出现顺序是如下：</p>
+<blockquote>
+<p>NULL-&gt;数字-&gt;字符<br>注意：此时，该列中的数字其实是按照字符来算的，因此，升序时，23也是排在5之前的。</p>
+</blockquote>
+<h1 id="六、基于列的逻辑-CASE"><a href="#六、基于列的逻辑-CASE" class="headerlink" title="六、基于列的逻辑-CASE"></a>六、基于列的逻辑-CASE</h1><h2 id="6-1-IF-THEN-ELSE逻辑"><a href="#6-1-IF-THEN-ELSE逻辑" class="headerlink" title="6.1 IF-THEN-ELSE逻辑"></a>6.1 IF-THEN-ELSE逻辑</h2><p>包含列和CASE表达式的SELECT语句，大概如下：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line">column1,</div><div class="line">column2,</div><div class="line">CaseExpression</div><div class="line"><span class="keyword">FROM</span> <span class="keyword">table</span></div></pre></td></tr></table></figure></p>
+<h2 id="6-2-CASE-简单格式"><a href="#6-2-CASE-简单格式" class="headerlink" title="6.2 CASE-简单格式"></a>6.2 CASE-简单格式</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line"><span class="keyword">CASE</span> ColumnOrExpression</div><div class="line"><span class="keyword">WHEN</span> value1 <span class="keyword">THEN</span> result1</div><div class="line"><span class="keyword">WHEN</span> value2 <span class="keyword">THEN</span> result2</div><div class="line">(<span class="keyword">repeat</span> <span class="keyword">WHEN</span>-<span class="keyword">THEN</span> <span class="keyword">any</span> <span class="built_in">number</span> <span class="keyword">of</span> times)</div><div class="line">[<span class="keyword">ELSE</span>  DefaultResult]</div><div class="line"><span class="keyword">END</span></div></pre></td></tr></table></figure>
+<p>CASE表达式对于把不好理解的值转换成有意义的描述是很有用的。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line"><span class="keyword">CASE</span> CategoryCode</div><div class="line"><span class="keyword">WHEN</span> <span class="string">'F'</span> <span class="keyword">THEN</span> <span class="string">'Fruit'</span></div><div class="line"><span class="keyword">WHEN</span> <span class="string">'V'</span> <span class="keyword">THEN</span> <span class="string">'Vegetable'</span></div><div class="line"><span class="keyword">ELSE</span> <span class="string">'other'</span></div><div class="line"><span class="keyword">END</span> <span class="keyword">AS</span> <span class="string">'Category'</span>,</div><div class="line">ProductDescription <span class="keyword">As</span> <span class="string">'Description'</span></div><div class="line"><span class="keyword">FROM</span> Products</div></pre></td></tr></table></figure></p>
+<h2 id="6-3-CASE-查询格式"><a href="#6-3-CASE-查询格式" class="headerlink" title="6.3 CASE-查询格式"></a>6.3 CASE-查询格式</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line"><span class="keyword">CASE</span> </div><div class="line"><span class="keyword">WHEN</span> condition1 <span class="keyword">THEN</span> result1</div><div class="line"><span class="keyword">WHEN</span> condition2 <span class="keyword">THEN</span> result2</div><div class="line">(<span class="keyword">repeat</span> <span class="keyword">WHEN</span>-<span class="keyword">THEN</span> <span class="keyword">any</span> <span class="built_in">number</span> <span class="keyword">of</span> times)</div><div class="line">[<span class="keyword">ELSE</span>  DefaultResult]</div><div class="line"><span class="keyword">END</span></div></pre></td></tr></table></figure>
+<p><strong>这种格式允许在关键字WHEN后边放置较为复杂的条件表达式。</strong></p>
+<p>相关问题：</p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/5487892/sql-server-case-when-or-then-else-end-the-or-is-not-supported" target="_blank" rel="external">StackOverFlow-SQL Server: CASE WHEN OR THEN ELSE END =&gt; the OR is not supported</a></li>
+</ul>
+<h1 id="七、基于行的逻辑"><a href="#七、基于行的逻辑" class="headerlink" title="七、基于行的逻辑"></a>七、基于行的逻辑</h1><h2 id="7-1-应用查询条件"><a href="#7-1-应用查询条件" class="headerlink" title="7.1 应用查询条件"></a>7.1 应用查询条件</h2><p>终于派到WHERE出场了，注意写法顺序，再写一遍：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Select -1&gt;选择列,-2&gt;distinct,-3&gt;top</div><div class="line"><span class="meta">  1&gt;</span><span class="bash">…From 表</span></div><div class="line"><span class="meta">  2&gt;</span><span class="bash">…Where 条件</span></div><div class="line"><span class="meta">  3&gt;</span><span class="bash">…Group by 列</span></div><div class="line"><span class="meta">  4&gt;</span><span class="bash">…Having 筛选条件</span></div><div class="line"><span class="meta">  6&gt;</span><span class="bash">…Order by 列</span></div></pre></td></tr></table></figure></p>
+<h2 id="7-2-限制行-TOP"><a href="#7-2-限制行-TOP" class="headerlink" title="7.2 限制行-TOP"></a>7.2 限制行-TOP</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line">TOP <span class="built_in">Number</span> </div><div class="line">Columnlist</div><div class="line"><span class="keyword">FROM</span> <span class="keyword">table</span></div></pre></td></tr></table></figure>
+<h2 id="7-3-TOP和ORDER-BY结合"><a href="#7-3-TOP和ORDER-BY结合" class="headerlink" title="7.3 TOP和ORDER BY结合"></a>7.3 TOP和ORDER BY结合</h2><p>关键字TOP的另一个用途是，把它和ORDER BY子句结合起来，基于特定分类，得到带有最大值的一定数量的行。</p>
+<p>假设你想看到Shakespeare所著的销量最多的书。<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line">TOP1</div><div class="line">Title <span class="keyword">AS</span> <span class="string">'Book Title'</span>,</div><div class="line">CurrentMonthSales <span class="keyword">AS</span> <span class="string">'Quantuty Sold'</span></div><div class="line"><span class="keyword">FROM</span> Books</div><div class="line"><span class="keyword">WHERE</span> Author=<span class="string">'Shakespeare'</span></div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> CurrentMonthSales <span class="keyword">DESC</span></div></pre></td></tr></table></figure></p>
+<p>ps: 学会利用google搜索，例如，我想要知道oracle中类似top作用的关键字是什么，可以：<br><img src="http://ww4.sinaimg.cn/large/6d9475f6jw1f2tydodr55j20jc0eq43d.jpg" alt=""></p>
+<h1 id="八、布尔逻辑"><a href="#八、布尔逻辑" class="headerlink" title="八、布尔逻辑"></a>八、布尔逻辑</h1><p>关键字：AND/OR/NOT/BETWEEN/IN/IS/NULL</p>
+<h2 id="8-1-OR"><a href="#8-1-OR" class="headerlink" title="8.1 OR"></a>8.1 OR</h2><p>OR子句意味着，如果确定任意条件为真，那么就该选中该行。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> userid,<span class="keyword">name</span>,phone</div><div class="line"><span class="keyword">FROM</span> <span class="keyword">users</span></div><div class="line"><span class="keyword">WHERE</span> age&lt;<span class="number">18</span></div><div class="line"><span class="keyword">OR</span> age&gt;<span class="number">60</span></div></pre></td></tr></table></figure></p>
+<h2 id="8-2-使用圆括号"><a href="#8-2-使用圆括号" class="headerlink" title="8.2 使用圆括号"></a>8.2 使用圆括号</h2><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> CustomerName,</div><div class="line">Sate,</div><div class="line">QuantityPurchased</div><div class="line"><span class="keyword">FROM</span> Orders</div><div class="line"><span class="keyword">WHERE</span> State =<span class="string">'IL'</span></div><div class="line"><span class="keyword">OR</span> State=<span class="string">'CA'</span></div><div class="line"><span class="keyword">AND</span> QuantityPurchased&gt;<span class="number">8</span></div></pre></td></tr></table></figure>
+<p>本来想要的结果是对来自IL或者CA的客户，同时，只看数量大于8的订单。但是上面执行的结果不是这样的，因为，SQL总是会先处理AND操作符！！！然后才会处理OR操作符。所以，上述语句中，先看到AND并执行如下的条件<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">State= <span class="symbol">'CA</span>'</div><div class="line"><span class="keyword">AND</span> QuantityPurchased&gt;<span class="number">8</span></div></pre></td></tr></table></figure></p>
+<p>因此，要用括号来规定顺序：<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> CustomerName,</div><div class="line">Sate,</div><div class="line">QuantityPurchased</div><div class="line"><span class="keyword">FROM</span> Orders</div><div class="line"><span class="keyword">WHERE</span> (State =<span class="string">'IL'</span></div><div class="line"><span class="keyword">OR</span> State=<span class="string">'CA'</span>)</div><div class="line"><span class="keyword">AND</span> QuantityPurchased&gt;<span class="number">8</span></div></pre></td></tr></table></figure></p>
+<h2 id="8-3-NOT操作符"><a href="#8-3-NOT操作符" class="headerlink" title="8.3 NOT操作符"></a>8.3 NOT操作符</h2><p>NOT操作符表示对后边的内容否定或者取反。<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> CustomerName,State</div><div class="line"><span class="keyword">FROM</span> Orders</div><div class="line"><span class="keyword">WHERE</span> <span class="keyword">NOT</span> (State=<span class="string">'IL'</span> <span class="keyword">OR</span> Sate=<span class="string">'NY'</span>)</div></pre></td></tr></table></figure></p>
+<p>这个其实可以用AND改写的！！！<br>NOT操作符在逻辑上不是必须的。</p>
+<h2 id="8-4-BETWEEN操作符"><a href="#8-4-BETWEEN操作符" class="headerlink" title="8.4 BETWEEN操作符"></a>8.4 BETWEEN操作符</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> CustomerName,</div><div class="line">Sate,</div><div class="line">QuantityPurchased</div><div class="line"><span class="keyword">FROM</span> Orders</div><div class="line"><span class="keyword">WHERE</span> QuantityPurchased <span class="keyword">BETWEEN</span> <span class="number">8</span> <span class="keyword">AND</span> <span class="number">10</span></div></pre></td></tr></table></figure>
+<h2 id="8-5-IN操作符"><a href="#8-5-IN操作符" class="headerlink" title="8.5 IN操作符"></a>8.5 IN操作符</h2><p>假设你想看到IL或者NY的行：<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> *</div><div class="line"><span class="keyword">FROM</span> Orders</div><div class="line"><span class="keyword">WHERE</span> State=<span class="string">'IL'</span></div><div class="line"><span class="keyword">OR</span> State=<span class="string">'CA'</span></div></pre></td></tr></table></figure></p>
+<p>可以改写成：<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> *</div><div class="line"><span class="keyword">FROM</span> Orders</div><div class="line"><span class="keyword">WHERE</span> State <span class="keyword">IN</span> (<span class="string">'IL'</span>,<span class="string">'CA'</span>)</div></pre></td></tr></table></figure></p>
+<h2 id="8-9-布尔逻辑-IS-NULL"><a href="#8-9-布尔逻辑-IS-NULL" class="headerlink" title="8.9 布尔逻辑-IS NULL"></a>8.9 布尔逻辑-IS NULL</h2><p>为了将某字段NULL值的行或0的行包括进来：<br><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> *</div><div class="line"><span class="keyword">FROM</span> Products</div><div class="line"><span class="keyword">WHERE</span> weight=<span class="number">0</span></div><div class="line"><span class="keyword">OR</span> weight <span class="keyword">IS</span> <span class="literal">NULL</span></div></pre></td></tr></table></figure></p>
+<p>或者<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> *</div><div class="line"><span class="keyword">FROM</span> Products</div><div class="line"><span class="keyword">WHERE</span> <span class="keyword">ISNULL</span>(weight,<span class="number">0</span>)=<span class="number">0</span></div></pre></td></tr></table></figure></p>
+<h1 id="九、模糊匹配"><a href="#九、模糊匹配" class="headerlink" title="九、模糊匹配"></a>九、模糊匹配</h1><h2 id="9-1-LIKE和-搭配"><a href="#9-1-LIKE和-搭配" class="headerlink" title="9.1 LIKE和%搭配"></a>9.1 LIKE和%搭配</h2><p>%通配符可以表示任意的字符，它可以表示0个，1个，任意多个字符。</p>
+<h2 id="9-2-通配符"><a href="#9-2-通配符" class="headerlink" title="9.2 通配符"></a>9.2 通配符</h2><p>除了%以外，还有下划线（_）、方括号起来的characterlist，以及用方括号括起来的脱字符号（^）加上characterlist。</p>
+<ul>
+<li>下划线表示一个字符</li>
+<li>[characterlist]表示括号中字符的任意一个</li>
+<li>[^characterlist]表示不能是括号中字符的任意一个<br>例子：<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line">FirstName,</div><div class="line">LastName</div><div class="line"><span class="keyword">FROM</span> Actors</div><div class="line"><span class="keyword">WHERE</span> FirstName <span class="keyword">LIKE</span> <span class="string">'[CM]ARY'</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>检索以C或者M开头并以ARY结尾的所有行。</p>
+<h3 id="9-3-按照读音匹配"><a href="#9-3-按照读音匹配" class="headerlink" title="9.3 按照读音匹配"></a>9.3 按照读音匹配</h3><p>SOUNDEX和DIFFERENCE</p>
+<h1 id="十、汇总数据"><a href="#十、汇总数据" class="headerlink" title="十、汇总数据"></a>十、汇总数据</h1><h2 id="10-1消除重复"><a href="#10-1消除重复" class="headerlink" title="10.1消除重复"></a>10.1消除重复</h2><p>使用DISTINCT<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> DISTINCE <span class="keyword">name</span>,age</div><div class="line"><span class="keyword">FROM</span> <span class="keyword">users</span></div></pre></td></tr></table></figure></p>
+<p>如果age不同，即使name相同，那么这一行就不会被删除重复。</p>
+<h2 id="10-2-聚合函数"><a href="#10-2-聚合函数" class="headerlink" title="10.2 聚合函数"></a>10.2 聚合函数</h2><p>COUNT\SUM\AVG\MIN\MAX，他们提供了对分组数据进行计数、求和、取平均值、取最小值和最大值等方法。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line"><span class="keyword">AVG</span>(Grade) <span class="keyword">AS</span> <span class="string">'Average Quiz Score'</span></div><div class="line"><span class="keyword">MIN</span>(Grade) <span class="keyword">AS</span> <span class="string">'Minimum Quiz Score'</span></div><div class="line"><span class="keyword">FROM</span> Grades</div><div class="line"><span class="keyword">WHERE</span> GradeType=<span class="string">'Quiz'</span></div></pre></td></tr></table></figure></p>
+<h3 id="COUNT函数可以有3中不同方式使用它。"><a href="#COUNT函数可以有3中不同方式使用它。" class="headerlink" title="COUNT函数可以有3中不同方式使用它。"></a>COUNT函数可以有3中不同方式使用它。</h3><p>1.COUNT函数可以用来返回所有选中行的数目，而不管任何特定列的值。<br>例如：下面语句返回GradeType为’HomeWork’的所有行的数目：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line"><span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> <span class="string">'Count of Homework Rows'</span></div><div class="line"><span class="keyword">FROM</span> Grades</div><div class="line"><span class="keyword">WHERE</span> GradeType=<span class="string">'HomeWork'</span></div></pre></td></tr></table></figure></p>
+<p>这种<em>方式，会计数所有行的个数，即使其中有<em>*NULL</em></em>。</p>
+<p>2.第二种方式指定具体的列<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line"><span class="keyword">COUNT</span>(Grades) <span class="keyword">AS</span> <span class="string">'Count of Homework Rows'</span></div><div class="line"><span class="keyword">FROM</span> Grades</div><div class="line"><span class="keyword">WHERE</span> GradeType=<span class="string">'HomeWork'</span></div></pre></td></tr></table></figure></p>
+<p>第一种方式返回3，这一种方式返回2，为什么？？？因为，这种方式要满足Grades这一列有值，NULL值的行不会计数。</p>
+<p>3.使用关键字DISTINCT。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line"><span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> FeeType) <span class="keyword">AS</span> <span class="string">'Number of Fee Types'</span></div><div class="line"><span class="keyword">FROM</span> Fees</div></pre></td></tr></table></figure></p>
+<p>这条语句计数了FeeType列唯一值的个数。</p>
+<h2 id="10-3-分组数据-GROUP-BY"><a href="#10-3-分组数据-GROUP-BY" class="headerlink" title="10.3 分组数据-GROUP BY"></a>10.3 分组数据-GROUP BY</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span></div><div class="line">GradeType <span class="keyword">AS</span> <span class="string">'Grade Type'</span>,</div><div class="line"><span class="keyword">AVG</span>(Grade)<span class="keyword">AS</span> <span class="string">'Average Grade'</span></div><div class="line"><span class="keyword">FROM</span> Grades</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> GradeType</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> GradeType</div></pre></td></tr></table></figure>
+<p>感觉像EXCEL中的分类汇总功能。<br>如果想把Grade为NULL值的当做0，那么可以用：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span></div><div class="line">GradeType <span class="keyword">AS</span> <span class="string">'Grade Type'</span>,</div><div class="line"><span class="keyword">AVG</span>(<span class="keyword">ISNULL</span>(Grade,<span class="number">0</span>))<span class="keyword">AS</span> <span class="string">'Average Grade'</span></div><div class="line"><span class="keyword">FROM</span> Grades</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> GradeType</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> GradeType</div></pre></td></tr></table></figure></p>
+<ul>
+<li>GROUP BY子句中的列的顺序是没有意义的；</li>
+<li>ORDER BY子句中的列的顺序是有意义的。</li>
+</ul>
+<h2 id="10-4-基于聚合查询条件-HAVING"><a href="#10-4-基于聚合查询条件-HAVING" class="headerlink" title="10.4 基于聚合查询条件-HAVING"></a>10.4 基于聚合查询条件-HAVING</h2><p>当针对带GROUP BY的一条SELECT语句应用任何查询条件时，人们必须要问查询条件是应用于单独的行还是整个组。</p>
+<p>实际上，WHERE子句是单独的执行查询条件。SQL提供了一个名为HAVING的关键字，它允许对组级别使用查询条件。<br>例子：<br>查看选修了类型为选修“A”，平均成绩在70分以上的学生姓名，平均成绩。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line"><span class="keyword">Name</span>,</div><div class="line"><span class="keyword">AVG</span>(<span class="keyword">ISNULL</span>(Grades,<span class="number">0</span>)) <span class="keyword">AS</span> <span class="string">'Average Grades'</span></div><div class="line"><span class="keyword">FROM</span> Grades</div><div class="line"><span class="keyword">WHERE</span> GradeType=<span class="string">'A'</span></div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="keyword">Name</span></div><div class="line"><span class="keyword">HAVING</span> <span class="keyword">AVG</span>(<span class="keyword">ISNULL</span>(Grades,<span class="number">0</span>))&gt;<span class="number">70</span></div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">Name</span></div></pre></td></tr></table></figure></p>
+<p>修要修类型为A，那么，这是这对行的查询，因此这里要用WHERE。<br>但是，还要筛选平均成绩，那么，这是一个平均值，建立在聚合函数上的，并不是单独的行，这就需要用到关键字HAVING。需要先将Student分组，然后把查询结果应用到基于全组的一个聚合统计上。</p>
+<p>WHERE只保证我们选择了GradeType是A的行，HAVING保证平均成绩至少70分以上。</p>
+<p>注意：如果想要在结果中添加GradeType的值，如果直接在SELECT后边添加这个列，将会出错。这是因为，所有列都必须要么出现在GROUP BY中，要么包含在一个聚合函数中。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line"><span class="keyword">Name</span>,</div><div class="line">GradeType,</div><div class="line"><span class="keyword">AVG</span>(<span class="keyword">ISNULL</span>(Grades,<span class="number">0</span>)) <span class="keyword">AS</span> <span class="string">'Average Grades'</span></div><div class="line"><span class="keyword">FROM</span> Grades</div><div class="line"><span class="keyword">WHERE</span> GradeType=<span class="string">'A'</span></div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="keyword">Name</span>,GradeType</div><div class="line"><span class="keyword">HAVING</span> <span class="keyword">AVG</span>(<span class="keyword">ISNULL</span>(Grades,<span class="number">0</span>))&gt;<span class="number">70</span></div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">Name</span></div></pre></td></tr></table></figure></p>
+<h1 id="十一、组合表"><a href="#十一、组合表" class="headerlink" title="十一、组合表"></a>十一、组合表</h1><h2 id="11-1-内连接来组合表-Inner-Join"><a href="#11-1-内连接来组合表-Inner-Join" class="headerlink" title="11.1 内连接来组合表-Inner Join"></a>11.1 内连接来组合表-Inner Join</h2><p>通过书中的描述，我感觉内连接更像是用来将主键表、外键表连接起来的工具。<br>例如：<br>A表：</p>
+<table>
+<thead>
+<tr>
+<th>userid</th>
+<th>name</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>michael</td>
+<td>26</td>
+</tr>
+<tr>
+<td>2</td>
+<td>hhh</td>
+<td>25</td>
+</tr>
+<tr>
+<td>3</td>
+<td>xiang</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p>B表：</p>
+<table>
+<thead>
+<tr>
+<th>orderid</th>
+<th>userid</th>
+<th>num</th>
+<th>price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td>5</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>如上表格，那么要连接这两个表格，查询订单1的客户姓名，年龄，订单号：<br>方式一：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age,orderid</div><div class="line"><span class="keyword">FROM</span> A,B</div><div class="line"><span class="keyword">WHERE</span> A.userid=B.userid</div><div class="line"><span class="keyword">AND</span> orderid=<span class="number">1</span></div></pre></td></tr></table></figure></p>
+<p>方式二，使用现在的内连接实现：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age,orderid</div><div class="line"><span class="keyword">FROM</span> A</div><div class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> B</div><div class="line"><span class="keyword">ON</span> A.userid=B.userid</div><div class="line"><span class="keyword">AND</span> orderid=<span class="number">1</span></div></pre></td></tr></table></figure></p>
+<p>ON关键字指定两个表如何准确的连接。</p>
+<p>内连接中表的顺序：FROM 子句指定了A表，INNER JOIN 子句指定B表，我们调换A,B顺序，所得到的结果相同的!只是显示列的顺序可能会不同而已。</p>
+<p>不建议使用方式一的格式。关键字INNER JOIN ON的优点在于显示地表示了连接的逻辑，那是它们唯一的用途。WEHERE的含义不够明显。因为它是条件的意思啊，不是连接的！</p>
+<h2 id="11-2-外连接"><a href="#11-2-外连接" class="headerlink" title="11.2 外连接"></a>11.2 外连接</h2><p>外连接分为左连接（LEFT OUTER JOIN)、右连接(RIGHT OUTER JOIN)、全连接（FULL OUTER JOIN)。</p>
+<p>OUTER是可以省略的。</p>
+<h3 id="左连接（LEFT-JOIN"><a href="#左连接（LEFT-JOIN" class="headerlink" title="左连接（LEFT  JOIN)"></a>左连接（LEFT  JOIN)</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age,orderid</div><div class="line"><span class="keyword">FROM</span> A</div><div class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span> B</div><div class="line"><span class="keyword">ON</span> A.userid=B.userid</div><div class="line"><span class="keyword">AND</span> orderid=<span class="number">1</span></div></pre></td></tr></table></figure>
+<p>外连接的强大之处在于，主表中的数据必然都会保留，从表中列没有值的情况，用NULL补充。</p>
+<p>LEFT JOIN 左边的表为主表，右边的表为从表。</p>
+<h2 id="11-3-自连接"><a href="#11-3-自连接" class="headerlink" title="11.3 自连接"></a>11.3 自连接</h2><p><strong>自连接必然用到表的别名。</strong><br><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> A.name,B.name <span class="keyword">as</span> ManagerName</div><div class="line"><span class="keyword">FROM</span> worker <span class="keyword">as</span> A</div><div class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span> worker <span class="keyword">as</span> B</div><div class="line"><span class="keyword">ON</span> A.managerid=B.id</div></pre></td></tr></table></figure></p>
+<h2 id="11-4-创建视图"><a href="#11-4-创建视图" class="headerlink" title="11.4 创建视图"></a>11.4 创建视图</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> ViewName <span class="keyword">AS</span></div><div class="line">SelectStatement</div><div class="line">[<span class="keyword">WITH</span> <span class="keyword">CHECK</span> <span class="keyword">OPTION</span>]</div></pre></td></tr></table></figure>
+<p>视图中不能包含ORDER BY子句。</p>
+<p>[WITH CHECK OPTION]表示对视图进行UPDATE,INSERT,DELETE操作时任然保证了视图定义时的条件表达式。</p>
+<p>删除视图：<br><figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">DROP</span> <span class="built_in">VIEW</span> ViewName</div></pre></td></tr></table></figure></p>
+<p>修改视图：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">VIEW</span> ViewName <span class="keyword">AS</span></div><div class="line">SelectStatement</div></pre></td></tr></table></figure></p>
+<h3 id="视图的优点"><a href="#视图的优点" class="headerlink" title="视图的优点"></a>视图的优点</h3><ol>
+<li>简化用户的操作</li>
+<li>使用户以多角度看待同一数据</li>
+<li>对重构数据库提供了一定程度的逻辑独立性</li>
+<li>对机密数据提供安全保护</li>
+</ol>
+<h1 id="十二、补充"><a href="#十二、补充" class="headerlink" title="十二、补充"></a>十二、补充</h1><h2 id="12-1-子查询"><a href="#12-1-子查询" class="headerlink" title="12.1 子查询"></a>12.1 子查询</h2><p>可以用3种主要的方式来指定子查询，总结如下：</p>
+<ul>
+<li>当子查询是tablelist的一部分时，它指定了一个数据源。</li>
+<li>当子查询是condition的一部分时，它成为查询条件的一部分。</li>
+<li>当子查询是columnlist的一部分时，它创建了一个单个的计算的列。</li>
+</ul>
+<h2 id="12-2-索引"><a href="#12-2-索引" class="headerlink" title="12.2 索引"></a>12.2 索引</h2><p>索引是一种物理结构，可以为数据库表中任意的列添加索引。</p>
+<p>索引的目的是，当SQL语句中包含该列的是偶，可以加速数据的检索。</p>
+<p>索引的缺点是，在数据库中，索引需要更多的存储硬盘。另一个负面因素是，索引通常会降低相关的列数据更新速度。这是因为，任何时候插入或者修改一行记录时，索引都必须重新计算该列中的值的正确的排列顺序。</p>
+<p>可以对任意的列进行索引，但是只能指定一个列作为主键。指定一个列作为主键意味着两件事情：首先这个列成为了索引，其次保证这列包含唯一的值。<br><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> Index2</div><div class="line"><span class="keyword">ON</span> MyTable (ColumnFour)</div></pre></td></tr></table></figure></p>
+<p>删除一个索引：<br><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DROP</span> INDX Index2</div><div class="line"><span class="keyword">ON</span> MyTable</div></pre></td></tr></table></figure></p>
+<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><ul>
+<li><a href="http://www.imooc.com/article/1412" target="_blank" rel="external">SQL总结（一）基本查询</a></li>
+<li><a href="http://www.imooc.com/article/1415" target="_blank" rel="external">SQL Server 常用高级语法笔记</a></li>
+<li><a href="http://www.codeceo.com/article/mssql-log-01.html" target="_blank" rel="external">史上最全的SQL Server复习笔记一</a></li>
+</ul>
+<script src="//w.segmentfault.com/card/1030000002497141.js?w=0&3rd=1&bg=0&bd=DDDDDD&cl=333333&btn=009a62&noBtn=0"></script>
+
+<hr>
+<p>本文由 <strong><a href="http://michaelxiang.me/" target="_blank" rel="external">Michael翔</a></strong> 创作，采用 <strong><a href="http://creativecommons.org/licenses/by/3.0/cn/" target="_blank" rel="external">知识共享署名 3.0 中国大陆许可协议</a> </strong>进行许可。<br>可自由转载、引用，但需署名作者且注明文章出处。</p>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+
+
+    <!-- 使用 DISQUS_CLICK -->
+    <div id="disqus-comment">
+        <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+        .ripple-container {
+        }
+        .ripple-container .ripple{
+            background-color: rgba(255,255,255,0.4);
+            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0
+        }
+</style>
+	
+<!-- add data-ripple attribute -->
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论 「请确保 disq.us &amp; disquscdn.com &amp; disqus.com 可以正常加载」</button>
+</div>
+	
+<script>
+    // add effect to elements
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
+        // find all elements and attach effect
+        new RippleEffect(element); // element is instance of javascript element node
+    });
+</script>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://michael728.github.io/2016/05/03/SQL/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://michael728.github.io/2016/05/03/SQL/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//michaelxiang.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/02/26/books-list-2016/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/05/14/python-matplotlib-basic/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/side_logo.jpg" alt="Michael_翔's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        http://michael728.github.io/
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: 649168982@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/" target="_self">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/12/">十二月 2015<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/11/">十一月 2015<span class="sidebar_archives-count">7</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">loyalty</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tools" title="工具">
+                
+                    <i class="material-icons sidebar-material-icons">build</i>
+                
+                工具
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="足迹">
+                
+                    <i class="material-icons sidebar-material-icons">camera</i>
+                
+                足迹
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友链">
+                
+                    <i class="material-icons sidebar-material-icons">group</i>
+                
+                友链
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">26</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/Michael_Xiang_" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-twitter.svg);">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/xiangzai728/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-weibo.svg);">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/michaelXoX/activities" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-zhihu.svg);">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;
+            <script type="text/javascript">
+                var fd = new Date();
+                document.write(fd.getFullYear());
+            </script>
+            &nbsp;Michael翔的小窝
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+    <script src="/js/lazyload.min.js"></script>
+    <script src="/js/js.min.js"></script>
+
+
+
+    <script src="/js/nprogress.js"></script>
+
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+    <!-- Leancloud -->
+    <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+    <script>
+        AV.initialize('7CDtrbb4U7nQzOdctmXXnMqt-gzGzoHsz', 'ISgUUtg79U9Eq0ActHmVRtmN');
+    </script>
+    <script>
+    function showTime(Counter) {
+        var query = new AV.Query(Counter);
+        $('.leancloud-views_num').each(function() {
+            var url = $(this).attr('id').trim();
+            query.equalTo('url', url);
+            query.find({
+                success: function(results) {
+                    if (results.length === 0) {
+                        var content = '0 ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                        return;
+                    }
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    }
+                },
+                error: function(object, error) {
+                    console.log('Error: ' + error.code + ' ' + error.message);
+                }
+            });
+        });
+    }
+
+    function addCount(Counter) {
+      var Counter = AV.Object.extend('Counter');
+      url = $('.leancloud-views_num').attr('id').trim();
+      title = $('.leancloud-views_num').attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+      query.equalTo('url', url);
+      query.find({
+          success: function(results) {
+            if (results.length > 0) {
+                var counter = results[0];
+                counter.fetchWhenSave(true);
+                counter.increment('time');
+                counter.save(null, {
+                    success: function(counter) {
+                        var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    },
+                    error: function(counter, error) {
+                        console.log('Failed to save Visitor num, with error message: ' + error.message);
+                    }
+                });
+            } else {
+              var newcounter = new Counter();
+              newcounter.set('title', title);
+              newcounter.set('url', url);
+              newcounter.set('time', 1);
+              newcounter.save(null, {
+                  success: function(newcounter) {
+                      console.log('newcounter.get(\'time\')='+newcounter.get('time'));
+                      var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+                      $(document.getElementById(url)).text(content);
+                  },
+                  error: function(newcounter, error) {
+                      console.log('Failed to create');
+                  }
+              });
+            }
+        },
+        error: function(error) {
+            console.log('Error:' + error.code + ' ' + error.message);
+        }
+      });
+    }
+    $(function() {
+        var Counter = AV.Object.extend('Counter');
+        if ($('.leancloud-views_num').length === 1) {
+            addCount(Counter);
+        } else if ($('.post-title-link').length > 1) {
+            showTime(Counter);
+        }
+    });
+</script>
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script>
+    <!-- Offer LazyLoad -->
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    <!-- Start Queue -->
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

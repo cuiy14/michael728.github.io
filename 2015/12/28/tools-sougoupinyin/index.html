@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.3.4 -->
+
+    <!-- Title -->
+    
+    <title>
+        
+            搜狗输入法使用技巧整理 | 
+        
+        Michael翔的小窝
+    </title>
+
+    <!-- Meta & Info -->
+    <meta charset="utf-8">
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+        <link rel="dns-prefetch" href="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"/>
+    
+    
+    
+    
+    
+        <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+    
+
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Michael_翔">
+    <meta name="description" content="因上努力，果上随缘;爱折腾app、小众软件--Michael翔">
+    <meta name="keywords" content="null,tools">
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.ico">
+    <link rel="icon" sizes="192x192" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Michael翔的小窝">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://michael728.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="搜狗输入法使用技巧整理 | Michael翔的小窝">
+    <meta property="og:description" content="因上努力，果上随缘;爱折腾app、小众软件--Michael翔">
+    <meta property="og:article:tag" content="tools"> 
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS & jQuery -->
+    
+        <link rel="stylesheet" href="/css/material.min.css">
+        <link rel="stylesheet" href="/css/style.min.css">
+        <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(/img/bg_big2.jpg);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/queue.js"></script>
+    
+
+    <!-- UC Browser Compatible -->
+    <script>
+        var agent = navigator.userAgent.toLowerCase();
+        if(agent.indexOf('ucbrowser')>0) {
+            document.write("<link rel=\"stylesheet\" href=\"/css/uc.css\">");
+            alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+        }
+    </script>
+
+    
+
+    
+
+
+    <!-- Bing Background -->
+    
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#输入罗马数字-计算器"><span class="post-toc-number">1.</span> <span class="post-toc-text">输入罗马数字+计算器</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#输入法截图"><span class="post-toc-number">2.</span> <span class="post-toc-text">输入法截图</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#自定义短语"><span class="post-toc-number">3.</span> <span class="post-toc-text">自定义短语</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#鼠标手势"><span class="post-toc-number">4.</span> <span class="post-toc-text">鼠标手势</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#手写输入"><span class="post-toc-number">5.</span> <span class="post-toc-text">手写输入</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Tab拆字辅助码笔画"><span class="post-toc-number">6.</span> <span class="post-toc-text">Tab拆字辅助码笔画</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Tab拆字辅助码拼音"><span class="post-toc-number">7.</span> <span class="post-toc-text">Tab拆字辅助码拼音</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#难字按u键进行偏旁和笔画输入"><span class="post-toc-number">8.</span> <span class="post-toc-text">难字按u键进行偏旁和笔画输入</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#生活小技巧（农历，诗句等）"><span class="post-toc-number">9.</span> <span class="post-toc-text">生活小技巧（农历，诗句等）</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#比较常用的特殊符号，如↑之类"><span class="post-toc-number">10.</span> <span class="post-toc-text">比较常用的特殊符号，如↑之类</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#参考："><span class="post-toc-number">11.</span> <span class="post-toc-text">参考：</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://static.pexels.com/photos/34153/pexels-photo.jpg)">
+    
+            <p class="article-headline-p">
+                搜狗输入法使用技巧整理
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/side_logo.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Michael_翔</strong>
+        <span>12月 28, 2015</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC1ElEQVR42u3aQZLCMAwEQP7/6d0HUISR5GWD3TlRRSBuXxRp/Pg58npgY2NjY2NjY2Nj35L9iK/nX736n1f3vFnW5f3P/1xeMzY2NvbW7MmCerDrDXqFnKwZGxsb+wT2qwKwarmTDb1eQ7I12NjY2NjX5SRpXfKlJxuKjY2Njb2qgEWPDBqJBI+NjY2NPR8qXRewXklLtuyfZ2nY2NjYt2fnoel9Pn8038bGxsa+MbsX1q4aG+WB7jxsxsbGxt6VXV1cXvx6A6ZeGxOFytjY2Nibsq9HPEkBKzQDiyKEfPyEjY2NfQ67ipxsRI7PtyBqlrCxsbE3ZeeFpHrnqhaieqCnmW9jY2Njfzk7H+5Xw4Ck1eltWTIUw8bGxj6BXX3Fr4ayCakX61ajX2xsbOy92b0F9Q7l9OLe3qgLGxsb+zR28tI/aTN65WfZE7GxsbG3ZldbjupwvzwAKgYMUVHExsbG3pTde2TewFSj3EJrEYOxsbGxT2D3DtnkR3B6x30WN0XY2NjYm7InYUAyKkqOSOalqxcbY2NjY5/Gnge3q3jVdujNGrCxsbE3Za8d8SeDp8nG/clQCRsbG3tTdv7SPylX+XPzA5rlWRo2Njb2l7PzcrWqvE02aBRIYGNjY2/Nrh647JWxzzQ2USuCjY2NvRF7PtZJwoNJZJtHyOV4ABsbG3tTdjXQXXs0s/qr0ZlTbGxs7O3Y1eMyb4LV1gZNVlIYKmFjY2Nvyq6OdfIDl1Vk8tw/rNvY2NjYX8WuXr2QoFcyq98WhkrY2NjYG7EnY6BegUni3urnaM3Y2NjYW7PzIjQfLVWLZfL/0Z3Y2NjYB7DzoDcPbnvPml/Y2NjY2L0jO/nWTDa02t5gY2NjYyetSK+A9eKEXoCBjY2NfQK7GtZWtyAPfZPtzksjNjY29gnsfEyTD5uqLUSvTH4o38bGxsa+MfucCxsbGxsbGxsbG/s21y/FEbnMHR6DTgAAAABJRU5ErkJggg==">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/tools/">tools</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/2015/12/28/tools-sougoupinyin/" class="leancloud-views_num" data-flag-title="搜狗输入法使用技巧整理">
+     &nbsp;浏览量
+</span>
+
+            </li>
+        </a>
+    
+
+    
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=搜狗输入法使用技巧整理&url=http://michael728.github.io//2015/12/28/tools-sougoupinyin/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=搜狗输入法使用技巧整理&url=http://michael728.github.io//2015/12/28/tools-sougoupinyin/index.html&via=Michael_翔" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Michael翔的小窝&title=搜狗输入法使用技巧整理&summary=因上努力，果上随缘;爱折腾app、小众软件--Michael翔&pics=http://michael728.github.io/img/favicon.ico&url=http://michael728.github.io/2015/12/28/tools-sougoupinyin/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>现在的输入法有很多，但是，哪个最好呢？不必纠结，自己用着顺手的才是最好！</p>
+<p>自己选择搜狗输入法的原因很简单，因为，它支持的平台多，同时，各个平台更新也很积极。从兼容性的角度考虑，还是最后选择了搜狗。至于搜狗启动的广告之类，其实不怕麻烦，是可以在设置里选择不弹出的。</p>
+<p>作为每天使用最多的输入法，我觉得，花点时间了解它一下还是值得的，你说呢？毕竟是与我们共同作战的小伙伴啊！</p>
+<h1 id="输入罗马数字-计算器"><a href="#输入罗马数字-计算器" class="headerlink" title="输入罗马数字+计算器"></a>输入罗马数字+计算器</h1><p><img src="http://ww1.sinaimg.cn/large/6d9475f6jw1ezf7djgz9zj20j10ekwhl.jpg" alt=""><br>属性设置-&gt;高级</p>
+<ul>
+<li>需要输入罗马数字时，采用：v+”数字”，然后可以看见候选数字中有罗马数字了。</li>
+<li>v+计算式子 就能直接获得结果</li>
+</ul>
+<a id="more"></a>
+<h1 id="输入法截图"><a href="#输入法截图" class="headerlink" title="输入法截图"></a>输入法截图</h1><p><img src="http://ww3.sinaimg.cn/large/6d9475f6jw1ezf798kj55j209j07swg5.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/6d9475f6jw1ezf7fhc6yuj20j70eldif.jpg" alt=""><br>右击输入法进入搜狗工具箱。按键-&gt;扩展功能快捷键  设置截图快捷键之后，就可以通过快捷键快速截图了！<br>这样需要截图的时候就不需要开qq！足以应付日常的截图功能了，至于专业的，还是找专业截图的工具好了……</p>
+<h1 id="自定义短语"><a href="#自定义短语" class="headerlink" title="自定义短语"></a>自定义短语</h1><p><img src="http://ww1.sinaimg.cn/large/6d9475f6jw1ezfcb7u97fj20je0gs42z.jpg" alt=""><br>属性设置-&gt;高级-&gt;自定义短语<br>如图，可以通过设置自定义短语，从而达到快速输入一些短语的功能。<br>例如：设置缩写<code>qq</code>对应短语’你的qq邮箱’,那么下次在你需要输入QQ邮箱的时候，只需要输入qq就能显示邮箱候选了。</p>
+<h1 id="鼠标手势"><a href="#鼠标手势" class="headerlink" title="鼠标手势"></a>鼠标手势</h1><p>没想到，搜狗输入法鼠标手势也有，再方便不过了。可以通过扩展箱安装。如果担心鼠标手势和某些应用程序内的手势冲突，可以通过设置来定义在某些程序里边不启用鼠标手势。<br>PS：现在已经喜欢上搜狗鼠标手势的全局缩小，全局最大化的功能了。浏览器一下子可以快速最小化和最大化呢。防止boss突袭。</p>
+<h1 id="手写输入"><a href="#手写输入" class="headerlink" title="手写输入"></a>手写输入</h1><p>通过扩展工具箱里的首席输入扩展，可以在遇到陌生字时，手写输入。</p>
+<h1 id="Tab拆字辅助码笔画"><a href="#Tab拆字辅助码笔画" class="headerlink" title="Tab拆字辅助码笔画"></a>Tab拆字辅助码笔画</h1><p>笔画筛选用于输入单字时，用笔顺来快速定位该字。使用方法是输入一个字或多个字后，按下tab键（tab键如果是翻页的话也不受影响），然后用h横、s 竖、p撇、n捺、z折依次输入第一个字的笔顺，一直找到该字为止。五个笔顺的规则同上面的笔画输入的规则。要退出笔画筛选模式，只需删掉已经输入的笔画辅助码即可。</p>
+<p>例如，快速定位【珍】字，输入了zhen后，按下【tab】，然后输入珍的前两笔【hh】，就可定位该字。 或者输入一个不怎么用的词：威赫（wei he），这个词不在第一页，这种情况下不要翻页。输入weihe，然后按tab键，会进入一个笔画模式，你可以用横撇竖点（hpsd）定位到字。这里，“威”字笔顺是横、撇、横、撇点、撇、横、斜钩、撇、点，所以你输入weihe之后，按一下tab，然后输入hp，看看是不是把第一个字是威的提到前 面了？如果还不够精确，可以继续输入下面的笔画，一般输入3笔左右就够了，然后按0只显示单字，选中威之后再选下一个。</p>
+<h1 id="Tab拆字辅助码拼音"><a href="#Tab拆字辅助码拼音" class="headerlink" title="Tab拆字辅助码拼音"></a>Tab拆字辅助码拼音</h1><p>拆字辅助码让你快速的定位到一个单字，使用方法如下：<br>想输入一个汉字【娴】，但是非常靠后，找不到，那么输入【xian】，然后按下【tab】键，在输入【娴】的两部分【女】【闲】的首字母nx，就可以看到只剩下【娴】字了。输入的顺序为xian+tab+nx。</p>
+<h1 id="难字按u键进行偏旁和笔画输入"><a href="#难字按u键进行偏旁和笔画输入" class="headerlink" title="难字按u键进行偏旁和笔画输入"></a>难字按u键进行偏旁和笔画输入</h1><p>U模式是专门为输入不会读的字所设计的。在输入u键后，然后依次输入一个字的笔顺，笔顺为：h横、s竖、p撇、n捺、z折，就可以得到该字，同时小键盘上的1、2、3、4、5也代表h、s、p、n、z。这里的笔顺规则与普通手机上的五笔画输入是完全一样的。其中点也可以用d来输入。由于双拼占用了u键，智能ABC的笔画规则不是五笔画，所以双拼和智能ABC下都没有u键模式。</p>
+<p>对于只认识偏旁部首，不清楚字音的字，像“黏”、“亓”等，我们可以这样输入：u+偏旁部首的读音，或者u+字的顺序笔画。<br>对于即清楚字形，又清楚字音的，只是候选位置比较靠后的字，比如“幂”、“祎”等，我们可以这样输入：　读音+tab键+偏旁的读音首字母，例如“幂”字的偏旁是“秃宝盖”，对应的字母就是“t”，“祎”字的偏旁部首对应的读音分别是“s”（示补旁）、“w”（韦）。<br>对于只知道读音，不清楚怎么写的字，我们可以这样输入：</p>
+<ul>
+<li>比如“耄”，我们知道它是“耄耋”中的一个字，可以输入maodie，然后按“[”键，上屏当前候选第一个字；</li>
+<li>比如“餮”，我们知道它是“饕餮”中的一个字，可以输入taotie，然后按“]”键，上屏当前候选第二个字；</li>
+</ul>
+<h1 id="生活小技巧（农历，诗句等）"><a href="#生活小技巧（农历，诗句等）" class="headerlink" title="生活小技巧（农历，诗句等）"></a>生活小技巧（农历，诗句等）</h1><ul>
+<li>键入rq选择1得到××××年××月××日格式时间，选择2得到××××-××-××格式时间，选择3得到例如二〇〇八年三月三十一日的时间</li>
+<li>键入llysc选择2得到：离离原上草，一岁一枯荣。野火烧不尽，春风吹又生。远芳侵古道，晴翠接荒城。又送王孙去，萋萋满别情。</li>
+</ul>
+<h1 id="比较常用的特殊符号，如↑之类"><a href="#比较常用的特殊符号，如↑之类" class="headerlink" title="比较常用的特殊符号，如↑之类"></a>比较常用的特殊符号，如↑之类</h1><ul>
+<li>键入pai选择3得到π</li>
+<li>键入aerfa选择2得到希腊字母α，依此类推</li>
+<li>键入wjx选择3、4分别得到☆和★</li>
+<li>键入sjt、xjt、zjt、yjt分别得到↑、↓、←和→</li>
+<li>键入sjx选择3、4分别得到△和▲</li>
+</ul>
+<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><ul>
+<li><a href="http://higrid.net/hi/docs/sougou-input-skills" target="_blank" rel="external">搜狗输入法使用实用技巧分享</a></li>
+<li><a href="https://www.zhihu.com/question/22029844" target="_blank" rel="external">拼音输入法有哪些鲜为人知的技巧？</a></li>
+</ul>
+<hr>
+<p>本文由 <strong><a href="http://michaelxiang.me/" target="_blank" rel="external">Michael翔</a></strong> 创作，采用 <strong><a href="http://creativecommons.org/licenses/by/3.0/cn/" target="_blank" rel="external">知识共享署名 3.0 中国大陆许可协议</a> </strong>进行许可。<br>可自由转载、引用，但需署名作者且注明文章出处。</p>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+
+
+    <!-- 使用 DISQUS_CLICK -->
+    <div id="disqus-comment">
+        <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+        .ripple-container {
+        }
+        .ripple-container .ripple{
+            background-color: rgba(255,255,255,0.4);
+            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0
+        }
+</style>
+	
+<!-- add data-ripple attribute -->
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论 「请确保 disq.us &amp; disquscdn.com &amp; disqus.com 可以正常加载」</button>
+</div>
+	
+<script>
+    // add effect to elements
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
+        // find all elements and attach effect
+        new RippleEffect(element); // element is instance of javascript element node
+    });
+</script>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://michael728.github.io/2015/12/28/tools-sougoupinyin/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://michael728.github.io/2015/12/28/tools-sougoupinyin/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//michaelxiang.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2015/12/24/algorithm-GA-basic/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2015/12/29/python-encoding-error/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/side_logo.jpg" alt="Michael_翔's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        http://michael728.github.io/
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: 649168982@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/" target="_self">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/12/">十二月 2015<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/11/">十一月 2015<span class="sidebar_archives-count">7</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">loyalty</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tools" title="工具">
+                
+                    <i class="material-icons sidebar-material-icons">build</i>
+                
+                工具
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="足迹">
+                
+                    <i class="material-icons sidebar-material-icons">camera</i>
+                
+                足迹
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友链">
+                
+                    <i class="material-icons sidebar-material-icons">group</i>
+                
+                友链
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">26</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/Michael_Xiang_" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-twitter.svg);">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/xiangzai728/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-weibo.svg);">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/michaelXoX/activities" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-zhihu.svg);">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;
+            <script type="text/javascript">
+                var fd = new Date();
+                document.write(fd.getFullYear());
+            </script>
+            &nbsp;Michael翔的小窝
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+    <script src="/js/lazyload.min.js"></script>
+    <script src="/js/js.min.js"></script>
+
+
+
+    <script src="/js/nprogress.js"></script>
+
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+    <!-- Leancloud -->
+    <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+    <script>
+        AV.initialize('7CDtrbb4U7nQzOdctmXXnMqt-gzGzoHsz', 'ISgUUtg79U9Eq0ActHmVRtmN');
+    </script>
+    <script>
+    function showTime(Counter) {
+        var query = new AV.Query(Counter);
+        $('.leancloud-views_num').each(function() {
+            var url = $(this).attr('id').trim();
+            query.equalTo('url', url);
+            query.find({
+                success: function(results) {
+                    if (results.length === 0) {
+                        var content = '0 ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                        return;
+                    }
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    }
+                },
+                error: function(object, error) {
+                    console.log('Error: ' + error.code + ' ' + error.message);
+                }
+            });
+        });
+    }
+
+    function addCount(Counter) {
+      var Counter = AV.Object.extend('Counter');
+      url = $('.leancloud-views_num').attr('id').trim();
+      title = $('.leancloud-views_num').attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+      query.equalTo('url', url);
+      query.find({
+          success: function(results) {
+            if (results.length > 0) {
+                var counter = results[0];
+                counter.fetchWhenSave(true);
+                counter.increment('time');
+                counter.save(null, {
+                    success: function(counter) {
+                        var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    },
+                    error: function(counter, error) {
+                        console.log('Failed to save Visitor num, with error message: ' + error.message);
+                    }
+                });
+            } else {
+              var newcounter = new Counter();
+              newcounter.set('title', title);
+              newcounter.set('url', url);
+              newcounter.set('time', 1);
+              newcounter.save(null, {
+                  success: function(newcounter) {
+                      console.log('newcounter.get(\'time\')='+newcounter.get('time'));
+                      var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+                      $(document.getElementById(url)).text(content);
+                  },
+                  error: function(newcounter, error) {
+                      console.log('Failed to create');
+                  }
+              });
+            }
+        },
+        error: function(error) {
+            console.log('Error:' + error.code + ' ' + error.message);
+        }
+      });
+    }
+    $(function() {
+        var Counter = AV.Object.extend('Counter');
+        if ($('.leancloud-views_num').length === 1) {
+            addCount(Counter);
+        } else if ($('.post-title-link').length > 1) {
+            showTime(Counter);
+        }
+    });
+</script>
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script>
+    <!-- Offer LazyLoad -->
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    <!-- Start Queue -->
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.3.4 -->
+
+    <!-- Title -->
+    
+    <title>
+        
+            Python多版本共存工具-Pyenv及Anaconda科学计算环境的配置 | 
+        
+        Michael翔的小窝
+    </title>
+
+    <!-- Meta & Info -->
+    <meta charset="utf-8">
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+        <link rel="dns-prefetch" href="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"/>
+    
+    
+    
+    
+    
+        <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+    
+
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Michael_翔">
+    <meta name="description" content="因上努力，果上随缘;爱折腾app、小众软件--Michael翔">
+    <meta name="keywords" content="null,python,anaconda">
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.ico">
+    <link rel="icon" sizes="192x192" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Michael翔的小窝">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://michael728.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Python多版本共存工具-Pyenv及Anaconda科学计算环境的配置 | Michael翔的小窝">
+    <meta property="og:description" content="因上努力，果上随缘;爱折腾app、小众软件--Michael翔">
+    <meta property="og:article:tag" content="python"> <meta property="og:article:tag" content="anaconda"> 
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS & jQuery -->
+    
+        <link rel="stylesheet" href="/css/material.min.css">
+        <link rel="stylesheet" href="/css/style.min.css">
+        <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(/img/bg_big2.jpg);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/queue.js"></script>
+    
+
+    <!-- UC Browser Compatible -->
+    <script>
+        var agent = navigator.userAgent.toLowerCase();
+        if(agent.indexOf('ucbrowser')>0) {
+            document.write("<link rel=\"stylesheet\" href=\"/css/uc.css\">");
+            alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+        }
+    </script>
+
+    
+
+    
+
+
+    <!-- Bing Background -->
+    
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Unix系统下pyenv安装与使用"><span class="post-toc-number">1.</span> <span class="post-toc-text">Unix系统下pyenv安装与使用:</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装pyenv"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">安装pyenv</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查看pyenv可安装的版本列表"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">查看pyenv可安装的版本列表</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装指定的python版本。"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">安装指定的python版本。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#卸载指定的python版本"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">卸载指定的python版本</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#python版本查看"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">python版本查看</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#python版本切换"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">python版本切换</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Anaconda科学计算包的使用："><span class="post-toc-number">2.</span> <span class="post-toc-text">Anaconda科学计算包的使用：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用conda-list查看anaconda安装自带的包："><span class="post-toc-number">2.1.</span> <span class="post-toc-text">使用conda list查看anaconda安装自带的包：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#给anaconda安装包"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">给anaconda安装包</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#如果需要指定包的版本。"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">如果需要指定包的版本。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#多个Python版本并存，尤其是2-x和3-x的并存。"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">多个Python版本并存，尤其是2.x和3.x的并存。</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#利用Pycharm的版本切换功能-推荐！很方便！"><span class="post-toc-number">3.</span> <span class="post-toc-text">利用Pycharm的版本切换功能~推荐！很方便！</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Windows系统切换"><span class="post-toc-number">4.</span> <span class="post-toc-text">Windows系统切换</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#参考："><span class="post-toc-number">5.</span> <span class="post-toc-text">参考：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#pyenv"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">pyenv</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Anaconda"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">Anaconda</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Virtualenv-待续"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">Virtualenv(待续)</span></a></li></ol></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://www.enthought.com/images/pandas_logo.png)">
+    
+            <p class="article-headline-p">
+                Python多版本共存工具-Pyenv及Anaconda科学计算环境的配置
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/side_logo.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Michael_翔</strong>
+        <span>11月 26, 2015</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC10lEQVR42u3ay47CMAwFUP7/p2e2I41arm0KJTlZIR5tTllYvs7jZ8v1wMbGxsbGxsbGxr4l+xGvv99/coODX/1//+iaR9/s7RkbGxt7B3bCOHqn+mjOf1u9QmHP2NjY2Buwk6J1/jovJwn7/Ff5nrGxsbGxk9tXr5Y3PPmn2NjY2NiFS8TfqX6aNCfY2NjY2JOAZvL6ivu+KUvDxsbGvj27N+j97OuPzbexsbGxb8aerCTcnxzcSUYFhd1iY2NjL8rO24Z59J8cxMmHvuUYCxsbG3tRdr6JfEiQh0HzQe/548bGxsbehz05OtkLgK6LtAoFDBsbG3shdm+LPWR16Fu9WjlLw8bGxl6InTcY1aYlGQ/MQ65mAcPGxsZegh2FMuPxQG+gm4dZ2NjY2DuzX1u6ro6ieo0KNjY29qrsvAzkh2+S2Kj3UKpFFBsbG3sHdl4M8kYlweQtRx42vWwqgo2Njf2F7DnjVcFQfqCz/MdgY2NjL8quHtCpBlJXNCf5AAMbGxt7H3Y1Zuo1CfnxzZxd+GOwsbGxl2b3RrnnpGqJmu/hyV2wsbGxF2VX24NJw5CUrl6oFFmwsbGxl2Y/glUdDyRXq44WkvKJjY2NvRt7Pgaoftp7v1fGsLGxsXdj927ZW9V26E1ZGjY2NvYXsqslJB/oToa4E3a5A8PGxsb+cnYS+vTGujmsWkqTVgobGxt7H3YSIeUD3eaxyAvKJDY2NvY+7HwEm4dN1dFCMlSuPlZsbGzsfdjV1Tt8mbQ6+SGhZoCFjY2NvSh7clxyEjPlj6DZeGBjY2Nvxu5FS9W2oVogey3H4ZWxsbGxN2BXi1Y1GOqFRL0hRKGAYWNjY2/J7hWnvCgWoqJ8OIGNjY2NfTrczQ9Z9kpaft9LChg2Njb2l7DnxSYvXUlQNWlgLs/SsLGxsW/GnpSNeThVDa3yPwYbGxt7B/Y+CxsbGxsbGxsbG/s26xfeTwGTeL/MEgAAAABJRU5ErkJggg==">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/anaconda/">anaconda</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/python/">python</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/2015/11/26/python-pyenv-anaconda/" class="leancloud-views_num" data-flag-title="Python多版本共存工具-Pyenv及Anaconda科学计算环境的配置">
+     &nbsp;浏览量
+</span>
+
+            </li>
+        </a>
+    
+
+    
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Python多版本共存工具-Pyenv及Anaconda科学计算环境的配置&url=http://michael728.github.io//2015/11/26/python-pyenv-anaconda/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Python多版本共存工具-Pyenv及Anaconda科学计算环境的配置&url=http://michael728.github.io//2015/11/26/python-pyenv-anaconda/index.html&via=Michael_翔" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Michael翔的小窝&title=Python多版本共存工具-Pyenv及Anaconda科学计算环境的配置&summary=因上努力，果上随缘;爱折腾app、小众软件--Michael翔&pics=http://michael728.github.io/img/favicon.ico&url=http://michael728.github.io/2015/11/26/python-pyenv-anaconda/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>为了安装Anaconda科学计算环境，控制好python版本，今天上午总算折腾好了。</p>
+<ul>
+<li>学习python有时希望在python2.7环境下，有时希望在python3.4环境下，该怎么办呢？</li>
+<li>Anconda的包也不知道适合在什么环境下工作？</li>
+</ul>
+<p>解决多python环境下，python版本切换的工具–pyenv应运而生。同时，另外一个工具virtualenv则提供了一种功能， 就是将一个目录建立为一个虚拟的python环境， 这样的话， 用户可以建立多个虚拟环境， 每个环境里面的python版本可以是不同的， 也可以是相同的， 而且环境之间相互独立。<br>下面简要介绍一下安装的过程：<br><a id="more"></a></p>
+<h1 id="Unix系统下pyenv安装与使用"><a href="#Unix系统下pyenv安装与使用" class="headerlink" title="Unix系统下pyenv安装与使用:"></a>Unix系统下pyenv安装与使用:</h1><h2 id="安装pyenv"><a href="#安装pyenv" class="headerlink" title="安装pyenv"></a>安装pyenv</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/yyuu/pyenv.git ~/.pyenv     <span class="comment">#使用 git 把 pyenv 下载到家目录</span></span></div><div class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="string">'export PYENV_ROOT="$HOME/.pyenv"'</span> &gt;&gt; ~/.bashrc     <span class="comment">#然后需要修改环境变量，使用 Bash Shell 的输入</span></span></div><div class="line"><span class="meta"></span></div><div class="line">$<span class="bash"> <span class="built_in">echo</span> <span class="string">'export PATH="$PYENV_ROOT/bin:$PATH"'</span> &gt;&gt; ~/.bashrc</span></div><div class="line"><span class="meta"></span></div><div class="line">$<span class="bash"> <span class="built_in">echo</span> <span class="string">'eval "$(pyenv init -)"'</span> &gt;&gt; ~/.bashrc     <span class="comment">#最后添加 pyenv init</span></span></div><div class="line"><span class="meta"></span></div><div class="line">$<span class="bash"> <span class="built_in">exec</span> <span class="variable">$SHELL</span> <span class="_">-l</span>     <span class="comment">#输入命令重启 Shell,然后就可以重启pyenv</span></span></div></pre></td></tr></table></figure>
+<h2 id="查看pyenv可安装的版本列表"><a href="#查看pyenv可安装的版本列表" class="headerlink" title="查看pyenv可安装的版本列表"></a>查看pyenv可安装的版本列表</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> pyenv install --list</span></div></pre></td></tr></table></figure>
+<p>該命令将列出pyenv可以安装的列表，单单列举几个咱们关心的python和anaconda把：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="number">2.7</span><span class="number">.8</span>   # Python <span class="number">2</span>最新版本 </div><div class="line"></div><div class="line"><span class="number">3.4</span><span class="number">.1</span>   # Python <span class="number">3</span>最新版本</div><div class="line"></div><div class="line">anaconda<span class="number">-2.4</span><span class="number">.0</span>  # 支持Python <span class="number">2.6</span>和<span class="number">2.7</span></div><div class="line"></div><div class="line">anaconda3<span class="number">-2.0</span><span class="number">.1</span> # 支持Python <span class="number">3.3</span>和<span class="number">3.4</span></div></pre></td></tr></table></figure>
+<h2 id="安装指定的python版本。"><a href="#安装指定的python版本。" class="headerlink" title="安装指定的python版本。"></a>安装指定的python版本。</h2><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pyenv install <span class="number">3.4</span><span class="number">.1</span></div></pre></td></tr></table></figure>
+<p>该命令会从github上下载python的源代码安装，但是，我这里主要是用来进行科学计算的环境安装，因此，最后选择安装<br>anaconda-2.4.0（python2.7环境） 和 anaconda3-2.4.0（python3.4环境）。可以选择都安装，之后可以使用pyenv进行版本的切换。<br>注：</p>
+<ul>
+<li>这里利用pyenv命令安装的python版本都安装在~.pyenv/versions文件夹下，当然，如果你从图形界面进入Ubuntu的用户主目录下可能看不见.pyenv文件夹，这时候，你可以使用<strong><code>ls -a</code></strong>看到隐藏的文件夹。</li>
+<li>使用<code>pip</code>安装的包完成之后，可能需要对数据库进行更新:<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv <span class="built_in">rehash</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="卸载指定的python版本"><a href="#卸载指定的python版本" class="headerlink" title="卸载指定的python版本"></a>卸载指定的python版本</h2><figure class="highlight llvm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv uninstall <span class="keyword">x</span>.<span class="keyword">x</span>.<span class="keyword">x</span></div></pre></td></tr></table></figure>
+<h2 id="python版本查看"><a href="#python版本查看" class="headerlink" title="python版本查看"></a>python版本查看</h2><p>查看当前已经安装了的python版本：<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">pyenv versions</span></div></pre></td></tr></table></figure></p>
+<p>输出结果如下：<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">*system (set by /home/michael/.pyenv/version)</div><div class="line"><span class="number">2.7</span><span class="number">.1</span></div><div class="line"><span class="number">3.4</span><span class="number">.1</span></div><div class="line">anaconda<span class="number">-2.4</span><span class="number">.0</span></div></pre></td></tr></table></figure></p>
+<p>system是指系统的python版本；*表示当前环境所处于的python版本</p>
+<h2 id="python版本切换"><a href="#python版本切换" class="headerlink" title="python版本切换"></a>python版本切换</h2><p>全局版本切换：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">pyenv</span> <span class="selector-tag">global</span> <span class="selector-tag">anaconda-2</span><span class="selector-class">.4</span><span class="selector-class">.0</span></div></pre></td></tr></table></figure></p>
+<p>全局切换为anaconda科学计算环境，因为，我现在也不做其他python开发，所以，无需再安装其他环境了。<br>查看现在的python版本：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">michael<span class="meta">@michael</span>-ThinkCentre-<span class="string">XXXX:</span>~$ pyenv versions</div><div class="line">system</div><div class="line"><span class="number">2.7</span><span class="number">.1</span></div><div class="line"><span class="number">3.4</span><span class="number">.1</span></div><div class="line">* anaconda<span class="number">-2.4</span><span class="number">.0</span> (set by <span class="regexp">/home/</span>michael<span class="regexp">/.pyenv/</span>version)</div></pre></td></tr></table></figure>
+<p>有全局版本切换，当然也会有局部环境的切换：<br>在test文件夹下希望切换到python3.4.1:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">pyenv</span> <span class="selector-tag">local</span> <span class="selector-tag">python3</span><span class="selector-class">.4</span><span class="selector-class">.1</span></div></pre></td></tr></table></figure></p>
+<h1 id="Anaconda科学计算包的使用："><a href="#Anaconda科学计算包的使用：" class="headerlink" title="Anaconda科学计算包的使用："></a>Anaconda科学计算包的使用：</h1><h2 id="使用conda-list查看anaconda安装自带的包："><a href="#使用conda-list查看anaconda安装自带的包：" class="headerlink" title="使用conda list查看anaconda安装自带的包："></a>使用<code>conda list</code>查看anaconda安装自带的包：</h2><figure class="highlight x86asm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">michael@michael-ThinkCentre-XXXX:~/<span class="keyword">test</span>$ conda list</div><div class="line"># packages <span class="keyword">in</span> environment <span class="meta">at</span> /home/michael/.pyenv/versions/anaconda-<span class="number">2.4</span><span class="meta">.0</span>:</div><div class="line">#</div><div class="line">abstract-rendering <span class="number">0.5</span><span class="meta">.1</span> np110py27_0 </div><div class="line">alabaster <span class="number">0.7</span><span class="meta">.6</span> py27_0 </div><div class="line">anaconda <span class="number">2.4</span><span class="meta">.0</span> np110py27_0 </div><div class="line">anaconda-client <span class="number">1.1</span><span class="meta">.0</span> py27_0 </div><div class="line">argcomplete <span class="number">1.0</span><span class="meta">.0</span> py27_1 </div><div class="line">astropy <span class="number">1.0</span><span class="meta">.5</span> np110py27_1 </div><div class="line">babel <span class="number">2.1</span><span class="meta">.1</span> py27_0 </div><div class="line">backports.ssl-match-hostname <span class="number">3.4</span><span class="meta">.0</span><span class="meta">.2</span> &lt;pip&gt;</div></pre></td></tr></table></figure>
+<p>注：</p>
+<ul>
+<li>使用<code>conda list</code>命令的环境时python版本切换到anaconda版本下，不然，这个命令无法来查询。</li>
+<li>看上面列表就能知道，anaconda的环境下，也是能使用系统<code>pip</code>命令安装的包的！</li>
+</ul>
+<h2 id="给anaconda安装包"><a href="#给anaconda安装包" class="headerlink" title="给anaconda安装包"></a>给anaconda安装包</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda <span class="keyword">install</span> ××××</div></pre></td></tr></table></figure>
+<h2 id="如果需要指定包的版本。"><a href="#如果需要指定包的版本。" class="headerlink" title="如果需要指定包的版本。"></a>如果需要指定包的版本。</h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[package-<span class="built_in">name</span>]=x.x   <span class="comment">#指定包的版本</span></div></pre></td></tr></table></figure>
+<h2 id="多个Python版本并存，尤其是2-x和3-x的并存。"><a href="#多个Python版本并存，尤其是2-x和3-x的并存。" class="headerlink" title="多个Python版本并存，尤其是2.x和3.x的并存。"></a>多个Python版本并存，尤其是2.x和3.x的并存。</h2><p>这个通过virtualenv可以做到。Anaconda也正是通过其实现的。下面用conda创建一个名叫python2的版本为python2.7的环境。</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda create -<span class="built_in">n</span> python2 python=<span class="number">2.7</span></div></pre></td></tr></table></figure>
+<p>这样就会在Anaconda安装目录下的envs目录下创建python2这个目录。<br>向其中安装扩展可以：</p>
+<p>直接用conda install并用-n指明安装到的环境，这里自然就是python2。<br>像virtualenv那样，先activate，然后在虚拟环境中安装。<br>注：</p>
+<ul>
+<li>关于<code>virtualenv</code>的使用，还需了解，可以参考python生态</li>
+<li>下面的操作，貌似会安装很多包，谨慎使用。</li>
+</ul>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda create -<span class="built_in">n</span> <span class="symbol">py34</span> python=<span class="number">3.4</span> anaconda</div></pre></td></tr></table></figure>
+<h1 id="利用Pycharm的版本切换功能-推荐！很方便！"><a href="#利用Pycharm的版本切换功能-推荐！很方便！" class="headerlink" title="利用Pycharm的版本切换功能~推荐！很方便！"></a>利用Pycharm的版本切换功能~推荐！很方便！</h1><p>可以选择安装anaconda 不同的版本，然后按照下面操作,切换版本。Windows/Linux下都有[Pycharm][1]。</p>
+<blockquote>
+<p>打开pycharm，打开preference –&gt; project –&gt; project interpreter–&gt;</p>
+</blockquote>
+<h1 id="Windows系统切换"><a href="#Windows系统切换" class="headerlink" title="Windows系统切换"></a>Windows系统切换</h1><p>首先当然是安装你需要的两个不同版本的python，我安装的是2.7和3.4的，两个版本安装顺序无所谓，但是后面安装的会变成默认的（因为我是后安装的python 3.4，它就变成了默认的python）。</p>
+<p>然后去python27 文件夹下面把python.exe改名python2.exe，然后就可以在命令行下通过python或者py来调用3.x，python2来调用2.x。</p>
+<p>另外pip的话直接使用 pip2 或者 pip3 就可以了。</p>
+<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><h2 id="pyenv"><a href="#pyenv" class="headerlink" title="pyenv"></a>pyenv</h2><ol>
+<li><a href="http://seisman.info/python-pyenv.html" target="_blank" rel="external">Python多版本共存之pyenv</a></li>
+<li><a href="https://github.com/yyuu/pyenv#installation" target="_blank" rel="external">yyuu/pyenv-github</a></li>
+<li><a href="http://www.cnblogs.com/npumenglei/p/3719412.html" target="_blank" rel="external">用pyenv 和 virtualenv 搭建单机多版本python 虚拟开发环境</a> </li>
+<li><a href="https://github.com/lixm/pybooklet/blob/master/install.md" target="_blank" rel="external">lixm/pybooklet-github</a></li>
+<li><a href="http://huangziwei.com/tech/setting-up-scientific-python-environment-in-os-x-10-10-using-miniconda/" target="_blank" rel="external">使用 pyenv 和 Miniconda 管理 Python 科学计算环境</a></li>
+<li><a href="http://zhangnew.com/2015-06-09-python-2-3-exist.html" target="_blank" rel="external">Python 2.X 3.X 多版本共存</a></li>
+<li><a href="http://codingpy.com/article/python-ecosystem-introduction/" target="_blank" rel="external">一篇文章入门Python生态系统</a></li>
+</ol>
+<h2 id="Anaconda"><a href="#Anaconda" class="headerlink" title="Anaconda"></a>Anaconda</h2><ol>
+<li><a href="https://www.continuum.io/downloads" target="_blank" rel="external">DOWNLOAD ANACONDA NOW</a></li>
+<li><a href="http://www.cnblogs.com/CodeCabin/p/3961118.html" target="_blank" rel="external">P]ython科学计算利器——Anaconda</a> </li>
+<li><a href="http://www.cnblogs.com/super-d2/p/4725818.html" target="_blank" rel="external">Python科学计算发行版—Anaconda</a> </li>
+</ol>
+<h2 id="Virtualenv-待续"><a href="#Virtualenv-待续" class="headerlink" title="Virtualenv(待续)"></a>Virtualenv(待续)</h2><ol>
+<li><a href="https://virtualenv.pypa.io/en/latest/installation.html" target="_blank" rel="external">https://virtualenv.pypa.io/en/latest/installation.html</a></li>
+</ol>
+<hr>
+<p>本文由 <strong><a href="http://michaelxiang.me/" target="_blank" rel="external">Michael翔</a></strong> 创作，采用 <strong><a href="http://creativecommons.org/licenses/by/3.0/cn/" target="_blank" rel="external">知识共享署名 3.0 中国大陆许可协议</a> </strong>进行许可。<br>可自由转载、引用，但需署名作者且注明文章出处。</p>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+
+
+    <!-- 使用 DISQUS_CLICK -->
+    <div id="disqus-comment">
+        <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+        .ripple-container {
+        }
+        .ripple-container .ripple{
+            background-color: rgba(255,255,255,0.4);
+            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0
+        }
+</style>
+	
+<!-- add data-ripple attribute -->
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论 「请确保 disq.us &amp; disquscdn.com &amp; disqus.com 可以正常加载」</button>
+</div>
+	
+<script>
+    // add effect to elements
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
+        // find all elements and attach effect
+        new RippleEffect(element); // element is instance of javascript element node
+    });
+</script>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://michael728.github.io/2015/11/26/python-pyenv-anaconda/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://michael728.github.io/2015/11/26/python-pyenv-anaconda/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//michaelxiang.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2015/11/26/chrome-extentions/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2015/11/28/tools-list-win/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/side_logo.jpg" alt="Michael_翔's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        http://michael728.github.io/
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: 649168982@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/" target="_self">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/12/">十二月 2015<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/11/">十一月 2015<span class="sidebar_archives-count">7</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">loyalty</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tools" title="工具">
+                
+                    <i class="material-icons sidebar-material-icons">build</i>
+                
+                工具
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="足迹">
+                
+                    <i class="material-icons sidebar-material-icons">camera</i>
+                
+                足迹
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友链">
+                
+                    <i class="material-icons sidebar-material-icons">group</i>
+                
+                友链
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">26</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/Michael_Xiang_" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-twitter.svg);">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/xiangzai728/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-weibo.svg);">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/michaelXoX/activities" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-zhihu.svg);">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;
+            <script type="text/javascript">
+                var fd = new Date();
+                document.write(fd.getFullYear());
+            </script>
+            &nbsp;Michael翔的小窝
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+    <script src="/js/lazyload.min.js"></script>
+    <script src="/js/js.min.js"></script>
+
+
+
+    <script src="/js/nprogress.js"></script>
+
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+    <!-- Leancloud -->
+    <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+    <script>
+        AV.initialize('7CDtrbb4U7nQzOdctmXXnMqt-gzGzoHsz', 'ISgUUtg79U9Eq0ActHmVRtmN');
+    </script>
+    <script>
+    function showTime(Counter) {
+        var query = new AV.Query(Counter);
+        $('.leancloud-views_num').each(function() {
+            var url = $(this).attr('id').trim();
+            query.equalTo('url', url);
+            query.find({
+                success: function(results) {
+                    if (results.length === 0) {
+                        var content = '0 ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                        return;
+                    }
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    }
+                },
+                error: function(object, error) {
+                    console.log('Error: ' + error.code + ' ' + error.message);
+                }
+            });
+        });
+    }
+
+    function addCount(Counter) {
+      var Counter = AV.Object.extend('Counter');
+      url = $('.leancloud-views_num').attr('id').trim();
+      title = $('.leancloud-views_num').attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+      query.equalTo('url', url);
+      query.find({
+          success: function(results) {
+            if (results.length > 0) {
+                var counter = results[0];
+                counter.fetchWhenSave(true);
+                counter.increment('time');
+                counter.save(null, {
+                    success: function(counter) {
+                        var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    },
+                    error: function(counter, error) {
+                        console.log('Failed to save Visitor num, with error message: ' + error.message);
+                    }
+                });
+            } else {
+              var newcounter = new Counter();
+              newcounter.set('title', title);
+              newcounter.set('url', url);
+              newcounter.set('time', 1);
+              newcounter.save(null, {
+                  success: function(newcounter) {
+                      console.log('newcounter.get(\'time\')='+newcounter.get('time'));
+                      var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+                      $(document.getElementById(url)).text(content);
+                  },
+                  error: function(newcounter, error) {
+                      console.log('Failed to create');
+                  }
+              });
+            }
+        },
+        error: function(error) {
+            console.log('Error:' + error.code + ' ' + error.message);
+        }
+      });
+    }
+    $(function() {
+        var Counter = AV.Object.extend('Counter');
+        if ($('.leancloud-views_num').length === 1) {
+            addCount(Counter);
+        } else if ($('.post-title-link').length > 1) {
+            showTime(Counter);
+        }
+    });
+</script>
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script>
+    <!-- Offer LazyLoad -->
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    <!-- Start Queue -->
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

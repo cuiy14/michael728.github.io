@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.3.4 -->
+
+    <!-- Title -->
+    
+    <title>
+        
+            Python入门资料大全(更新ing) | 
+        
+        Michael翔的小窝
+    </title>
+
+    <!-- Meta & Info -->
+    <meta charset="utf-8">
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+        <link rel="dns-prefetch" href="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"/>
+    
+    
+    
+    
+    
+        <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+    
+
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Michael_翔">
+    <meta name="description" content="因上努力，果上随缘;爱折腾app、小众软件--Michael翔">
+    <meta name="keywords" content="null,list,整理,python">
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.ico">
+    <link rel="icon" sizes="192x192" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Michael翔的小窝">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://michael728.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Python入门资料大全(更新ing) | Michael翔的小窝">
+    <meta property="og:description" content="因上努力，果上随缘;爱折腾app、小众软件--Michael翔">
+    <meta property="og:article:tag" content="list"> <meta property="og:article:tag" content="整理"> <meta property="og:article:tag" content="python"> 
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS & jQuery -->
+    
+        <link rel="stylesheet" href="/css/material.min.css">
+        <link rel="stylesheet" href="/css/style.min.css">
+        <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(/img/bg_big2.jpg);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/queue.js"></script>
+    
+
+    <!-- UC Browser Compatible -->
+    <script>
+        var agent = navigator.userAgent.toLowerCase();
+        if(agent.indexOf('ucbrowser')>0) {
+            document.write("<link rel=\"stylesheet\" href=\"/css/uc.css\">");
+            alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+        }
+    </script>
+
+    
+
+    
+
+
+    <!-- Bing Background -->
+    
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、说明"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、说明</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#萧大的编程入门指南"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">萧大的编程入门指南</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Python-编码风格指南中译版（Google-SOC）"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Python 编码风格指南中译版（Google SOC）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PythonTab中文网"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">PythonTab中文网</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、Python社区"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、Python社区</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Python-Tip社区"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Python Tip社区</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#啄木鸟社区"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">啄木鸟社区</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#编程指南社区Co"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">编程指南社区Co</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、入门阶段"><span class="post-toc-number">3.</span> <span class="post-toc-text">三、入门阶段</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简明教程"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">简明教程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#笨办法学python"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">笨办法学python</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Python-Codecademy"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">Python|Codecademy</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实验楼python研发工程师"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">实验楼python研发工程师</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#老齐的零基础学Python（第二版）"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">老齐的零基础学Python（第二版）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#廖雪峰python2-7教程"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">廖雪峰python2.7教程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vamei的的python快速教程"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">Vamei的的python快速教程</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四、充实阶段"><span class="post-toc-number">4.</span> <span class="post-toc-text">四、充实阶段</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#《Python基础教程》"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">《Python基础教程》</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#MIT计算机科学及编程导论"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">MIT计算机科学及编程导论</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Harvard-计算机科学cs50"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">Harvard:计算机科学cs50</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Crossin教室"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">Crossin教室</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#五、升华阶段"><span class="post-toc-number">5.</span> <span class="post-toc-text">五、升华阶段</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-1-数据分析"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">5.1 数据分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#利用Python进行数据分析"><span class="post-toc-number">5.1.1.</span> <span class="post-toc-text">利用Python进行数据分析</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#scientific-python-lectures"><span class="post-toc-number">5.1.2.</span> <span class="post-toc-text">scientific-python-lectures</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-2-web开发"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">5.2 web开发</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自强学堂Django基础教程"><span class="post-toc-number">5.2.1.</span> <span class="post-toc-text">自强学堂Django基础教程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Django搭建简易博客教程"><span class="post-toc-number">5.2.2.</span> <span class="post-toc-text">Django搭建简易博客教程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#欢迎进入Flask大型教程项目"><span class="post-toc-number">5.2.3.</span> <span class="post-toc-text">欢迎进入Flask大型教程项目</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Flask指南"><span class="post-toc-number">5.2.4.</span> <span class="post-toc-text">Flask指南</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用Python和Pygame写游戏-从入门到精通"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">用Python和Pygame写游戏-从入门到精通</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#六、-计算机素养"><span class="post-toc-number">6.</span> <span class="post-toc-text">六、 计算机素养</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#《深入理解计算机系统》"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">《深入理解计算机系统》</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#七、-Python面试题"><span class="post-toc-number">7.</span> <span class="post-toc-text">七、 Python面试题</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://ww1.sinaimg.cn/large/6d9475f6ly1ff0dtsfd0gj20u10b4gow.jpg)">
+    
+            <p class="article-headline-p">
+                Python入门资料大全(更新ing)
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/side_logo.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Michael_翔</strong>
+        <span>12月 02, 2015</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC1UlEQVR42u3aQXLcMAwEQP//08k1h0SeAdaxl2ydtsorCU1XGeaAH7+uvD6wsbGxsbGxsbGxfyT7I77+/P7zvcmT8xr+AihrxsbGxr6B/cmf/kf28135kuXvamvGxsbGvoe9KSV//fO7nqua1YyNjY2N/VxWy2s3NvmiYGNjY2O3xeXPSZ6Q/BQbGxsbex8q5UUkZeWLta8ZGxsb+2z2ZtD7XZ+/eb6NjY2N/WPY+ytpObNNxebJf3kXNjY29qHs9ihkGxh9XTiVB0zY2NjYN7Dz9vC8TJu2lwOe3/7PKAobGxv7aHb+efXioP20S5PXgI2NjX0qOxnHbmKmvMnNFiuPt7CxsbFvYCdhTVtKO0jIG2FbDzY2NvY97LagPBjKC92ESsV8GxsbG/sIdj6sbYtoj07mw+Z22ICNjY19D3vP27SidqjcvgUbGxv7BvYsVMpbS944Z9uPT+7CxsbGvoC9j4FmUVRyV7L0w1AJGxsb+83Zs+I2R3CSbUYeGOULgY2NjX0qewPeH9PMl6D9BWBjY2Pfw/6KsvLhcbKNya96K4KNjY19BLstNG9dM0y+4WmbKDY2NvY97FmElEf8yULMRtH1DgwbGxv7CPZmE7IfJMxGy7MjmNjY2Nhns9tm0A4YNkOF2VJGWRo2Njb2Eew9MtlItKPi2TamHg9gY2NjH8TOY506yom3CjNwfhc2Njb22ex8W9KOctsnzw5iRguKjY2NfQG7fVACnkVIeThVHADCxsbGPpTdXsVgtYzvZ1FX8U1sbGzsQ9ltM9gfap81oTpCmmVp2NjY2G/LbptWHjnNljLZWtSNDRsbG/sCdt48NuFREvTvWyw2NjY29uxf/1eNjdvo/782MGxsbOw3Z7+qtWyO5nzDVgQbGxv7TdizsWsS+nzFyOFlJ5WwsbGxj2DvB65JrP+qQzzRWBcbGxv7GvY9FzY2NjY2NjY2NvaPuX4DQe5JS0yf2icAAAAASUVORK5CYII=">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/list/">list</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/python/">python</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/整理/">整理</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/2015/12/02/python-files-list/" class="leancloud-views_num" data-flag-title="Python入门资料大全(更新ing)">
+     &nbsp;浏览量
+</span>
+
+            </li>
+        </a>
+    
+
+    
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Python入门资料大全(更新ing)&url=http://michael728.github.io//2015/12/02/python-files-list/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Python入门资料大全(更新ing)&url=http://michael728.github.io//2015/12/02/python-files-list/index.html&via=Michael_翔" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Michael翔的小窝&title=Python入门资料大全(更新ing)&summary=因上努力，果上随缘;爱折腾app、小众软件--Michael翔&pics=http://michael728.github.io/img/favicon.ico&url=http://michael728.github.io/2015/12/02/python-files-list/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p><img src="http://leanote.com/api/file/getImage?fileId=56417bb0ab6441391f0013ad" alt="图片标题"></p>
+<h1 id="一、说明"><a href="#一、说明" class="headerlink" title="一、说明"></a>一、说明</h1><p>面对网络上纷繁复杂的资料，自己真是眼花缭乱，学的毫无章法，东一榔头西一棒子，这样不仅知识不能成为体系，自己的学习进度也不容易掌握，收效甚微。突然有个想法，就是把自己这几天收藏的资料整理出文章出来，方便自己有章可依……</p>
+<p>PS:附上一些python相关的好文：</p>
+<a id="more"></a>
+<h2 id="萧大的编程入门指南"><a href="#萧大的编程入门指南" class="headerlink" title="萧大的编程入门指南"></a><a href="http://zhuanlan.zhihu.com/xiao-jing-mo/19959253" target="_blank" rel="external">萧大的编程入门指南</a></h2><p>知乎获赞无数的编程指南，介绍的不光是一门语言的入门，也是关于编程的入门，谈到了作为一名程序员，应该掌握的一些计算机知识。</p>
+<h2 id="Python-编码风格指南中译版（Google-SOC）"><a href="#Python-编码风格指南中译版（Google-SOC）" class="headerlink" title="Python 编码风格指南中译版（Google SOC）"></a><a href="http://www.elias.cn/Python/PythonStyleGuide" target="_blank" rel="external">Python 编码风格指南中译版（Google SOC）</a></h2><h2 id="PythonTab中文网"><a href="#PythonTab中文网" class="headerlink" title="PythonTab中文网"></a><a href="http://www.pythontab.com/" target="_blank" rel="external">PythonTab中文网</a></h2><h1 id="二、Python社区"><a href="#二、Python社区" class="headerlink" title="二、Python社区"></a>二、Python社区</h1><h2 id="Python-Tip社区"><a href="#Python-Tip社区" class="headerlink" title="Python Tip社区"></a><a href="http://www.pythontip.com/coding/code_oj" target="_blank" rel="external">Python Tip社区</a></h2><p>   强烈推荐Python Tip,有刷题挑战赛，同时，也有很多在线教程！练手实操必备！</p>
+<h2 id="啄木鸟社区"><a href="#啄木鸟社区" class="headerlink" title="啄木鸟社区"></a><a href="http://wiki.woodpecker.org.cn/moin/%E9%A6%96%E9%A1%B5" target="_blank" rel="external">啄木鸟社区</a></h2><h2 id="编程指南社区Co"><a href="#编程指南社区Co" class="headerlink" title="编程指南社区Co"></a><a href="http://cocode.cc/" target="_blank" rel="external">编程指南社区Co</a></h2><h1 id="三、入门阶段"><a href="#三、入门阶段" class="headerlink" title="三、入门阶段"></a>三、入门阶段</h1><p>介绍一些入门的资料，对于有编程经验的同学来讲，入门资料学习并不是很费力。</p>
+<h2 id="简明教程"><a href="#简明教程" class="headerlink" title="简明教程"></a><a href="http://itlab.idcquan.com/linux/manual/python_chinese/index.html" target="_blank" rel="external">简明教程</a></h2><p> 入门教程里，简明教程算是细节介绍相对详细的了，知识面也覆盖的挺全，入门资料的好选择。</p>
+<h2 id="笨办法学python"><a href="#笨办法学python" class="headerlink" title="笨办法学python"></a><a href="http://www.kancloud.cn/kancloud/learn-python-hard-way/49920" target="_blank" rel="external">笨办法学python</a></h2><p>坚持看完了，尽管最后几章没去实现（主要是和我现在的需求不一致，不想花精力在那个上面）。有所收获吧，但是，确实是入门的，知识不全面，入门够用，风格特别，采用问答形式，学习过程挺有趣。</p>
+<h2 id="Python-Codecademy"><a href="#Python-Codecademy" class="headerlink" title="Python|Codecademy"></a><a href="https://www.codecademy.com/zh/learn/python" target="_blank" rel="external">Python|Codecademy</a></h2><p>在线挑战，还没用过，貌似现在对英文资料心里还有种抵触，必须克服！！！</p>
+<h2 id="实验楼python研发工程师"><a href="#实验楼python研发工程师" class="headerlink" title="实验楼python研发工程师"></a><a href="https://www.shiyanlou.com/jobs/python" target="_blank" rel="external">实验楼python研发工程师</a></h2><p>包含了Linux/Vim/Git/SQL/Python/Django/Flask等学习课程。</p>
+<h2 id="老齐的零基础学Python（第二版）"><a href="#老齐的零基础学Python（第二版）" class="headerlink" title="老齐的零基础学Python（第二版）"></a><a href="http://wiki.jikexueyuan.com/project/start-learning-python/" target="_blank" rel="external">老齐的零基础学Python（第二版）</a></h2><p>github版本，教程内容覆盖很全，也有实战项目介绍。</p>
+<h2 id="廖雪峰python2-7教程"><a href="#廖雪峰python2-7教程" class="headerlink" title="廖雪峰python2.7教程"></a><a href="001374738125095c955c1e6d8bb493182103fac9270762a000">廖雪峰python2.7教程</a></h2><p>现在已经有python3的教程了。</p>
+<h2 id="Vamei的的python快速教程"><a href="#Vamei的的python快速教程" class="headerlink" title="Vamei的的python快速教程"></a><a href="http://www.cnblogs.com/vamei/archive/2012/09/13/2682778.html" target="_blank" rel="external">Vamei的的python快速教程</a></h2><p>话说，我还加入了博主的粉丝群，后来加入了微信群，逗比一枚啊，现在好像去新加坡深造去了！博客文章还是很详细的~</p>
+<p>总结到这儿我已经有乱花渐入迷人眼的感觉了！光是入门就这么多资料，看的过来吗？看完得到猴年马月啊！所以必须痛下决心，选择自己觉得好的就OK！青菜萝卜，各有所爱，别人觉得好的，可能在你这儿就是看着不舒服！好吧，自己就选择简明，笨办法，还有，codecademy!ok,暂时就这样了！</p>
+<h1 id="四、充实阶段"><a href="#四、充实阶段" class="headerlink" title="四、充实阶段"></a>四、充实阶段</h1><p>入门之后，对于这个语言的细节需要更进一步的了解，那么提升阶段必不可少。同时，对于计算机基础不好的同学，了解计算机及编程相关背景知识也很关键。</p>
+<h2 id="《Python基础教程》"><a href="#《Python基础教程》" class="headerlink" title="《Python基础教程》"></a><a href="http://item.jd.com/11461683.html?jd_pop=bd44a477-d2b4-4158-bd1e-ff5dc5a3ff3e&amp;abt=3" target="_blank" rel="external">《Python基础教程》</a></h2><p>根据自己学习javascript的经验，一本好的教材真是获益匪浅，它能让你明白很多底层的东西。比如红宝书《js高级程序设计》中关于闭包、原型链的讲解就非常详细！好吧，扯远了，因此，学习python也是一样，光是靠博客，在线文章是不能深入了解它的，选择一门经典教材是你深入了解一门语言的必经之路！当然，也有推荐<a href="http://union.dangdang.com/transfer.php?sys_id=1&amp;ad_type=10&amp;from=P-307250&amp;backurl=http%3A%2F%2Fproduct.dangdang.com%2Fproduct.aspx%3Fproduct_id%3D20255354" target="_blank" rel="external">《Python核心编程（第二版）》</a>的，但是自己只买了<a href="http://item.jd.com/11461683.html?jd_pop=bd44a477-d2b4-4158-bd1e-ff5dc5a3ff3e&amp;abt=3" target="_blank" rel="external">《Python基础教程》</a>因此，不做评价了，选中一本经典就可以了！何况自己离吃透它，还有很远的距离的！</p>
+<h2 id="MIT计算机科学及编程导论"><a href="#MIT计算机科学及编程导论" class="headerlink" title="MIT计算机科学及编程导论"></a><a href="http://v.163.com/special/opencourse/bianchengdaolun.html" target="_blank" rel="external">MIT计算机科学及编程导论</a></h2><h2 id="Harvard-计算机科学cs50"><a href="#Harvard-计算机科学cs50" class="headerlink" title="Harvard:计算机科学cs50"></a><a href="http://v.163.com/special/opencourse/cs50.html" target="_blank" rel="external">Harvard:计算机科学cs50</a></h2><p>2和3属于计算机入门课，之所以放到这儿，是因为介绍了计算机领域中相关的知识点，了解数据结构相关知识。其中，MIT的导论课老师的知识点是基于Python的，在学习时也能巩固Python。编程入门指南中强烈推荐的的两门公开课。（PS：网易真是良心，这两门课都有中英字幕的视频！）</p>
+<h2 id="Crossin教室"><a href="#Crossin教室" class="headerlink" title="Crossin教室"></a><a href="http://115.29.188.128/static/wechat/index.html" target="_blank" rel="external">Crossin教室</a></h2><p>除了python教程之外，还有小程序，练手很好！在第一阶段入门之后，来这里做应用小程序，会找到成就感！除此之外，还有git等其他教程。是个不错的入门练手的地方。</p>
+<h1 id="五、升华阶段"><a href="#五、升华阶段" class="headerlink" title="五、升华阶段"></a>五、升华阶段</h1><p>有了扎实的基础，那么方向的选择显得尤为重要了。是数据分析，是web开发，还是游戏开发。下面暂时分为这三个方面整理一下：</p>
+<h2 id="5-1-数据分析"><a href="#5-1-数据分析" class="headerlink" title="5.1 数据分析"></a>5.1 数据分析</h2><h3 id="利用Python进行数据分析"><a href="#利用Python进行数据分析" class="headerlink" title="利用Python进行数据分析"></a><a href="http://book.douban.com/subject/25779298/" target="_blank" rel="external">利用Python进行数据分析</a></h3><p>这本书是一本大而全的利用Python数据分析的书，数据分析入门肯定够够的，写的也很详细。书的作者就是开发了用于数据分析的著名开源Python库——pandas的作者！</p>
+<h3 id="scientific-python-lectures"><a href="#scientific-python-lectures" class="headerlink" title="scientific-python-lectures"></a><a href="http://nbviewer.ipython.org/github/jrjohansson/scientific-python-lectures/tree/master" target="_blank" rel="external">scientific-python-lectures</a></h3><p>英文资料，对Python数据分析中要用到的一些库，pandas,numpy,matplotlib等等做了简要介绍。Ipython Notebook形式的资料，示例代码都很全。</p>
+<ol>
+<li><a href="http://reverland.org/python/2012/09/07/matplotlib-tutorial/#scatter-plots" target="_blank" rel="external">Matplotlib Tutorial(译)</a><br>Python制图的入门资料，强烈推荐！在线版的资料，作者排版也很舒服，示例代码也有，推荐！</li>
+</ol>
+<h2 id="5-2-web开发"><a href="#5-2-web开发" class="headerlink" title="5.2 web开发"></a>5.2 web开发</h2><h3 id="自强学堂Django基础教程"><a href="#自强学堂Django基础教程" class="headerlink" title="自强学堂Django基础教程"></a><a href="http://www.ziqiangxuetang.com/django/django-tutorial.html" target="_blank" rel="external">自强学堂Django基础教程</a></h3><p>很详细的一个Django教程，作者很详细的介绍了每一步。有问题，作者回复也很详细，推荐！同时，自强学堂上也有很多其他教程，是个不错的网站，收藏！</p>
+<h3 id="Django搭建简易博客教程"><a href="#Django搭建简易博客教程" class="headerlink" title="Django搭建简易博客教程"></a><a href="https://andrew-liu.gitbooks.io/django-blog/content/" target="_blank" rel="external">Django搭建简易博客教程</a></h3><p>建议和1结合看，1的介绍相对更详细一点。</p>
+<h3 id="欢迎进入Flask大型教程项目"><a href="#欢迎进入Flask大型教程项目" class="headerlink" title="欢迎进入Flask大型教程项目"></a><a href="http://www.pythondoc.com/flask-mega-tutorial/" target="_blank" rel="external">欢迎进入Flask大型教程项目</a></h3><h3 id="Flask指南"><a href="#Flask指南" class="headerlink" title="Flask指南"></a><a href="http://www.pythondoc.com/flask/index.html" target="_blank" rel="external">Flask指南</a></h3><p>#5.3 游戏开发</p>
+<h2 id="用Python和Pygame写游戏-从入门到精通"><a href="#用Python和Pygame写游戏-从入门到精通" class="headerlink" title="用Python和Pygame写游戏-从入门到精通"></a><a href="http://eyehere.net/2011/python-pygame-novice-professional-index/" target="_blank" rel="external">用Python和Pygame写游戏-从入门到精通</a></h2><h1 id="六、-计算机素养"><a href="#六、-计算机素养" class="headerlink" title="六、 计算机素养"></a>六、 计算机素养</h1><h2 id="《深入理解计算机系统》"><a href="#《深入理解计算机系统》" class="headerlink" title="《深入理解计算机系统》"></a><a href="http://book.douban.com/subject/5333562/" target="_blank" rel="external">《深入理解计算机系统》</a></h2><h1 id="七、-Python面试题"><a href="#七、-Python面试题" class="headerlink" title="七、 Python面试题"></a>七、 Python面试题</h1><ol>
+<li><a href="http://www.dongwm.com/" target="_blank" rel="external">聊聊Python面试那些事儿</a></li>
+</ol>
+<p>暂时总结到这儿了，和大家分享一下，希望有帮助！</p>
+<script src="//w.segmentfault.com/card/1030000002497141.js?w=0&3rd=1&bg=0&bd=DDDDDD&cl=333333&btn=009a62&noBtn=0"></script>
+
+<hr>
+<p>本文由 <strong><a href="http://michaelxiang.me/" target="_blank" rel="external">Michael翔</a></strong> 创作，采用 <strong><a href="http://creativecommons.org/licenses/by/3.0/cn/" target="_blank" rel="external">知识共享署名 3.0 中国大陆许可协议</a> </strong>进行许可。<br>可自由转载、引用，但需署名作者且注明文章出处。</p>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+
+
+    <!-- 使用 DISQUS_CLICK -->
+    <div id="disqus-comment">
+        <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+        .ripple-container {
+        }
+        .ripple-container .ripple{
+            background-color: rgba(255,255,255,0.4);
+            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0
+        }
+</style>
+	
+<!-- add data-ripple attribute -->
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论 「请确保 disq.us &amp; disquscdn.com &amp; disqus.com 可以正常加载」</button>
+</div>
+	
+<script>
+    // add effect to elements
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
+        // find all elements and attach effect
+        new RippleEffect(element); // element is instance of javascript element node
+    });
+</script>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://michael728.github.io/2015/12/02/python-files-list/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://michael728.github.io/2015/12/02/python-files-list/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//michaelxiang.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2015/12/01/tools-sublime-extensions/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2015/12/07/git-tutor/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/side_logo.jpg" alt="Michael_翔's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        http://michael728.github.io/
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: 649168982@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/" target="_self">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/12/">十二月 2015<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/11/">十一月 2015<span class="sidebar_archives-count">7</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">loyalty</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tools" title="工具">
+                
+                    <i class="material-icons sidebar-material-icons">build</i>
+                
+                工具
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="足迹">
+                
+                    <i class="material-icons sidebar-material-icons">camera</i>
+                
+                足迹
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友链">
+                
+                    <i class="material-icons sidebar-material-icons">group</i>
+                
+                友链
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">26</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/Michael_Xiang_" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-twitter.svg);">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/xiangzai728/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-weibo.svg);">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/michaelXoX/activities" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-zhihu.svg);">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;
+            <script type="text/javascript">
+                var fd = new Date();
+                document.write(fd.getFullYear());
+            </script>
+            &nbsp;Michael翔的小窝
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+    <script src="/js/lazyload.min.js"></script>
+    <script src="/js/js.min.js"></script>
+
+
+
+    <script src="/js/nprogress.js"></script>
+
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+    <!-- Leancloud -->
+    <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+    <script>
+        AV.initialize('7CDtrbb4U7nQzOdctmXXnMqt-gzGzoHsz', 'ISgUUtg79U9Eq0ActHmVRtmN');
+    </script>
+    <script>
+    function showTime(Counter) {
+        var query = new AV.Query(Counter);
+        $('.leancloud-views_num').each(function() {
+            var url = $(this).attr('id').trim();
+            query.equalTo('url', url);
+            query.find({
+                success: function(results) {
+                    if (results.length === 0) {
+                        var content = '0 ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                        return;
+                    }
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    }
+                },
+                error: function(object, error) {
+                    console.log('Error: ' + error.code + ' ' + error.message);
+                }
+            });
+        });
+    }
+
+    function addCount(Counter) {
+      var Counter = AV.Object.extend('Counter');
+      url = $('.leancloud-views_num').attr('id').trim();
+      title = $('.leancloud-views_num').attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+      query.equalTo('url', url);
+      query.find({
+          success: function(results) {
+            if (results.length > 0) {
+                var counter = results[0];
+                counter.fetchWhenSave(true);
+                counter.increment('time');
+                counter.save(null, {
+                    success: function(counter) {
+                        var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    },
+                    error: function(counter, error) {
+                        console.log('Failed to save Visitor num, with error message: ' + error.message);
+                    }
+                });
+            } else {
+              var newcounter = new Counter();
+              newcounter.set('title', title);
+              newcounter.set('url', url);
+              newcounter.set('time', 1);
+              newcounter.save(null, {
+                  success: function(newcounter) {
+                      console.log('newcounter.get(\'time\')='+newcounter.get('time'));
+                      var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+                      $(document.getElementById(url)).text(content);
+                  },
+                  error: function(newcounter, error) {
+                      console.log('Failed to create');
+                  }
+              });
+            }
+        },
+        error: function(error) {
+            console.log('Error:' + error.code + ' ' + error.message);
+        }
+      });
+    }
+    $(function() {
+        var Counter = AV.Object.extend('Counter');
+        if ($('.leancloud-views_num').length === 1) {
+            addCount(Counter);
+        } else if ($('.post-title-link').length > 1) {
+            showTime(Counter);
+        }
+    });
+</script>
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script>
+    <!-- Offer LazyLoad -->
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    <!-- Start Queue -->
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

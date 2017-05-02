@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Michael翔的小窝</title>
+  <subtitle>生命不息，折腾不止！</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://michael728.github.io/"/>
+  <updated>2017-04-27T03:09:59.947Z</updated>
+  <id>http://michael728.github.io/</id>
+  
+  <author>
+    <name>Michael_翔</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>有趣的博客-整理</title>
+    <link href="http://michael728.github.io/2017/04/25/blog-interesting-list/"/>
+    <id>http://michael728.github.io/2017/04/25/blog-interesting-list/</id>
+    <published>2017-04-25T09:09:10.000Z</published>
+    <updated>2017-04-27T03:09:59.947Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对于整理癖重度患者，必须要整理一下收藏夹中的博客了，有一些博主的博客很用心，下面先简单整理一下好了：&lt;/p&gt;
+&lt;h2 id=&quot;数据挖掘&quot;&gt;&lt;a href=&quot;#数据挖掘&quot; class=&quot;headerlink&quot; title=&quot;数据挖掘&quot;&gt;&lt;/a&gt;数据挖掘&lt;/h2&gt;&lt;h2 id=
+    
+    </summary>
+    
+    
+      <category term="list" scheme="http://michael728.github.io/tags/list/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows下利用批命令修改IP设置</title>
+    <link href="http://michael728.github.io/2016/11/14/tools-batch-file-set-ip-mask-gateway/"/>
+    <id>http://michael728.github.io/2016/11/14/tools-batch-file-set-ip-mask-gateway/</id>
+    <published>2016-11-14T08:58:35.000Z</published>
+    <updated>2017-04-27T02:58:46.081Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;因为在实验室需要将网络设置为自动获取IP地址和DNS服务器地址，然而，在宿舍想要登录成功6维BT站，却需要配置静态IP地址。每次切换IP需要输入一串参数，打开网络适配器去设置，很麻烦，下午就花时间解决了一下。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="http://michael728.github.io/categories/tools/"/>
+    
+    
+      <category term="tools" scheme="http://michael728.github.io/tags/tools/"/>
+    
+      <category term="小程序" scheme="http://michael728.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows无法识别USB设备--移动硬盘/U盘 解决方法</title>
+    <link href="http://michael728.github.io/2016/11/08/tools-no-usb/"/>
+    <id>http://michael728.github.io/2016/11/08/tools-no-usb/</id>
+    <published>2016-11-08T11:25:18.000Z</published>
+    <updated>2017-04-27T03:11:19.577Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天用了好几年的东芝移动硬盘无法识别，插上Win10之后，硬盘指示灯闪亮了几下之后，就提示“无法识别的USB设备”，询问度娘无果，搜索google，发下了一篇好文，截图如下：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="http://michael728.github.io/categories/tools/"/>
+    
+    
+      <category term="tools" scheme="http://michael728.github.io/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客建站日志</title>
+    <link href="http://michael728.github.io/2016/09/03/blog-logfile/"/>
+    <id>http://michael728.github.io/2016/09/03/blog-logfile/</id>
+    <published>2016-09-03T14:12:53.000Z</published>
+    <updated>2017-04-27T06:05:40.933Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;建站日志&quot;&gt;&lt;a href=&quot;#建站日志&quot; class=&quot;headerlink&quot; title=&quot;建站日志&quot;&gt;&lt;/a&gt;建站日志&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://michael728.github.io/categories/hexo/"/>
+    
+    
+      <category term="blog" scheme="http://michael728.github.io/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python正则表达式学习摘要及资料</title>
+    <link href="http://michael728.github.io/2016/07/28/python-regx/"/>
+    <id>http://michael728.github.io/2016/07/28/python-regx/</id>
+    <published>2016-07-28T15:08:34.000Z</published>
+    <updated>2017-04-27T02:31:52.816Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;在正则表达式中，如果直接给出字符，就是精确匹配。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{m,n}?&lt;/code&gt;  对于前一个字符重复 &lt;code&gt;m&lt;/code&gt;到 &lt;code&gt;n&lt;/code&gt; 次，并且取尽可能少的情况    在字符串&lt;code&gt;&amp;#39;aaaaaa&amp;#39;&lt;/code&gt;中，&lt;code&gt;a{2,4}&lt;/code&gt; 会匹配 4 个 &lt;code&gt;a&lt;/code&gt;，但 &lt;code&gt;a{2,4}?&lt;/code&gt; 只匹配 2 个 &lt;code&gt;a&lt;/code&gt;。&lt;br&gt;&lt;code&gt;^&lt;/code&gt;表示行的开头，&lt;code&gt;^\d&lt;/code&gt;表示必须以数字开头。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;$&lt;/code&gt;表示行的结束，&lt;code&gt;\d$&lt;/code&gt;表示必须以数字结束。&lt;/p&gt;
+&lt;p&gt;你可能注意到了，&lt;code&gt;py&lt;/code&gt;也可以匹配&lt;code&gt;&amp;#39;python&amp;#39;&lt;/code&gt;–&amp;gt;&lt;code&gt;py&lt;/code&gt;;&lt;br&gt;但是加上&lt;code&gt;^py$&lt;/code&gt;就变成了整行匹配，就只能匹配’py’了,匹配&lt;code&gt;&amp;#39;python&amp;#39;&lt;/code&gt;时，就什么也得不到。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="正则" scheme="http://michael728.github.io/categories/%E6%AD%A3%E5%88%99/"/>
+    
+    
+      <category term="python" scheme="http://michael728.github.io/tags/python/"/>
+    
+      <category term="正则" scheme="http://michael728.github.io/tags/%E6%AD%A3%E5%88%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在魔都上海的银联实习生活</title>
+    <link href="http://michael728.github.io/2016/07/25/life-about-intern-in-Shanghai/"/>
+    <id>http://michael728.github.io/2016/07/25/life-about-intern-in-Shanghai/</id>
+    <published>2016-07-25T13:29:08.000Z</published>
+    <updated>2017-04-27T02:41:20.481Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;不知不觉，来传说中的“魔都”已经一个多月了，然而，我并没有感受到他的魔力，可能是我还没去发现吧……应该是我还没有动力去发现！&lt;/p&gt;
+&lt;p&gt;文章开头的图片拍摄于我和媳妇儿2014年“南游”的时候，当时在外滩附近大楼拍的，现在想想，仿佛过去没多久，事实，白驹过隙，已2年多了:)&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Life" scheme="http://michael728.github.io/categories/Life/"/>
+    
+    
+      <category term="Life" scheme="http://michael728.github.io/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python--matplotlib绘图可视化知识点整理</title>
+    <link href="http://michael728.github.io/2016/05/14/python-matplotlib-basic/"/>
+    <id>http://michael728.github.io/2016/05/14/python-matplotlib-basic/</id>
+    <published>2016-05-14T07:50:02.000Z</published>
+    <updated>2017-04-27T02:53:20.657Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;强烈推荐ipython&lt;/strong&gt;&lt;br&gt;无论你工作在什么项目上，IPython都是值得推荐的。利用&lt;code&gt;ipython --pylab&lt;/code&gt;，可以进入PyLab模式，已经导入了matplotlib库与相关软件包（例如Numpy和Scipy)，额可以直接使用相关库的功能。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="python" scheme="http://michael728.github.io/categories/python/"/>
+    
+    
+      <category term="matplotlib" scheme="http://michael728.github.io/tags/matplotlib/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL基础语法笔记教程整理</title>
+    <link href="http://michael728.github.io/2016/05/03/SQL/"/>
+    <id>http://michael728.github.io/2016/05/03/SQL/</id>
+    <published>2016-05-03T08:55:41.000Z</published>
+    <updated>2017-04-27T02:40:33.993Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近从图书馆借了本介绍SQL的书，打算复习一下基本语法，记录一下笔记，整理一下思路，以备日后复习之用。&lt;/p&gt;
+&lt;p&gt;PS：本文适用SQL Server2008语法。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://michael728.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="数据库" scheme="http://michael728.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="SQL" scheme="http://michael728.github.io/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2016读书-书单整理</title>
+    <link href="http://michael728.github.io/2016/02/26/books-list-2016/"/>
+    <id>http://michael728.github.io/2016/02/26/books-list-2016/</id>
+    <published>2016-02-26T05:50:14.000Z</published>
+    <updated>2017-04-27T02:24:57.051Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;书籍是人类进步的阶梯。&lt;/p&gt;
+&lt;p&gt;前几天无意看到了一个&lt;a href=&quot;http://ocw.nthu.edu.tw/ocw/index.php?page=course&amp;amp;cid=23&amp;amp;&quot;&gt;视频&lt;/a&gt;，这位老先生说了一个故事，学习读书的时候，不要因为书中有不好的地方，就不去读这本书，因为不可能每本书都完美无暇！我们要先看到这本书里值得学习的、好的地方，然后再去看到它不好的地方！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="books" scheme="http://michael728.github.io/categories/books/"/>
+    
+    
+      <category term="读书" scheme="http://michael728.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python编码问题总结</title>
+    <link href="http://michael728.github.io/2015/12/29/python-encoding-error/"/>
+    <id>http://michael728.github.io/2015/12/29/python-encoding-error/</id>
+    <published>2015-12-29T04:51:24.000Z</published>
+    <updated>2017-04-27T02:49:34.418Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Python编码问题一直是头疼的东西，这篇文章就用来记录整理Python编码相关的问题以及IDE编码问题的解决办法好了。会不断补充的。&lt;/p&gt;
+&lt;h1 id=&quot;Pyscripter出现编码错误&quot;&gt;&lt;a href=&quot;#Pyscripter出现编码错误&quot; class=&quot;headerlink&quot; title=&quot;Pyscripter出现编码错误&quot;&gt;&lt;/a&gt;Pyscripter出现编码错误&lt;/h1&gt;&lt;h2 id=&quot;Pyscripter错误&quot;&gt;&lt;a href=&quot;#Pyscripter错误&quot; class=&quot;headerlink&quot; title=&quot;Pyscripter错误&quot;&gt;&lt;/a&gt;Pyscripter错误&lt;/h2&gt;&lt;p&gt;今天使用Pyscripter编辑python时，出现了这样的错误提示：&lt;br&gt;&lt;figure class=&quot;highlight ada&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;pyscripter UnicodeEncodeError: &lt;span class=&quot;symbol&quot;&gt;&#39;ascii&lt;/span&gt;&#39; codec can&lt;span class=&quot;symbol&quot;&gt;&#39;t&lt;/span&gt; encode characters &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; position &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;-&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;: ordinal &lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;range&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;128&lt;/span&gt;)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/6d9475f6jw1ezgfl7tihsj20lk0fkq7o.jpg&quot; alt=&quot;error&quot;&gt;&lt;br&gt;为了解决这个错误，百度了好半天，各种说法，最后总算给我找到了一个靠谱的解决方案：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="python" scheme="http://michael728.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://michael728.github.io/tags/python/"/>
+    
+      <category term="编码" scheme="http://michael728.github.io/tags/%E7%BC%96%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搜狗输入法使用技巧整理</title>
+    <link href="http://michael728.github.io/2015/12/28/tools-sougoupinyin/"/>
+    <id>http://michael728.github.io/2015/12/28/tools-sougoupinyin/</id>
+    <published>2015-12-28T03:03:25.000Z</published>
+    <updated>2017-04-27T03:05:25.178Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;现在的输入法有很多，但是，哪个最好呢？不必纠结，自己用着顺手的才是最好！&lt;/p&gt;
+&lt;p&gt;自己选择搜狗输入法的原因很简单，因为，它支持的平台多，同时，各个平台更新也很积极。从兼容性的角度考虑，还是最后选择了搜狗。至于搜狗启动的广告之类，其实不怕麻烦，是可以在设置里选择不弹出的。&lt;/p&gt;
+&lt;p&gt;作为每天使用最多的输入法，我觉得，花点时间了解它一下还是值得的，你说呢？毕竟是与我们共同作战的小伙伴啊！&lt;/p&gt;
+&lt;h1 id=&quot;输入罗马数字-计算器&quot;&gt;&lt;a href=&quot;#输入罗马数字-计算器&quot; class=&quot;headerlink&quot; title=&quot;输入罗马数字+计算器&quot;&gt;&lt;/a&gt;输入罗马数字+计算器&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6d9475f6jw1ezf7djgz9zj20j10ekwhl.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;属性设置-&amp;gt;高级&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要输入罗马数字时，采用：v+”数字”，然后可以看见候选数字中有罗马数字了。&lt;/li&gt;
+&lt;li&gt;v+计算式子 就能直接获得结果&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="http://michael728.github.io/categories/tools/"/>
+    
+    
+      <category term="tools" scheme="http://michael728.github.io/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>遗传算法GA(Genetic Algorithm)入门知识梳理</title>
+    <link href="http://michael728.github.io/2015/12/24/algorithm-GA-basic/"/>
+    <id>http://michael728.github.io/2015/12/24/algorithm-GA-basic/</id>
+    <published>2015-12-24T13:11:03.000Z</published>
+    <updated>2017-04-27T02:16:45.990Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、遗传算法进化论背景知识&quot;&gt;&lt;a href=&quot;#一、遗传算法进化论背景知识&quot; class=&quot;headerlink&quot; title=&quot;一、遗传算法进化论背景知识&quot;&gt;&lt;/a&gt;一、遗传算法进化论背景知识&lt;/h1&gt;&lt;p&gt;作为遗传算法生物背景的介绍，下面内容了解即可：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;种群(Population)：生物的进化以群体的形式进行，这样的一个群体称为种群。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;个体：组成种群的单个生物。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;基因 ( Gene ) ：一个遗传因子。 &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;染色体 ( Chromosome ) ：包含一组的基因。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;生存竞争，适者生存：对环境适应度高的、牛B的个体参与繁殖的机会比较多，后代就会越来越多。适应度低的个体参与繁殖的机会比较少，后代就会越来越少。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;遗传与变异：新个体会遗传父母双方各一部分的基因，同时有一定的概率发生基因变异。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://michael728.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://michael728.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="机器学习" scheme="http://michael728.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python数据分析入门之pandas总结基础</title>
+    <link href="http://michael728.github.io/2015/12/23/python-pandas-basic/"/>
+    <id>http://michael728.github.io/2015/12/23/python-pandas-basic/</id>
+    <published>2015-12-23T10:44:29.000Z</published>
+    <updated>2017-04-27T02:54:13.392Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Pandas–“大熊猫”基础&quot;&gt;&lt;a href=&quot;#Pandas–“大熊猫”基础&quot; class=&quot;headerlink&quot; title=&quot;Pandas–“大熊猫”基础&quot;&gt;&lt;/a&gt;Pandas–“大熊猫”基础&lt;/h1&gt;&lt;h2 id=&quot;Series&quot;&gt;&lt;a href=&quot;#Series&quot; class=&quot;headerlink&quot; title=&quot;Series&quot;&gt;&lt;/a&gt;Series&lt;/h2&gt;&lt;p&gt;Series: pandas的长枪(数据表中的一列或一行,观测向量,一维数组…)&lt;/p&gt;
+&lt;figure class=&quot;highlight maxima&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Series1 = pd.Series(&lt;span class=&quot;built_in&quot;&gt;np&lt;/span&gt;.&lt;span class=&quot;built_in&quot;&gt;random&lt;/span&gt;.randn(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;))&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; Series1,type(Series1) &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; Series1.index&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; Series1.&lt;span class=&quot;built_in&quot;&gt;values&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="python" scheme="http://michael728.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://michael728.github.io/tags/python/"/>
+    
+      <category term="pandas" scheme="http://michael728.github.io/tags/pandas/"/>
+    
+      <category term="数据分析" scheme="http://michael728.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杂文-2015/12/20</title>
+    <link href="http://michael728.github.io/2015/12/20/life-20151220/"/>
+    <id>http://michael728.github.io/2015/12/20/life-20151220/</id>
+    <published>2015-12-20T15:16:43.000Z</published>
+    <updated>2017-04-27T02:46:00.635Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天在朋友圈，发现高中同桌q诚当上爸爸了，恭喜。虽然许久都未曾联系，但是还是由衷的内心给予祝福……回想起高中那段时光，真是记忆犹新。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Life" scheme="http://michael728.github.io/categories/Life/"/>
+    
+    
+      <category term="Life" scheme="http://michael728.github.io/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python机器学习入门资料梳理</title>
+    <link href="http://michael728.github.io/2015/12/16/python-machine-learning-list/"/>
+    <id>http://michael728.github.io/2015/12/16/python-machine-learning-list/</id>
+    <published>2015-12-16T13:45:29.000Z</published>
+    <updated>2017-04-27T02:51:47.458Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在python基本语法入门之后，就要准备选一个研究方向了。Web是自己比较感兴趣的方向，可是，导师这边的数&lt;br&gt;据处理肯定不能由我做主了。paper、peper、paper……真的挺愁人的&lt;/p&gt;
+&lt;p&gt;还有几个月就要进行春季实习招聘了，加油！总结一下python机器学习方面的资料吧。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="python" scheme="http://michael728.github.io/categories/python/"/>
+    
+    
+      <category term="整理" scheme="http://michael728.github.io/tags/%E6%95%B4%E7%90%86/"/>
+    
+      <category term="python" scheme="http://michael728.github.io/tags/python/"/>
+    
+      <category term="machine learning" scheme="http://michael728.github.io/tags/machine-learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>无法删除文件，“文件或目录损坏且无法读取”问题的解决办法</title>
+    <link href="http://michael728.github.io/2015/12/09/tools-del-error/"/>
+    <id>http://michael728.github.io/2015/12/09/tools-del-error/</id>
+    <published>2015-12-09T05:30:03.000Z</published>
+    <updated>2017-04-27T03:02:01.801Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天下午整理我的移动硬盘上的资料，结果，删除某个文件夹出现了这样的错误：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;移动硬盘出现“文件或目录损坏且无法读取”的简单修复&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;作为处女座的我当然不能熟视无睹！必须歼灭它~通过查资料，找到了一下解决办法。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="http://michael728.github.io/categories/tools/"/>
+    
+    
+      <category term="tools" scheme="http://michael728.github.io/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git入门私房菜</title>
+    <link href="http://michael728.github.io/2015/12/07/git-tutor/"/>
+    <id>http://michael728.github.io/2015/12/07/git-tutor/</id>
+    <published>2015-12-07T06:51:29.000Z</published>
+    <updated>2017-04-27T03:11:25.141Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;昨天下午参考廖雪峰的博客和其他一些文章，简单了解了一下传说中的Git，发现常见用法入门还是挺容易上手的，在此做一些笔记，方便以后查阅和复习。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="http://michael728.github.io/categories/tools/"/>
+    
+    
+      <category term="git" scheme="http://michael728.github.io/tags/git/"/>
+    
+      <category term="tools" scheme="http://michael728.github.io/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python入门资料大全(更新ing)</title>
+    <link href="http://michael728.github.io/2015/12/02/python-files-list/"/>
+    <id>http://michael728.github.io/2015/12/02/python-files-list/</id>
+    <published>2015-12-02T01:45:29.000Z</published>
+    <updated>2017-04-26T17:45:24.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://leanote.com/api/file/getImage?fileId=56417bb0ab6441391f0013ad&quot; alt=&quot;图片标题&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;一、说明&quot;&gt;&lt;a href=&quot;#一、说明&quot; class=&quot;headerlink&quot; title=&quot;一、说明&quot;&gt;&lt;/a&gt;一、说明&lt;/h1&gt;&lt;p&gt;面对网络上纷繁复杂的资料，自己真是眼花缭乱，学的毫无章法，东一榔头西一棒子，这样不仅知识不能成为体系，自己的学习进度也不容易掌握，收效甚微。突然有个想法，就是把自己这几天收藏的资料整理出文章出来，方便自己有章可依……&lt;/p&gt;
+&lt;p&gt;PS:附上一些python相关的好文：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="python" scheme="http://michael728.github.io/categories/python/"/>
+    
+    
+      <category term="list" scheme="http://michael728.github.io/tags/list/"/>
+    
+      <category term="整理" scheme="http://michael728.github.io/tags/%E6%95%B4%E7%90%86/"/>
+    
+      <category term="python" scheme="http://michael728.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sublime常用插件及用法整理</title>
+    <link href="http://michael728.github.io/2015/12/01/tools-sublime-extensions/"/>
+    <id>http://michael728.github.io/2015/12/01/tools-sublime-extensions/</id>
+    <published>2015-12-01T11:37:28.000Z</published>
+    <updated>2017-04-27T03:05:34.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;sublime-text-必装插件&quot;&gt;&lt;a href=&quot;#sublime-text-必装插件&quot; class=&quot;headerlink&quot; title=&quot;sublime text 必装插件&quot;&gt;&lt;/a&gt;sublime text 必装插件&lt;/h1&gt;&lt;p&gt;挖坑，待续&lt;/p&gt;
+&lt;h1 id=&quot;Sublime-Text-3设置python编译支持环境设置&quot;&gt;&lt;a href=&quot;#Sublime-Text-3设置python编译支持环境设置&quot; class=&quot;headerlink&quot; title=&quot;Sublime Text 3设置python编译支持环境设置&quot;&gt;&lt;/a&gt;Sublime Text 3设置python编译支持环境设置&lt;/h1&gt;&lt;h2 id=&quot;安装sublimerepl插件-官网说明&quot;&gt;&lt;a href=&quot;#安装sublimerepl插件-官网说明&quot; class=&quot;headerlink&quot; title=&quot;安装sublimerepl插件 官网说明&quot;&gt;&lt;/a&gt;安装&lt;code&gt;sublimerepl&lt;/code&gt;插件 &lt;a href=&quot;https://packagecontrol.io/packages/SublimeREPL&quot;&gt;官网说明&lt;/a&gt;&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="http://michael728.github.io/categories/tools/"/>
+    
+    
+      <category term="tools" scheme="http://michael728.github.io/tags/tools/"/>
+    
+      <category term="sublime" scheme="http://michael728.github.io/tags/sublime/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo之next主题优化整理</title>
+    <link href="http://michael728.github.io/2015/11/30/hexo-next-optimize/"/>
+    <id>http://michael728.github.io/2015/11/30/hexo-next-optimize/</id>
+    <published>2015-11-30T08:01:18.000Z</published>
+    <updated>2016-09-04T01:47:42.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;搭建hexo的教程实在太多了，折腾了几天，总算搞定了，现在去看参考文章也是能看懂，不过，官方文档也写的相当详细：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://theme-next.iissnan.com/&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.yamllint.com/&quot;&gt;Yml语法验证&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://michael728.github.io/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://michael728.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>

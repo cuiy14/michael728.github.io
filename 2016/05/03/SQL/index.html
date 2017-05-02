@@ -1,404 +1,463 @@
-<!DOCTYPE html>
-<html lang="zh">
-    <head>
-    <!--
-        © Material Theme
-        https://github.com/viosey/hexo-theme-material
-        Version: 1.3.4 -->
+<!doctype html>
 
-    <!-- Title -->
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
     
-    <title>
-        
-            SQL基础语法笔记教程整理 | 
-        
-        Michael翔的小窝
-    </title>
+    
+  
 
-    <!-- Meta & Info -->
-    <meta charset="utf-8">
+  
 
-    <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
+  
+
+  
+
+  
+
+  
     
     
-        <link rel="dns-prefetch" href="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"/>
-    
-    
-    
-    
-    
-        <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
-    
-
-    <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0097A7">
-    <meta name="author" content="Michael_翔">
-    <meta name="description" content="因上努力，果上随缘;爱折腾app、小众软件--Michael翔">
-    <meta name="keywords" content="null,数据库,SQL">
-
-    <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.ico">
-    <link rel="icon" sizes="192x192" href="/img/favicon.ico">
-    <link rel="apple-touch-icon" href="/img/favicon.ico">
-
-    <!--iOS -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-title" content="Title">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="480">
-
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Michael翔的小窝">
-
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://michael728.github.io">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="SQL基础语法笔记教程整理 | Michael翔的小窝">
-    <meta property="og:description" content="因上努力，果上随缘;爱折腾app、小众软件--Michael翔">
-    <meta property="og:article:tag" content="数据库"> <meta property="og:article:tag" content="SQL"> 
-
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="/css/ie-blocker.css">
-
-        
-            <script src="/js/ie-blocker.zhCN.js"></script>
-        
-    <![endif]-->
-
-    <!-- Import CSS & jQuery -->
-    
-        <link rel="stylesheet" href="/css/material.min.css">
-        <link rel="stylesheet" href="/css/style.min.css">
-        <!-- Config CSS -->
-
-
-<!-- Other Styles -->
-<style>
-  body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-  }
-
-  a {
-    color: #00838F;
-  }
-
-  .mdl-card__media,
-  #search-label,
-  #search-form-label:after,
-  #scheme-Paradox .hot_tags-count,
-  #scheme-Paradox .sidebar_archives-count,
-  #scheme-Paradox .sidebar-colored .sidebar-header,
-  #scheme-Paradox .sidebar-colored .sidebar-badge{
-    background-color: #0097A7 !important;
-  }
-
-  /* Sidebar User Drop Down Menu Text Color */
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-    color: #0097A7 !important;
-  }
-
-  #post_entry-right-info,
-  .sidebar-colored .sidebar-nav li:hover > a,
-  .sidebar-colored .sidebar-nav li:hover > a i,
-  .sidebar-colored .sidebar-nav li > a:hover,
-  .sidebar-colored .sidebar-nav li > a:hover i,
-  .sidebar-colored .sidebar-nav li > a:focus i,
-  .sidebar-colored .sidebar-nav > .open > a,
-  .sidebar-colored .sidebar-nav > .open > a:hover,
-  .sidebar-colored .sidebar-nav > .open > a:focus,
-  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-    color: #0097A7 !important;
-  }
-
-  .toTop {
-    background: #757575 !important;
-  }
-
-  .material-layout .material-post>.material-nav,
-  .material-layout .material-index>.material-nav,
-  .material-nav a {
-    color: #757575;
-  }
-
-  #scheme-Paradox .MD-burger-layer {
-    background-color: #757575;
-  }
-
-  #scheme-Paradox #post-toc-trigger-btn {
-    color: #757575;
-  }
-
-  .post-toc a:hover {
-    color: #00838F;
-    text-decoration: underline;
-  }
-
-</style>
-
-
-<!-- Theme Background Related-->
-
-    <style>
-      body{
-        background-image: url(/img/bg_big2.jpg);
-      }
-    </style>
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
 
 
 
 
-<!-- Fade Effect -->
-
-    <style>
-      .fade {
-        transition: all 800ms linear;
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-      }
-
-      .fade.out{
-        opacity: 0;
-      }
-    </style>
 
 
-        <script src="/js/jquery.min.js"></script>
-        <script src="/js/queue.js"></script>
-    
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-    <!-- UC Browser Compatible -->
-    <script>
-        var agent = navigator.userAgent.toLowerCase();
-        if(agent.indexOf('ucbrowser')>0) {
-            document.write("<link rel=\"stylesheet\" href=\"/css/uc.css\">");
-            alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-        }
-    </script>
-
-    
-
-    
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-    <!-- Bing Background -->
-    
+  <meta name="keywords" content="数据库,SQL," />
 
-    <!-- Custom Head -->
-    
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Michael翔的小窝" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="最近从图书馆借了本介绍SQL的书，打算复习一下基本语法，记录一下笔记，整理一下思路，以备日后复习之用。 PS：本文适用SQL Server2008语法。">
+<meta name="keywords" content="数据库,SQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL基础语法笔记教程整理">
+<meta property="og:url" content="http://michael728.github.io/2016/05/03/SQL/index.html">
+<meta property="og:site_name" content="Michael翔的小窝">
+<meta property="og:description" content="最近从图书馆借了本介绍SQL的书，打算复习一下基本语法，记录一下笔记，整理一下思路，以备日后复习之用。 PS：本文适用SQL Server2008语法。">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/6d9475f6jw1f2tqc5pnivj207902bjrg.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/6d9475f6jw1f2tqcumt9fj206c02jdfy.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/6d9475f6jw1f2tydodr55j20jc0eq43d.jpg">
+<meta property="og:updated_time" content="2017-04-27T02:40:33.993Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SQL基础语法笔记教程整理">
+<meta name="twitter:description" content="最近从图书馆借了本介绍SQL的书，打算复习一下基本语法，记录一下笔记，整理一下思路，以备日后复习之用。 PS：本文适用SQL Server2008语法。">
+<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/6d9475f6jw1f2tqc5pnivj207902bjrg.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://michael728.github.io/2016/05/03/SQL/"/>
+
+
+
+
+
+  <title>SQL基础语法笔记教程整理 | Michael翔的小窝</title>
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
     
-        <body id="scheme-Paradox" class="lazy">
-            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                
+  
 
-                <!-- Main Container -->
-                <main class="material-layout__content" id="main">
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
 
-                    <!-- Top Anchor -->
-                    <div id="top"></div>
-
-                    
-                        <!-- Hamburger Button -->
-                        <button class="MD-burger-icon sidebar-toggle">
-                            <span class="MD-burger-layer"></span>
-                        </button>
-                    
-
-                    <!-- Post TOC -->
-
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
     
-    <!-- Back Button -->
-    <!--
-    <div class="material-back" id="backhome-div" tabindex="0">
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
-           href="#" onclick="window.history.back();return false;"
-           target="_self"
-           role="button"
-           data-upgraded=",MaterialButton,MaterialRipple">
-            <i class="material-icons" role="presentation">arrow_back</i>
-            <span class="mdl-button__ripple-container">
-                <span class="mdl-ripple"></span>
-            </span>
-        </a>
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Michael翔的小窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-    -->
+      
+        <p class="site-subtitle">生命不息，折腾不止！</p>
+      
+  </div>
 
-    <!-- Left aligned menu below button -->
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
     </button>
-
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、关系型数据库和SQL"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、关系型数据库和SQL</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-1-SQL语言主要有3个主要的组成部分。"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.1 SQL语言主要有3个主要的组成部分。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-2-主键和外键"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">1.2 主键和外键</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-3-数据类型"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">1.3 数据类型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-3-空值"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">1.3 空值</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、简单增删改查"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、简单增删改查</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-1-查（列名有空格的情况）"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">2.1 查（列名有空格的情况）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查询顺序-SQL执行顺序-2："><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">查询顺序,SQL执行顺序^2：</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-2-增"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.2 增</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-3-改"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">2.3 改</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-4-删"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">2.4 删</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、别名"><span class="post-toc-number">3.</span> <span class="post-toc-text">三、别名</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-1-计算字段"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">3.1 计算字段</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-2-直接量"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">3.2 直接量</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-3-算数运算"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">3.3 算数运算</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-4-别名"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">3.4 别名</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四、使用函数"><span class="post-toc-number">4.</span> <span class="post-toc-text">四、使用函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-1-字符函数"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">4.1 字符函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#LEFT-amp-RIGHT"><span class="post-toc-number">4.1.1.</span> <span class="post-toc-text">LEFT&RIGHT</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#LTRIM-amp-RTRIM"><span class="post-toc-number">4.1.2.</span> <span class="post-toc-text">LTRIM&RTRIM</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SUBSTRING"><span class="post-toc-number">4.1.3.</span> <span class="post-toc-text">SUBSTRING</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-2-日期-时间函数"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">4.2 日期/时间函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GETDATE"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">GETDATE</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DATEPART"><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">DATEPART</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DATEDIFF"><span class="post-toc-number">4.2.3.</span> <span class="post-toc-text">DATEDIFF</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-3-数值函数"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">4.3 数值函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ROUND"><span class="post-toc-number">4.3.1.</span> <span class="post-toc-text">ROUND</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#RAND"><span class="post-toc-number">4.3.2.</span> <span class="post-toc-text">RAND</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PI"><span class="post-toc-number">4.3.3.</span> <span class="post-toc-text">PI</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-4-转换函数"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">4.4 转换函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CAST函数"><span class="post-toc-number">4.4.1.</span> <span class="post-toc-text">CAST函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ISNULL函数，很有用"><span class="post-toc-number">4.4.2.</span> <span class="post-toc-text">ISNULL函数，很有用</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#五、排序函数"><span class="post-toc-number">5.</span> <span class="post-toc-text">五、排序函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-1-添加排序"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">5.1 添加排序</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-2-降序"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">5.2 降序</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-3-根据多列"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">5.3 根据多列</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-4-根据计算字段"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">5.4 根据计算字段</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-5-排序补充内容"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">5.5 排序补充内容</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#六、基于列的逻辑-CASE"><span class="post-toc-number">6.</span> <span class="post-toc-text">六、基于列的逻辑-CASE</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-1-IF-THEN-ELSE逻辑"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">6.1 IF-THEN-ELSE逻辑</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-2-CASE-简单格式"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">6.2 CASE-简单格式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-3-CASE-查询格式"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">6.3 CASE-查询格式</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#七、基于行的逻辑"><span class="post-toc-number">7.</span> <span class="post-toc-text">七、基于行的逻辑</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-1-应用查询条件"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">7.1 应用查询条件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-2-限制行-TOP"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">7.2 限制行-TOP</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-3-TOP和ORDER-BY结合"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">7.3 TOP和ORDER BY结合</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#八、布尔逻辑"><span class="post-toc-number">8.</span> <span class="post-toc-text">八、布尔逻辑</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-1-OR"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">8.1 OR</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-2-使用圆括号"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">8.2 使用圆括号</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-3-NOT操作符"><span class="post-toc-number">8.3.</span> <span class="post-toc-text">8.3 NOT操作符</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-4-BETWEEN操作符"><span class="post-toc-number">8.4.</span> <span class="post-toc-text">8.4 BETWEEN操作符</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-5-IN操作符"><span class="post-toc-number">8.5.</span> <span class="post-toc-text">8.5 IN操作符</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-9-布尔逻辑-IS-NULL"><span class="post-toc-number">8.6.</span> <span class="post-toc-text">8.9 布尔逻辑-IS NULL</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#九、模糊匹配"><span class="post-toc-number">9.</span> <span class="post-toc-text">九、模糊匹配</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9-1-LIKE和-搭配"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">9.1 LIKE和%搭配</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9-2-通配符"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">9.2 通配符</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-3-按照读音匹配"><span class="post-toc-number">9.2.1.</span> <span class="post-toc-text">9.3 按照读音匹配</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#十、汇总数据"><span class="post-toc-number">10.</span> <span class="post-toc-text">十、汇总数据</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#10-1消除重复"><span class="post-toc-number">10.1.</span> <span class="post-toc-text">10.1消除重复</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#10-2-聚合函数"><span class="post-toc-number">10.2.</span> <span class="post-toc-text">10.2 聚合函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#COUNT函数可以有3中不同方式使用它。"><span class="post-toc-number">10.2.1.</span> <span class="post-toc-text">COUNT函数可以有3中不同方式使用它。</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#10-3-分组数据-GROUP-BY"><span class="post-toc-number">10.3.</span> <span class="post-toc-text">10.3 分组数据-GROUP BY</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#10-4-基于聚合查询条件-HAVING"><span class="post-toc-number">10.4.</span> <span class="post-toc-text">10.4 基于聚合查询条件-HAVING</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#十一、组合表"><span class="post-toc-number">11.</span> <span class="post-toc-text">十一、组合表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#11-1-内连接来组合表-Inner-Join"><span class="post-toc-number">11.1.</span> <span class="post-toc-text">11.1 内连接来组合表-Inner Join</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#11-2-外连接"><span class="post-toc-number">11.2.</span> <span class="post-toc-text">11.2 外连接</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#左连接（LEFT-JOIN"><span class="post-toc-number">11.2.1.</span> <span class="post-toc-text">左连接（LEFT  JOIN)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#11-3-自连接"><span class="post-toc-number">11.3.</span> <span class="post-toc-text">11.3 自连接</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#11-4-创建视图"><span class="post-toc-number">11.4.</span> <span class="post-toc-text">11.4 创建视图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#视图的优点"><span class="post-toc-number">11.4.1.</span> <span class="post-toc-text">视图的优点</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#十二、补充"><span class="post-toc-number">12.</span> <span class="post-toc-text">十二、补充</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#12-1-子查询"><span class="post-toc-number">12.1.</span> <span class="post-toc-text">12.1 子查询</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#12-2-索引"><span class="post-toc-number">12.2.</span> <span class="post-toc-text">12.2 索引</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#参考："><span class="post-toc-number">13.</span> <span class="post-toc-text">参考：</span></a></li></ol>
-
-        <!--
-        <li class="mdl-menu__item">
-            Some Action
-        </li>
-        -->
-    </ul>
-
-
-
-
-<!-- Layouts -->
-
-    <!-- Post Module -->
-    <div class="material-post_container">
-
-        <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-
-                <!-- Post Header(Thumbnail & Title) -->
-                
-    <!-- Paradox Post Header -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://ww1.sinaimg.cn/large/6d9475f6ly1ff11f0tfpwj21hc0zkgxs.jpg)">
-    
-            <p class="article-headline-p">
-                SQL基础语法笔记教程整理
-            </p>
-        </div>
-
-
-
-
-
-                
-                    <!-- Paradox Post Info -->
-                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-
-    <!-- Author Avatar -->
-    <div id="author-avatar">
-        <img src="/img/side_logo.jpg" width="44px" height="44px" alt="Author Avatar"/>
-    </div>
-    <!-- Author Name & Date -->
-    <div>
-        <strong>Michael_翔</strong>
-        <span>5月 03, 2016</span>
-    </div>
-
-    <div class="section-spacer"></div>
-
-    <!-- Favorite -->
-    <!--
-        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
-            <i class="material-icons" role="presentation">favorite</i>
-            <span class="visuallyhidden">favorites</span>
-        </button>
-    -->
-
-    <!-- Qrcode -->
-    
-        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">devices other</i>
-            <span class="visuallyhidden">devices other</span>
-        </button>
-        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
-            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACa0lEQVR42u3aUY7rIAwF0O5/0+8tYER6bQcSVSdfo5YmnIyErQuffz99ffDw8PDw8PDw8F7G+8TX31+tPll927tneW54eHh4R3hfltrFmNUD8jsn96/+Fg8PD+8kb7XgrsYkRSJ5VjL1ZG54eHh4b+Zdj5+z8fDw8H6Pl4QROwIOPDw8vLfx8tZ2HjpcUx/LWvDw8PBiXr6In//76P4eHh4eXsCrXvlj8qn3ysxyhnh4eHibeflCnAQHyee9kcmrxMPDwzvDSwpANVSdhLz5Sxy11Hh4eHgDXjLRJJ7obXdVi0TSduPh4eE9xUuOSfWW8t7421JqPDw8vFt5Sds6X8TzhrvZvuPh4eFt5hUOMw2a4OqLq94HDw8P7yledVurGltMnpuUBDw8PLz38HrHob6Era0iUY5x8fDw8DbwEkDeHOcRRgJuBsF4eHh4m3nVxTePXPNiUA04vpQNPDw8vM286gPyhjgPFKrF6eZDV3h4eHgD3qSNrh4U6L2aUWHAw8PDu5WXBAT5+OTb/JhXdSZ4eHh4J3nJlv8kOJhHwKPCgIeHh7eBl7Pz2CL5thcTj+oeHh4e3k286lbWpI2ehLZ4eHh47+Hltyu3ucVmPS9FeHh4eOd51St5WNKOX4+vtvh4eHh4J3nVULUaWPTukLyy5T8ADw8P7wivGq3mL6g3pvoi8PDw8J7iVTfvq0t/HvtWn4KHh4f3fl4y9d7hg+qsbjhThoeHh3eQdx0izMtGsrW2sTDg4eHh3RRG9LbEeuWhh8TDw8M7w8sjgEmMmxwOSMrMl/vg4eHhbeb93oWHh4eHh4eHh/eC6z8ktj7awl0IgQAAAABJRU5ErkJggg==">
-        </ul>
-    
-
-    <!-- Tags (bookmark) -->
-    
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/SQL/">SQL</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/数据库/">数据库</a>
-    </ul>
-    
-
-    <!-- Share -->
-    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">share</i>
-    <span class="visuallyhidden">share</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
-    
-    <!-- Leancloud Views -->
-        <a class="post_share-link" href="#">
-            <li class="mdl-menu__item">
-                <span id="/2016/05/03/SQL/" class="leancloud-views_num" data-flag-title="SQL基础语法笔记教程整理">
-     &nbsp;浏览量
-</span>
-
-            </li>
-        </a>
-    
-
-    
-        
-    
-
-    <!-- Share Weibo -->
-    
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=SQL基础语法笔记教程整理&url=http://michael728.github.io//2016/05/03/SQL/index.html&pic=&searchPic=false&style=simple" target="_blank">
-            <li class="mdl-menu__item">
-                分享到微博
-            </li>
-        </a>
-    
-
-    <!-- Share Twitter -->
-    
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=SQL基础语法笔记教程整理&url=http://michael728.github.io//2016/05/03/SQL/index.html&via=Michael_翔" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Twitter
-            </li>
-        </a>
-    
-
-    <!-- Share Facebook -->
-    
-
-    <!-- Share Google+ -->
-    
-
-    <!-- Share LinkedIn -->
-    
-
-    <!-- Share QQ -->
-    
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Michael翔的小窝&title=SQL基础语法笔记教程整理&summary=因上努力，果上随缘;爱折腾app、小众软件--Michael翔&pics=http://michael728.github.io/img/favicon.ico&url=http://michael728.github.io/2016/05/03/SQL/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 QQ
-            </li>
-        </a>
-    
-
-    <!-- Share Telegram -->
-    
-</ul>
-
+  </div>
 </div>
 
-                
+<nav class="site-nav">
+  
 
-                <!-- Post Content -->
-                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-diary">
+          <a href="/diary" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-leaf"></i> <br />
+            
+            札记
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-nav">
+          <a href="/nav" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            书签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tools">
+          <a href="/tools" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-paper-plane"></i> <br />
+            
+            工具
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://michael728.github.io/2016/05/03/SQL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Michael_翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/large/6d9475f6ly1fe99p60lagj205k05k74u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Michael翔的小窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                SQL基础语法笔记教程整理
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-03T16:55:41+08:00">
+                2016-05-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/05/03/SQL/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/05/03/SQL/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/05/03/SQL/" class="leancloud_visitors" data-flag-title="SQL基础语法笔记教程整理">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
         <p>最近从图书馆借了本介绍SQL的书，打算复习一下基本语法，记录一下笔记，整理一下思路，以备日后复习之用。</p>
 <p>PS：本文适用SQL Server2008语法。</p>
 <a id="more"></a>
@@ -719,615 +778,970 @@
 <hr>
 <p>本文由 <strong><a href="http://michaelxiang.me/" target="_blank" rel="external">Michael翔</a></strong> 创作，采用 <strong><a href="http://creativecommons.org/licenses/by/3.0/cn/" target="_blank" rel="external">知识共享署名 3.0 中国大陆许可协议</a> </strong>进行许可。<br>可自由转载、引用，但需署名作者且注明文章出处。</p>
 
-    
-
-    
-</div>
-
-
-                
-
-                <!-- Post Comments -->
-                
-                    
-
-
-
-
-
-
-    <!-- 使用 DISQUS_CLICK -->
-    <div id="disqus-comment">
-        <div id="disqus_thread"></div>
-
-<!-- add animation -->
-<style>
-        .ripple-container {
-        }
-        .ripple-container .ripple{
-            background-color: rgba(255,255,255,0.4);
-            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
-        }
-        @keyframes ripple {
-            0% {
-                transform: scale(0);
-                opacity: 1;
-            }
-            80% {
-                transform: scale(1);
-            }
-            100% {
-                opacity: 0;
-            }
-        }
-	.disqus_click_btn {
-            line-height: 30px;
-            margin: 0;
-            min-width: 50px;
-            padding: 0 14px;
-            display: inline-block;
-            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0;
-            overflow: hidden;
-            will-change: box-shadow;
-            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
-            outline: 0;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            vertical-align: middle;
-            border: 0;
-            background: rgba(158, 158, 158, .2);
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-            color: #fff;
-            background-color: #757575;
-            text-shadow: 0
-        }
-</style>
-	
-<!-- add data-ripple attribute -->
-<div class="btn_click_load"> 
-    <button class="disqus_click_btn">阅读评论 「请确保 disq.us &amp; disquscdn.com &amp; disqus.com 可以正常加载」</button>
-</div>
-	
-<script>
-    // add effect to elements
-    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
-        // find all elements and attach effect
-        new RippleEffect(element); // element is instance of javascript element node
-    });
-</script>
-
-<script>
-    var disqus_config = function () {
-        this.page.url = 'http://michael728.github.io/2016/05/03/SQL/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://michael728.github.io/2016/05/03/SQL/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    $('.btn_click_load').click(function() {  //click to load comments
-        (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document;
-            var s = d.createElement('script');
-            s.src = '//michaelxiang.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', + new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-        $('.btn_click_load').css('display','none');
-    });
-</script>
-  	
-
-    </div>
-    <style>
-        #disqus-comment{
-            background-color: #eee;
-            padding: 2pc;
-        }
-    </style>
-
-
-                
-            </div>
-
-            <!-- Post Prev & Next Nav -->
-            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-    <!-- Prev Nav -->
-    
-        <a href="/2016/02/26/books-list-2016/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
-
-    <!-- Section Spacer -->
-    <div class="section-spacer"></div>
-
-    <!-- Next Nav -->
-    
-        <a href="/2016/05/14/python-matplotlib-basic/" id="post_nav-older" class="next-content">
-            旧篇
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_forward</i>
-            </button>
-        </a>
-    
-</nav>
-
-        </div>
+      
     </div>
 
+    <div>
+      
+        
 
+      
+    </div>
 
-                    
-                        <!-- Overlay For Active Sidebar -->
-<div class="sidebar-overlay"></div>
-
-<!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
-    <div id="sidebar-main">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
-    <!-- Top bar -->
-    <div class="top-bar"></div>
-
-    <!-- Sidebar toggle button -->
-    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
-        <i class="material-icons">clear_all</i>
-        <span class="mdl-button__ripple-container">
-            <span class="mdl-ripple">
-            </span>
-        </span>
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>我知道是不会有人点的，但万一有人想不开呢？！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
     </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/微信.JPG" alt="Michael_翔 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/支付宝.png" alt="Michael_翔 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
 
-    <!-- Sidebar Avatar -->
-    <div class="sidebar-image">
-        <img src="/img/side_logo.jpg" alt="Michael_翔's avatar">
+
+      
     </div>
 
-    <!-- Sidebar Email -->
-    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        http://michael728.github.io/
-        <b class="caret"></b>
-    </a>
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据库/" rel="tag"># 数据库</a>
+          
+            <a href="/tags/SQL/" rel="tag"># SQL</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/14/python-matplotlib-basic/" rel="next" title="Python--matplotlib绘图可视化知识点整理">
+                <i class="fa fa-chevron-left"></i> Python--matplotlib绘图可视化知识点整理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/02/26/books-list-2016/" rel="prev" title="2016读书-书单整理">
+                2016读书-书单整理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
 </div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
-        <!-- Sidebar Navigation  -->
-        <ul class="nav sidebar-nav">
-    <!-- User dropdown  -->
-    <li class="dropdown">
-        <ul id="settings-dropdown" class="dropdown-menu">
-            
-                <li>
-                    <a href="mailto: 649168982@qq.com" target="_blank" title="Email Me">
-                        
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
-                        
-                        Email Me
-                    </a>
-                </li>
-            
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
         </ul>
-    </li>
+      
 
-    <!-- Homepage -->
-    
-        <li id="sidebar-first-li">
-            <a href="/" target="_self">
-                
-                    <i class="material-icons sidebar-material-icons">home</i>
-                
-                主页
-            </a>
-        </li>
-        
-    
-
-    <!-- Archives  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">inbox</i>
-                
-                    归档
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-            <li>
-                <a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/12/">十二月 2015<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/11/">十一月 2015<span class="sidebar_archives-count">7</span></a>
-            </ul>
-        </li>
-        
-    
-
-    <!-- Categories  -->
-    
-
-    <!-- Pages  -->
-    
-        <li>
-            <a href="/tags" title="标签">
-                
-                    <i class="material-icons sidebar-material-icons">loyalty</i>
-                
-                标签
-            </a>
-        </li>
-        
-    
-        <li>
-            <a href="/tools" title="工具">
-                
-                    <i class="material-icons sidebar-material-icons">build</i>
-                
-                工具
-            </a>
-        </li>
-        
-    
-        <li>
-            <a href="/gallery" title="足迹">
-                
-                    <i class="material-icons sidebar-material-icons">camera</i>
-                
-                足迹
-            </a>
-        </li>
-        
-    
-        <li>
-            <a href="/links" title="友链">
-                
-                    <i class="material-icons sidebar-material-icons">group</i>
-                
-                友链
-            </a>
-        </li>
-        
-    
-        <li>
-            <a href="/about" title="About">
-                
-                    <i class="material-icons sidebar-material-icons">person</i>
-                
-                About
-            </a>
-        </li>
-        
-            <li class="divider"></li>
-        
-    
-
-    <!-- Article Number  -->
-    
-        <li>
-            <a href="/archives">
-                文章总数
-                <span class="sidebar-badge">26</span>
-            </a>
-        </li>
-        
-    
-</ul>
-
-
-        <!-- Sidebar Footer -->
-        <!--
-I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
-If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
-It will not impact the appearance and can give developers a lot of support :)
-
-很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
-如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
-它不会影响美观并可以给开发者很大的支持和动力。 :)
--->
-
-<!-- Sidebar Divider -->
-
-    <div class="sidebar-divider"></div>
-
-
-<!-- Theme Material -->
-
-    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
-        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-            主题 - Material
-            <span class="sidebar-badge badge-circle">i</span>
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://ww1.sinaimg.cn/large/6d9475f6ly1fe99p60lagj205k05k74u.jpg"
+               alt="Michael_翔" />
+          <p class="site-author-name" itemprop="name">Michael_翔</p>
+           
+              <p class="site-description motion-element" itemprop="description">因上努力，果上随缘;爱折腾app、小众软件--Michael翔</p>
+          
         </div>
-    </a>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/xiangzai728/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.douban.com/people/51517255/" target="_blank" title="DouBan">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  DouBan
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/michaelXoX" target="_blank" title="ZhiHu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  ZhiHu
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Michael728" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/728_michael" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-link"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zcheng.ren/" title="ZeeCoder" target="_blank">ZeeCoder</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://ehlxr.me/" title="ehlxr" target="_blank">ehlxr</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://michael728.github.io/2016/09/03/blog-logfile/" title="建站日志" target="_blank">建站日志</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
 
 
-<!-- Help & Support -->
-<!--
+      </section>
 
--->
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
 
-<!-- Feedback -->
-<!--
+            
+              
+            
 
--->
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、关系型数据库和SQL"><span class="nav-number">1.</span> <span class="nav-text">一、关系型数据库和SQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-SQL语言主要有3个主要的组成部分。"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 SQL语言主要有3个主要的组成部分。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-主键和外键"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 主键和外键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-数据类型"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-空值"><span class="nav-number">1.4.</span> <span class="nav-text">1.3 空值</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、简单增删改查"><span class="nav-number">2.</span> <span class="nav-text">二、简单增删改查</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-查（列名有空格的情况）"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 查（列名有空格的情况）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查询顺序-SQL执行顺序-2："><span class="nav-number">2.1.1.</span> <span class="nav-text">查询顺序,SQL执行顺序^2：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-增"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 增</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-改"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-删"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 删</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、别名"><span class="nav-number">3.</span> <span class="nav-text">三、别名</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-计算字段"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 计算字段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-直接量"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 直接量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-算数运算"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 算数运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-别名"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 别名</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、使用函数"><span class="nav-number">4.</span> <span class="nav-text">四、使用函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-字符函数"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 字符函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LEFT-amp-RIGHT"><span class="nav-number">4.1.1.</span> <span class="nav-text">LEFT&RIGHT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LTRIM-amp-RTRIM"><span class="nav-number">4.1.2.</span> <span class="nav-text">LTRIM&RTRIM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SUBSTRING"><span class="nav-number">4.1.3.</span> <span class="nav-text">SUBSTRING</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-日期-时间函数"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 日期/时间函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GETDATE"><span class="nav-number">4.2.1.</span> <span class="nav-text">GETDATE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DATEPART"><span class="nav-number">4.2.2.</span> <span class="nav-text">DATEPART</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DATEDIFF"><span class="nav-number">4.2.3.</span> <span class="nav-text">DATEDIFF</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-数值函数"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 数值函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ROUND"><span class="nav-number">4.3.1.</span> <span class="nav-text">ROUND</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RAND"><span class="nav-number">4.3.2.</span> <span class="nav-text">RAND</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PI"><span class="nav-number">4.3.3.</span> <span class="nav-text">PI</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-转换函数"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 转换函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CAST函数"><span class="nav-number">4.4.1.</span> <span class="nav-text">CAST函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ISNULL函数，很有用"><span class="nav-number">4.4.2.</span> <span class="nav-text">ISNULL函数，很有用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、排序函数"><span class="nav-number">5.</span> <span class="nav-text">五、排序函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-添加排序"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 添加排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-降序"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 降序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-根据多列"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 根据多列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-根据计算字段"><span class="nav-number">5.4.</span> <span class="nav-text">5.4 根据计算字段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5-排序补充内容"><span class="nav-number">5.5.</span> <span class="nav-text">5.5 排序补充内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六、基于列的逻辑-CASE"><span class="nav-number">6.</span> <span class="nav-text">六、基于列的逻辑-CASE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-IF-THEN-ELSE逻辑"><span class="nav-number">6.1.</span> <span class="nav-text">6.1 IF-THEN-ELSE逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-CASE-简单格式"><span class="nav-number">6.2.</span> <span class="nav-text">6.2 CASE-简单格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-CASE-查询格式"><span class="nav-number">6.3.</span> <span class="nav-text">6.3 CASE-查询格式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七、基于行的逻辑"><span class="nav-number">7.</span> <span class="nav-text">七、基于行的逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1-应用查询条件"><span class="nav-number">7.1.</span> <span class="nav-text">7.1 应用查询条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-2-限制行-TOP"><span class="nav-number">7.2.</span> <span class="nav-text">7.2 限制行-TOP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-3-TOP和ORDER-BY结合"><span class="nav-number">7.3.</span> <span class="nav-text">7.3 TOP和ORDER BY结合</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#八、布尔逻辑"><span class="nav-number">8.</span> <span class="nav-text">八、布尔逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-1-OR"><span class="nav-number">8.1.</span> <span class="nav-text">8.1 OR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-2-使用圆括号"><span class="nav-number">8.2.</span> <span class="nav-text">8.2 使用圆括号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-3-NOT操作符"><span class="nav-number">8.3.</span> <span class="nav-text">8.3 NOT操作符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-4-BETWEEN操作符"><span class="nav-number">8.4.</span> <span class="nav-text">8.4 BETWEEN操作符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-5-IN操作符"><span class="nav-number">8.5.</span> <span class="nav-text">8.5 IN操作符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-9-布尔逻辑-IS-NULL"><span class="nav-number">8.6.</span> <span class="nav-text">8.9 布尔逻辑-IS NULL</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#九、模糊匹配"><span class="nav-number">9.</span> <span class="nav-text">九、模糊匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#9-1-LIKE和-搭配"><span class="nav-number">9.1.</span> <span class="nav-text">9.1 LIKE和%搭配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-2-通配符"><span class="nav-number">9.2.</span> <span class="nav-text">9.2 通配符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-按照读音匹配"><span class="nav-number">9.2.1.</span> <span class="nav-text">9.3 按照读音匹配</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十、汇总数据"><span class="nav-number">10.</span> <span class="nav-text">十、汇总数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#10-1消除重复"><span class="nav-number">10.1.</span> <span class="nav-text">10.1消除重复</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-2-聚合函数"><span class="nav-number">10.2.</span> <span class="nav-text">10.2 聚合函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#COUNT函数可以有3中不同方式使用它。"><span class="nav-number">10.2.1.</span> <span class="nav-text">COUNT函数可以有3中不同方式使用它。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-3-分组数据-GROUP-BY"><span class="nav-number">10.3.</span> <span class="nav-text">10.3 分组数据-GROUP BY</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-4-基于聚合查询条件-HAVING"><span class="nav-number">10.4.</span> <span class="nav-text">10.4 基于聚合查询条件-HAVING</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十一、组合表"><span class="nav-number">11.</span> <span class="nav-text">十一、组合表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#11-1-内连接来组合表-Inner-Join"><span class="nav-number">11.1.</span> <span class="nav-text">11.1 内连接来组合表-Inner Join</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-2-外连接"><span class="nav-number">11.2.</span> <span class="nav-text">11.2 外连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#左连接（LEFT-JOIN"><span class="nav-number">11.2.1.</span> <span class="nav-text">左连接（LEFT  JOIN)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-3-自连接"><span class="nav-number">11.3.</span> <span class="nav-text">11.3 自连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-4-创建视图"><span class="nav-number">11.4.</span> <span class="nav-text">11.4 创建视图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#视图的优点"><span class="nav-number">11.4.1.</span> <span class="nav-text">视图的优点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十二、补充"><span class="nav-number">12.</span> <span class="nav-text">十二、补充</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#12-1-子查询"><span class="nav-number">12.1.</span> <span class="nav-text">12.1 子查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-2-索引"><span class="nav-number">12.2.</span> <span class="nav-text">12.2 索引</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考："><span class="nav-number">13.</span> <span class="nav-text">参考：</span></a></li></ol></div>
+            
 
-<!-- About Theme -->
-<!--
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
--->
+      
 
     </div>
+  </aside>
 
-    <!-- Sidebar Image -->
-    
 
-</aside>
+        
+      </div>
+    </main>
 
-                    
-
-                    
-                        <!-- Footer Top Button -->
-                        <div class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
-</div>
-
-                    
-
-                    <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom">
-    
-        <!-- Paradox Footer Left Section -->
-        <div class="mdl-mini-footer--left-section sns-list">
-    <!-- Twitter -->
-    
-        <a href="https://twitter.com/Michael_Xiang_" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-twitter.svg);">
-                <span class="visuallyhidden">Twitter</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Facebook -->
-    
-
-    <!-- Google + -->
-    
-
-    <!-- Weibo -->
-    
-        <a href="http://weibo.com/xiangzai728/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-weibo.svg);">
-                <span class="visuallyhidden">Weibo</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Instagram -->
-    
-
-    <!-- Tumblr -->
-    
-
-    <!-- Github -->
-    
-
-    <!-- LinkedIn -->
-    
-
-    <!-- Zhihu -->
-    
-        <a href="https://www.zhihu.com/people/michaelXoX/activities" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-zhihu.svg);">
-                <span class="visuallyhidden">Zhihu</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Bilibili -->
-    
-
-    <!-- Telegram -->
-    
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Michael_翔</span>
 </div>
 
 
-        <!--Copyright-->
-        <div id="copyright">
-            Copyright&nbsp;©&nbsp;
-            <script type="text/javascript">
-                var fd = new Date();
-                document.write(fd.getFullYear());
-            </script>
-            &nbsp;Michael翔的小窝
-        </div>
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
 
-        <!-- Paradox Footer Right Section -->
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
 
-        <!--
-        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-        It will not impact the appearance and can give developers a lot of support :)
 
-        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-        它不会影响美观并可以给开发者很大的支持。 :)
-        -->
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-        <div class="mdl-mini-footer--right-section">
-            <div>
-                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
-            </div>
-        </div>
+  
+    <span class="site-uv">
+      <i class="fa fa-user">本站访客数</i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye">本站总访问量</i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
     
-</footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
 
+  </div>
 
-                    <!-- Import File -->
-
-    <script src="/js/lazyload.min.js"></script>
-    <script src="/js/js.min.js"></script>
-
-
-
-    <script src="/js/nprogress.js"></script>
-
+  
 
 <script type="text/javascript">
-    NProgress.configure({
-        showSpinner: true
-    });
-    NProgress.start();
-    $('#nprogress .bar').css({
-        'background': '#29d'
-    });
-    $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
-    });
-    $('#nprogress .spinner-icon').css({
-        'border-top-color': '#29d',
-        'border-left-color': '#29d'
-    });
-    setTimeout(function() {
-        NProgress.done();
-        $('.fade').removeClass('out');
-    }, 800);
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
 
 
 
-    <!-- Leancloud -->
-    <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-    <script>
-        AV.initialize('7CDtrbb4U7nQzOdctmXXnMqt-gzGzoHsz', 'ISgUUtg79U9Eq0ActHmVRtmN');
-    </script>
-    <script>
-    function showTime(Counter) {
-        var query = new AV.Query(Counter);
-        $('.leancloud-views_num').each(function() {
-            var url = $(this).attr('id').trim();
-            query.equalTo('url', url);
-            query.find({
-                success: function(results) {
-                    if (results.length === 0) {
-                        var content = '0 ' + $(document.getElementById(url)).text();
-                        $(document.getElementById(url)).text(content);
-                        return;
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://michaelxiang.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://michael728.github.io/2016/05/03/SQL/';
+          this.page.identifier = '2016/05/03/SQL/';
+          this.page.title = 'SQL基础语法笔记教程整理';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://michaelxiang.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (search_path.endsWith("json")) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      $('#local-search-input').focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
                     }
-                    for (var i = 0; i < results.length; i++) {
-                        var object = results[i];
-                        var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
-                        $(document.getElementById(url)).text(content);
-                    }
-                },
-                error: function(object, error) {
-                    console.log('Error: ' + error.code + ' ' + error.message);
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
                 }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
             });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("7CDtrbb4U7nQzOdctmXXnMqt-gzGzoHsz", "ISgUUtg79U9Eq0ActHmVRtmN");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
         });
     }
 
     function addCount(Counter) {
-      var Counter = AV.Object.extend('Counter');
-      url = $('.leancloud-views_num').attr('id').trim();
-      title = $('.leancloud-views_num').attr('data-flag-title').trim();
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
       var query = new AV.Query(Counter);
-      query.equalTo('url', url);
+
+      query.equalTo("url", url);
       query.find({
-          success: function(results) {
-            if (results.length > 0) {
-                var counter = results[0];
-                counter.fetchWhenSave(true);
-                counter.increment('time');
-                counter.save(null, {
-                    success: function(counter) {
-                        var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
-                        $(document.getElementById(url)).text(content);
-                    },
-                    error: function(counter, error) {
-                        console.log('Failed to save Visitor num, with error message: ' + error.message);
-                    }
-                });
-            } else {
-              var newcounter = new Counter();
-              newcounter.set('title', title);
-              newcounter.set('url', url);
-              newcounter.set('time', 1);
-              newcounter.save(null, {
-                  success: function(newcounter) {
-                      console.log('newcounter.get(\'time\')='+newcounter.get('time'));
-                      var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
-                      $(document.getElementById(url)).text(content);
-                  },
-                  error: function(newcounter, error) {
-                      console.log('Failed to create');
-                  }
-              });
-            }
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
         },
         error: function(error) {
-            console.log('Error:' + error.code + ' ' + error.message);
+          console.log('Error:' + error.code + " " + error.message);
         }
       });
     }
+
     $(function() {
-        var Counter = AV.Object.extend('Counter');
-        if ($('.leancloud-views_num').length === 1) {
-            addCount(Counter);
-        } else if ($('.post-title-link').length > 1) {
-            showTime(Counter);
-        }
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
     });
-</script>
+  </script>
 
 
 
+  
 
-    <!-- Busuanzi -->
-    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
-<!-- Window Load-->
-<script>
-    $(window).load(function() {
-        // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
-    });
-</script>
-
-<!-- MathJax Load-->
-
-<script>
-    <!-- Offer LazyLoad -->
-    queue.offer(function(){
-        $('.lazy').lazyload({
-            effect : 'show'
-        });
-    });
-
-    <!-- Start Queue -->
-    $(document).ready(function(){
-        setInterval(function(){
-            queue.execNext();
-        },200);
-    });
-</script>
-
-                </main>
-            </div>
-        </body>
-    
+</body>
 </html>

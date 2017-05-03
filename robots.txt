@@ -10,5 +10,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://michaelxiang.me/sitemap.xml
-Sitemap: http://michaelxiang.me/baidusitemap.xml
+Sitemap: http://http://michael728.github.io//sitemap.xml
+Sitemap: http://http://michael728.github.io//baidusitemap.xml

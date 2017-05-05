@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://michael728.github.io/"/>
-  <updated>2017-05-02T09:44:52.000Z</updated>
+  <updated>2017-05-05T09:28:36.440Z</updated>
   <id>http://michael728.github.io/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>观影-完美陌生人-家庭-人性-出轨</title>
+    <link href="http://michael728.github.io/2017/05/05/movie-Perfect-Strangers/"/>
+    <id>http://michael728.github.io/2017/05/05/movie-Perfect-Strangers/</id>
+    <published>2017-05-05T09:23:45.000Z</published>
+    <updated>2017-05-05T09:28:36.440Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://img1.doubanio.com/view/photo/photo/public/p2368165357.webp&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://movie.douban.com/subj
+    
+    </summary>
+    
+      <category term="电影" scheme="http://michael728.github.io/categories/%E7%94%B5%E5%BD%B1/"/>
+    
+    
+      <category term="电影" scheme="http://michael728.github.io/tags/%E7%94%B5%E5%BD%B1/"/>
+    
+      <category term="人性" scheme="http://michael728.github.io/tags/%E4%BA%BA%E6%80%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>多说评论迁移到disqus评论的教程</title>
@@ -454,29 +478,6 @@
       <category term="python" scheme="http://michael728.github.io/tags/python/"/>
     
       <category term="整理" scheme="http://michael728.github.io/tags/%E6%95%B4%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>sublime常用插件及用法整理</title>
-    <link href="http://michael728.github.io/2015/12/01/tools-sublime-extensions/"/>
-    <id>http://michael728.github.io/2015/12/01/tools-sublime-extensions/</id>
-    <published>2015-12-01T11:37:28.000Z</published>
-    <updated>2017-04-27T03:05:34.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;sublime-text-必装插件&quot;&gt;&lt;a href=&quot;#sublime-text-必装插件&quot; class=&quot;headerlink&quot; title=&quot;sublime text 必装插件&quot;&gt;&lt;/a&gt;sublime text 必装插件&lt;/h1&gt;&lt;p&gt;挖坑，待续&lt;/p&gt;
-&lt;h1 id=&quot;Sublime-Text-3设置python编译支持环境设置&quot;&gt;&lt;a href=&quot;#Sublime-Text-3设置python编译支持环境设置&quot; class=&quot;headerlink&quot; title=&quot;Sublime Text 3设置python编译支持环境设置&quot;&gt;&lt;/a&gt;Sublime Text 3设置python编译支持环境设置&lt;/h1&gt;&lt;h2 id=&quot;安装sublimerepl插件-官网说明&quot;&gt;&lt;a href=&quot;#安装sublimerepl插件-官网说明&quot; class=&quot;headerlink&quot; title=&quot;安装sublimerepl插件 官网说明&quot;&gt;&lt;/a&gt;安装&lt;code&gt;sublimerepl&lt;/code&gt;插件 &lt;a href=&quot;https://packagecontrol.io/packages/SublimeREPL&quot;&gt;官网说明&lt;/a&gt;&lt;/h2&gt;
-    
-    </summary>
-    
-      <category term="tools" scheme="http://michael728.github.io/categories/tools/"/>
-    
-    
-      <category term="tools" scheme="http://michael728.github.io/tags/tools/"/>
-    
-      <category term="sublime" scheme="http://michael728.github.io/tags/sublime/"/>
     
   </entry>
   

@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://michael728.github.io/2017/05/24/books-list-interesting/</loc>
+    <lastmod>2017-05-24T11:31:04.017Z</lastmod>
+    <data>
+        <display>
+        <title>有趣的在线电子书阅读列表</title>
+        <pubTime>2017-05-24T11:17:13.000Z</pubTime>
+        
+        <tag>电子书</tag>
+         
+         
+           
+             
+              <breadCrumb title="books" url="http://michael728.github.io/categories/books/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://michael728.github.io/2017/04/25/blog-interesting-list/</loc>
     <lastmod>2017-05-23T07:22:48.449Z</lastmod>
     <data>
@@ -333,9 +353,9 @@
         <title>python机器学习入门资料梳理</title>
         <pubTime>2015-12-16T13:45:29.000Z</pubTime>
         
-        <tag>整理</tag>
-         
         <tag>python</tag>
+         
+        <tag>整理</tag>
          
         <tag>machine learning</tag>
          
@@ -530,9 +550,9 @@
         
         <tag>list</tag>
          
-        <tag>整理</tag>
-         
         <tag>python</tag>
+         
+        <tag>整理</tag>
          
          
            

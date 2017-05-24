@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://michael728.github.io/2015/11/30/hexo-next-optimize/</loc>
+    <lastmod>2017-05-24T16:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>hexo之next主题优化整理</title>
+        <pubTime>2015-11-30T08:01:18.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://michael728.github.io/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://michael728.github.io/2017/04/25/blog-list-interesting/</loc>
-    <lastmod>2017-05-24T13:23:55.149Z</lastmod>
+    <lastmod>2017-05-24T13:32:11.097Z</lastmod>
     <data>
         <display>
         <title>有趣的博客-整理</title>
@@ -88,26 +108,6 @@
            
              
               <breadCrumb title="电影" url="http://michael728.github.io/categories/%E7%94%B5%E5%BD%B1/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2015/11/30/hexo-next-optimize/</loc>
-    <lastmod>2017-05-03T11:22:31.653Z</lastmod>
-    <data>
-        <display>
-        <title>hexo之next主题优化整理</title>
-        <pubTime>2015-11-30T08:01:18.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://michael728.github.io/categories/hexo/"/>
           
         </display>
     </data>

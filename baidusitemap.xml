@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>http://michael728.github.io/2017/04/25/blog-list-interesting/</loc>
+    <lastmod>2017-05-27T04:06:19.910Z</lastmod>
+    <data>
+        <display>
+        <title>有趣的博客-整理</title>
+        <pubTime>2017-04-25T09:09:10.000Z</pubTime>
+        
+        <tag>list</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://michael728.github.io/2015/11/30/hexo-next-optimize/</loc>
     <lastmod>2017-05-24T16:00:00.000Z</lastmod>
     <data>
@@ -18,23 +35,6 @@
              
               <breadCrumb title="hexo" url="http://michael728.github.io/categories/hexo/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2017/04/25/blog-list-interesting/</loc>
-    <lastmod>2017-05-24T13:32:11.097Z</lastmod>
-    <data>
-        <display>
-        <title>有趣的博客-整理</title>
-        <pubTime>2017-04-25T09:09:10.000Z</pubTime>
-        
-        <tag>list</tag>
-         
-         
-           
         </display>
     </data>
     </url>
@@ -224,26 +224,6 @@
         <display>
         <title>搜狗输入法使用技巧整理</title>
         <pubTime>2015-12-28T03:03:25.000Z</pubTime>
-        
-        <tag>tools</tag>
-         
-         
-           
-             
-              <breadCrumb title="tools" url="http://michael728.github.io/categories/tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2015/12/09/tools-del-error/</loc>
-    <lastmod>2017-04-27T03:02:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>无法删除文件，“文件或目录损坏且无法读取”问题的解决办法</title>
-        <pubTime>2015-12-09T05:30:03.000Z</pubTime>
         
         <tag>tools</tag>
          
@@ -568,28 +548,6 @@
     
     
     
-    
-  <url>
-    <loc>http://michael728.github.io/2015/11/29/song-wukong/</loc>
-    <lastmod>2016-05-14T07:09:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>大圣归来</title>
-        <pubTime>2015-11-28T17:39:40.000Z</pubTime>
-        
-        <tag>songs</tag>
-         
-        <tag>心情</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://michael728.github.io/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://michael728.github.io/2015/11/30/hexo-gitcafe-github-dns-goddaddy-set/</loc>

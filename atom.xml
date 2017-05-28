@@ -86,7 +86,7 @@
     <link href="http://michael728.github.io/2017/04/25/blog-list-interesting/"/>
     <id>http://michael728.github.io/2017/04/25/blog-list-interesting/</id>
     <published>2017-04-25T09:09:10.000Z</published>
-    <updated>2017-05-24T13:32:11.097Z</updated>
+    <updated>2017-05-27T04:06:19.910Z</updated>
     
     <summary type="html">
     
@@ -433,30 +433,6 @@
   </entry>
   
   <entry>
-    <title>无法删除文件，“文件或目录损坏且无法读取”问题的解决办法</title>
-    <link href="http://michael728.github.io/2015/12/09/tools-del-error/"/>
-    <id>http://michael728.github.io/2015/12/09/tools-del-error/</id>
-    <published>2015-12-09T05:30:03.000Z</published>
-    <updated>2017-04-27T03:02:01.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天下午整理我的移动硬盘上的资料，结果，删除某个文件夹出现了这样的错误：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;移动硬盘出现“文件或目录损坏且无法读取”的简单修复&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;作为处女座的我当然不能熟视无睹！必须歼灭它~通过查资料，找到了一下解决办法。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="tools" scheme="http://michael728.github.io/categories/tools/"/>
-    
-    
-      <category term="tools" scheme="http://michael728.github.io/tags/tools/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Git入门私房菜</title>
     <link href="http://michael728.github.io/2015/12/07/git-tutor/"/>
     <id>http://michael728.github.io/2015/12/07/git-tutor/</id>
@@ -475,6 +451,32 @@
       <category term="git" scheme="http://michael728.github.io/tags/git/"/>
     
       <category term="tools" scheme="http://michael728.github.io/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python入门资料大全(更新ing)</title>
+    <link href="http://michael728.github.io/2015/12/02/python-files-list/"/>
+    <id>http://michael728.github.io/2015/12/02/python-files-list/</id>
+    <published>2015-12-02T01:45:29.000Z</published>
+    <updated>2017-04-26T17:45:24.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://leanote.com/api/file/getImage?fileId=56417bb0ab6441391f0013ad&quot; alt=&quot;图片标题&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;一、说明&quot;&gt;&lt;a href=&quot;#一、说明&quot; class=&quot;headerlink&quot; title=&quot;一、说明&quot;&gt;&lt;/a&gt;一、说明&lt;/h1&gt;&lt;p&gt;面对网络上纷繁复杂的资料，自己真是眼花缭乱，学的毫无章法，东一榔头西一棒子，这样不仅知识不能成为体系，自己的学习进度也不容易掌握，收效甚微。突然有个想法，就是把自己这几天收藏的资料整理出文章出来，方便自己有章可依……&lt;/p&gt;
+&lt;p&gt;PS:附上一些python相关的好文：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="python" scheme="http://michael728.github.io/categories/python/"/>
+    
+    
+      <category term="list" scheme="http://michael728.github.io/tags/list/"/>
+    
+      <category term="python" scheme="http://michael728.github.io/tags/python/"/>
+    
+      <category term="整理" scheme="http://michael728.github.io/tags/%E6%95%B4%E7%90%86/"/>
     
   </entry>
   

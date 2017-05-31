@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://michael728.github.io/"/>
-  <updated>2017-05-24T11:44:22.313Z</updated>
+  <updated>2017-05-31T07:27:08.253Z</updated>
   <id>http://michael728.github.io/</id>
   
   <author>
@@ -14,6 +14,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>habits-life</title>
+    <link href="http://michael728.github.io/2017/05/31/life-habits/"/>
+    <id>http://michael728.github.io/2017/05/31/life-habits/</id>
+    <published>2017-05-31T07:11:36.000Z</published>
+    <updated>2017-05-31T07:27:08.253Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;习惯不是最好的仆人，便是最坏的主人。——爱默生&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="life" scheme="http://michael728.github.io/tags/life/"/>
+    
+  </entry>
   
   <entry>
     <title>有趣的在线电子书阅读列表</title>
@@ -451,32 +470,6 @@
       <category term="git" scheme="http://michael728.github.io/tags/git/"/>
     
       <category term="tools" scheme="http://michael728.github.io/tags/tools/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python入门资料大全(更新ing)</title>
-    <link href="http://michael728.github.io/2015/12/02/python-files-list/"/>
-    <id>http://michael728.github.io/2015/12/02/python-files-list/</id>
-    <published>2015-12-02T01:45:29.000Z</published>
-    <updated>2017-04-26T17:45:24.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://leanote.com/api/file/getImage?fileId=56417bb0ab6441391f0013ad&quot; alt=&quot;图片标题&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;一、说明&quot;&gt;&lt;a href=&quot;#一、说明&quot; class=&quot;headerlink&quot; title=&quot;一、说明&quot;&gt;&lt;/a&gt;一、说明&lt;/h1&gt;&lt;p&gt;面对网络上纷繁复杂的资料，自己真是眼花缭乱，学的毫无章法，东一榔头西一棒子，这样不仅知识不能成为体系，自己的学习进度也不容易掌握，收效甚微。突然有个想法，就是把自己这几天收藏的资料整理出文章出来，方便自己有章可依……&lt;/p&gt;
-&lt;p&gt;PS:附上一些python相关的好文：&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="python" scheme="http://michael728.github.io/categories/python/"/>
-    
-    
-      <category term="list" scheme="http://michael728.github.io/tags/list/"/>
-    
-      <category term="python" scheme="http://michael728.github.io/tags/python/"/>
-    
-      <category term="整理" scheme="http://michael728.github.io/tags/%E6%95%B4%E7%90%86/"/>
     
   </entry>
   

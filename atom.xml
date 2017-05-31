@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://michael728.github.io/"/>
-  <updated>2017-05-31T08:17:39.999Z</updated>
+  <updated>2017-05-31T08:18:43.573Z</updated>
   <id>http://michael728.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://michael728.github.io/2017/05/31/experience-job-seek/"/>
     <id>http://michael728.github.io/2017/05/31/experience-job-seek/</id>
     <published>2017-05-31T07:30:29.000Z</published>
-    <updated>2017-05-31T08:17:39.999Z</updated>
+    <updated>2017-05-31T08:18:43.573Z</updated>
     
     <summary type="html">
     
@@ -28,6 +28,10 @@
     
     </summary>
     
+      <category term="生活" scheme="http://michael728.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="校招" scheme="http://michael728.github.io/tags/%E6%A0%A1%E6%8B%9B/"/>
     
   </entry>
   
@@ -461,9 +465,9 @@
       <category term="python" scheme="http://michael728.github.io/categories/python/"/>
     
     
-      <category term="python" scheme="http://michael728.github.io/tags/python/"/>
-    
       <category term="整理" scheme="http://michael728.github.io/tags/%E6%95%B4%E7%90%86/"/>
+    
+      <category term="python" scheme="http://michael728.github.io/tags/python/"/>
     
       <category term="machine learning" scheme="http://michael728.github.io/tags/machine-learning/"/>
     

@@ -5,14 +5,19 @@
     
   <url>
     <loc>http://michael728.github.io/2017/05/31/experience-job-seek/</loc>
-    <lastmod>2017-05-31T08:17:39.999Z</lastmod>
+    <lastmod>2017-05-31T08:18:43.573Z</lastmod>
     <data>
         <display>
         <title>2017届校招总结</title>
         <pubTime>2017-05-31T07:30:29.000Z</pubTime>
         
+        <tag>校招</tag>
+         
          
            
+             
+              <breadCrumb title="生活" url="http://michael728.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+          
         </display>
     </data>
     </url>
@@ -408,9 +413,9 @@
         <title>python机器学习入门资料梳理</title>
         <pubTime>2015-12-16T13:45:29.000Z</pubTime>
         
-        <tag>python</tag>
-         
         <tag>整理</tag>
+         
+        <tag>python</tag>
          
         <tag>machine learning</tag>
          
@@ -565,9 +570,9 @@
         
         <tag>list</tag>
          
-        <tag>python</tag>
-         
         <tag>整理</tag>
+         
+        <tag>python</tag>
          
          
            

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://michael728.github.io/"/>
-  <updated>2017-05-31T07:27:08.253Z</updated>
+  <updated>2017-05-31T08:17:39.999Z</updated>
   <id>http://michael728.github.io/</id>
   
   <author>
@@ -16,11 +16,27 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>habits-life</title>
+    <title>2017届校招总结</title>
+    <link href="http://michael728.github.io/2017/05/31/experience-job-seek/"/>
+    <id>http://michael728.github.io/2017/05/31/experience-job-seek/</id>
+    <published>2017-05-31T07:30:29.000Z</published>
+    <updated>2017-05-31T08:17:39.999Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;校招已经结束很久，还是去年的事情了，一直想写一篇文章来记录那段时间经历的事情，但是一直未动笔。离毕业只剩下了3周的时间，即将告别大学校园，踏入职场，想想，是时候该写一写，留下一点回忆了。&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>习惯列表</title>
     <link href="http://michael728.github.io/2017/05/31/life-habits/"/>
     <id>http://michael728.github.io/2017/05/31/life-habits/</id>
     <published>2017-05-31T07:11:36.000Z</published>
-    <updated>2017-05-31T07:27:08.253Z</updated>
+    <updated>2017-05-31T07:29:56.984Z</updated>
     
     <summary type="html">
     
@@ -28,6 +44,8 @@
 &lt;/blockquote&gt;
     
     </summary>
+    
+      <category term="修养" scheme="http://michael728.github.io/categories/%E4%BF%AE%E5%85%BB/"/>
     
     
       <category term="life" scheme="http://michael728.github.io/tags/life/"/>
@@ -214,7 +232,7 @@
     <link href="http://michael728.github.io/2016/07/25/life-about-intern-in-Shanghai/"/>
     <id>http://michael728.github.io/2016/07/25/life-about-intern-in-Shanghai/</id>
     <published>2016-07-25T13:29:08.000Z</published>
-    <updated>2017-04-27T02:41:20.000Z</updated>
+    <updated>2017-05-31T08:17:12.097Z</updated>
     
     <summary type="html">
     
@@ -226,7 +244,7 @@
       <category term="Life" scheme="http://michael728.github.io/categories/Life/"/>
     
     
-      <category term="Life" scheme="http://michael728.github.io/tags/Life/"/>
+      <category term="life" scheme="http://michael728.github.io/tags/life/"/>
     
   </entry>
   
@@ -411,7 +429,7 @@
     <link href="http://michael728.github.io/2015/12/20/life-20151220/"/>
     <id>http://michael728.github.io/2015/12/20/life-20151220/</id>
     <published>2015-12-20T15:16:43.000Z</published>
-    <updated>2017-04-27T02:46:00.000Z</updated>
+    <updated>2017-05-31T08:17:10.900Z</updated>
     
     <summary type="html">
     
@@ -422,7 +440,7 @@
       <category term="Life" scheme="http://michael728.github.io/categories/Life/"/>
     
     
-      <category term="Life" scheme="http://michael728.github.io/tags/Life/"/>
+      <category term="life" scheme="http://michael728.github.io/tags/life/"/>
     
   </entry>
   
@@ -448,28 +466,6 @@
       <category term="整理" scheme="http://michael728.github.io/tags/%E6%95%B4%E7%90%86/"/>
     
       <category term="machine learning" scheme="http://michael728.github.io/tags/machine-learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git入门私房菜</title>
-    <link href="http://michael728.github.io/2015/12/07/git-tutor/"/>
-    <id>http://michael728.github.io/2015/12/07/git-tutor/</id>
-    <published>2015-12-07T06:51:29.000Z</published>
-    <updated>2017-04-27T03:11:25.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;昨天下午参考廖雪峰的博客和其他一些文章，简单了解了一下传说中的Git，发现常见用法入门还是挺容易上手的，在此做一些笔记，方便以后查阅和复习。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="tools" scheme="http://michael728.github.io/categories/tools/"/>
-    
-    
-      <category term="git" scheme="http://michael728.github.io/tags/git/"/>
-    
-      <category term="tools" scheme="http://michael728.github.io/tags/tools/"/>
     
   </entry>
   

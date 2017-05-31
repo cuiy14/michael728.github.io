@@ -4,17 +4,75 @@
 
     
   <url>
-    <loc>http://michael728.github.io/2017/05/31/life-habits/</loc>
-    <lastmod>2017-05-31T07:27:08.253Z</lastmod>
+    <loc>http://michael728.github.io/2017/05/31/experience-job-seek/</loc>
+    <lastmod>2017-05-31T08:17:39.999Z</lastmod>
     <data>
         <display>
-        <title>habits-life</title>
+        <title>2017届校招总结</title>
+        <pubTime>2017-05-31T07:30:29.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2016/07/25/life-about-intern-in-Shanghai/</loc>
+    <lastmod>2017-05-31T08:17:12.097Z</lastmod>
+    <data>
+        <display>
+        <title>在魔都上海的银联实习生活</title>
+        <pubTime>2016-07-25T13:29:08.000Z</pubTime>
+        
+        <tag>life</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://michael728.github.io/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2015/12/20/life-20151220/</loc>
+    <lastmod>2017-05-31T08:17:10.900Z</lastmod>
+    <data>
+        <display>
+        <title>杂文-2015/12/20</title>
+        <pubTime>2015-12-20T15:16:43.000Z</pubTime>
+        
+        <tag>life</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://michael728.github.io/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2017/05/31/life-habits/</loc>
+    <lastmod>2017-05-31T07:29:56.984Z</lastmod>
+    <data>
+        <display>
+        <title>习惯列表</title>
         <pubTime>2017-05-31T07:11:36.000Z</pubTime>
         
         <tag>life</tag>
          
          
            
+             
+              <breadCrumb title="修养" url="http://michael728.github.io/categories/%E4%BF%AE%E5%85%BB/"/>
+          
         </display>
     </data>
     </url>
@@ -382,46 +440,6 @@
            
              
               <breadCrumb title="python" url="http://michael728.github.io/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2015/12/20/life-20151220/</loc>
-    <lastmod>2017-04-27T02:46:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>杂文-2015/12/20</title>
-        <pubTime>2015-12-20T15:16:43.000Z</pubTime>
-        
-        <tag>Life</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://michael728.github.io/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2016/07/25/life-about-intern-in-Shanghai/</loc>
-    <lastmod>2017-04-27T02:41:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>在魔都上海的银联实习生活</title>
-        <pubTime>2016-07-25T13:29:08.000Z</pubTime>
-        
-        <tag>Life</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://michael728.github.io/categories/Life/"/>
           
         </display>
     </data>

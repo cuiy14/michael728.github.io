@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://michael728.github.io/"/>
-  <updated>2017-08-11T18:07:53.492Z</updated>
+  <updated>2017-12-17T11:32:30.142Z</updated>
   <id>http://michael728.github.io/</id>
   
   <author>
@@ -14,6 +14,23 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux-ubuntu-for-python</title>
+    <link href="http://michael728.github.io/2017/12/17/linux-ubuntu-for-python/"/>
+    <id>http://michael728.github.io/2017/12/17/linux-ubuntu-for-python/</id>
+    <published>2017-12-17T11:29:51.000Z</published>
+    <updated>2017-12-17T11:32:30.142Z</updated>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;打造Ubuntu下的Python开发环境&quot;&gt;&lt;a href=&quot;#打造Ubuntu下的Python开发环境&quot; class=&quot;headerlink&quot; title=&quot;打造Ubuntu下的Python开发环境&quot;&gt;&lt;/a&gt;打造Ubuntu
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>入职一个月的札记</title>
@@ -443,26 +460,6 @@
       <category term="pandas" scheme="http://michael728.github.io/tags/pandas/"/>
     
       <category term="数据分析" scheme="http://michael728.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杂文-2015/12/20</title>
-    <link href="http://michael728.github.io/2015/12/20/life-20151220/"/>
-    <id>http://michael728.github.io/2015/12/20/life-20151220/</id>
-    <published>2015-12-20T15:16:43.000Z</published>
-    <updated>2017-05-31T08:17:10.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天在朋友圈，发现高中同桌q诚当上爸爸了，恭喜。虽然许久都未曾联系，但是还是由衷的内心给予祝福……回想起高中那段时光，真是记忆犹新。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Life" scheme="http://michael728.github.io/categories/Life/"/>
-    
-    
-      <category term="life" scheme="http://michael728.github.io/tags/life/"/>
     
   </entry>
   

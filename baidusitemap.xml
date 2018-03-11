@@ -4,16 +4,16 @@
 
     
   <url>
-    <loc>http://michael728.github.io/2018/03/11/tools-zsh-tutorial/</loc>
-    <lastmod>2018-03-11T03:03:45.734Z</lastmod>
+    <loc>http://michael728.github.io/2017/05/02/tutorial-duoshuo-migrate-to-disqus/</loc>
+    <lastmod>2018-03-11T04:15:56.186Z</lastmod>
     <data>
         <display>
-        <title>zsh tutorial</title>
-        <pubTime>2018-03-11T02:56:09.000Z</pubTime>
+        <title>多说评论迁移到disqus评论的教程</title>
+        <pubTime>2017-05-02T08:40:19.000Z</pubTime>
         
-        <tag>tools</tag>
+        <tag>教程</tag>
          
-        <tag>Linux</tag>
+        <tag>disqus</tag>
          
          
            
@@ -23,11 +23,297 @@
 
     
   <url>
-    <loc>http://michael728.github.io/2017/12/17/linux-ubuntu-for-python/</loc>
-    <lastmod>2017-12-17T11:32:30.143Z</lastmod>
+    <loc>http://michael728.github.io/2015/12/01/tools-sublime-extensions/</loc>
+    <lastmod>2018-03-11T04:15:48.319Z</lastmod>
     <data>
         <display>
-        <title>linux-ubuntu-for-python</title>
+        <title>sublime常用插件及用法整理</title>
+        <pubTime>2015-12-01T11:37:28.000Z</pubTime>
+        
+        <tag>tools</tag>
+         
+        <tag>sublime</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="http://michael728.github.io/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2015/12/28/tools-sougoupinyin/</loc>
+    <lastmod>2018-03-11T04:15:43.187Z</lastmod>
+    <data>
+        <display>
+        <title>搜狗输入法使用技巧整理</title>
+        <pubTime>2015-12-28T03:03:25.000Z</pubTime>
+        
+        <tag>tools</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="http://michael728.github.io/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2016/11/08/tools-no-usb/</loc>
+    <lastmod>2018-03-11T04:15:37.253Z</lastmod>
+    <data>
+        <display>
+        <title>Windows无法识别USB设备--移动硬盘/U盘 解决方法</title>
+        <pubTime>2016-11-08T11:25:18.000Z</pubTime>
+        
+        <tag>tools</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="http://michael728.github.io/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2016/11/14/tools-batch-file-set-ip-mask-gateway/</loc>
+    <lastmod>2018-03-11T04:15:27.080Z</lastmod>
+    <data>
+        <display>
+        <title>Windows下利用批命令修改IP设置</title>
+        <pubTime>2016-11-14T08:58:35.000Z</pubTime>
+        
+        <tag>tools</tag>
+         
+        <tag>小程序</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="http://michael728.github.io/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2016/05/03/SQL/</loc>
+    <lastmod>2018-03-11T04:15:19.824Z</lastmod>
+    <data>
+        <display>
+        <title>SQL基础语法笔记教程整理</title>
+        <pubTime>2016-05-03T08:55:41.000Z</pubTime>
+        
+        <tag>数据库</tag>
+         
+        <tag>SQL</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据库" url="http://michael728.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2016/07/28/python-regx/</loc>
+    <lastmod>2018-03-11T04:15:08.568Z</lastmod>
+    <data>
+        <display>
+        <title>Python正则表达式学习摘要及资料</title>
+        <pubTime>2016-07-28T15:08:34.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>正则</tag>
+         
+         
+           
+             
+              <breadCrumb title="正则" url="http://michael728.github.io/categories/%E6%AD%A3%E5%88%99/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2015/11/26/python-pyenv-anaconda/</loc>
+    <lastmod>2018-03-11T04:15:01.654Z</lastmod>
+    <data>
+        <display>
+        <title>Python多版本共存工具-Pyenv及Anaconda科学计算环境的配置</title>
+        <pubTime>2015-11-26T08:22:29.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>anaconda</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://michael728.github.io/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2015/12/23/python-pandas-basic/</loc>
+    <lastmod>2018-03-11T04:14:54.871Z</lastmod>
+    <data>
+        <display>
+        <title>Python数据分析入门之pandas总结基础</title>
+        <pubTime>2015-12-23T10:44:29.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>pandas</tag>
+         
+        <tag>数据分析</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://michael728.github.io/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2016/05/14/python-matplotlib-basic/</loc>
+    <lastmod>2018-03-11T04:14:40.135Z</lastmod>
+    <data>
+        <display>
+        <title>Python--matplotlib绘图可视化知识点整理</title>
+        <pubTime>2016-05-14T07:50:02.000Z</pubTime>
+        
+        <tag>matplotlib</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://michael728.github.io/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2015/12/16/python-machine-learning-list/</loc>
+    <lastmod>2018-03-11T04:14:31.501Z</lastmod>
+    <data>
+        <display>
+        <title>python机器学习入门资料梳理</title>
+        <pubTime>2015-12-16T13:45:29.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>整理</tag>
+         
+        <tag>machine learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://michael728.github.io/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2015/12/02/python-files-list/</loc>
+    <lastmod>2018-03-11T04:14:25.934Z</lastmod>
+    <data>
+        <display>
+        <title>Python入门资料大全(更新ing)</title>
+        <pubTime>2015-12-02T01:45:29.000Z</pubTime>
+        
+        <tag>list</tag>
+         
+        <tag>python</tag>
+         
+        <tag>整理</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://michael728.github.io/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2015/12/29/python-encoding-error/</loc>
+    <lastmod>2018-03-11T04:14:19.622Z</lastmod>
+    <data>
+        <display>
+        <title>Python编码问题总结</title>
+        <pubTime>2015-12-29T04:51:24.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>编码</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://michael728.github.io/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2017/05/05/movie-Perfect-Strangers/</loc>
+    <lastmod>2018-03-11T04:14:13.531Z</lastmod>
+    <data>
+        <display>
+        <title>观影-完美陌生人-家庭-人性</title>
+        <pubTime>2017-05-05T09:23:45.000Z</pubTime>
+        
+        <tag>电影</tag>
+         
+        <tag>人性</tag>
+         
+         
+           
+             
+              <breadCrumb title="电影" url="http://michael728.github.io/categories/%E7%94%B5%E5%BD%B1/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2017/12/17/linux-ubuntu-for-python/</loc>
+    <lastmod>2018-03-11T04:14:04.392Z</lastmod>
+    <data>
+        <display>
+        <title>Linux-Ubuntu-for-Python</title>
         <pubTime>2017-12-17T11:29:51.000Z</pubTime>
         
          
@@ -37,38 +323,20 @@
     </url>
 
     
-    
   <url>
-    <loc>http://michael728.github.io/2017/08/12/job-one-month/</loc>
-    <lastmod>2017-08-11T18:07:53.493Z</lastmod>
+    <loc>http://michael728.github.io/2017/05/31/life-habits/</loc>
+    <lastmod>2018-03-11T04:13:53.967Z</lastmod>
     <data>
         <display>
-        <title>入职一个月的札记</title>
-        <pubTime>2017-08-11T17:44:12.000Z</pubTime>
+        <title>习惯列表</title>
+        <pubTime>2017-05-31T07:11:36.000Z</pubTime>
         
-        <tag>job</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2017/05/31/experience-job-seek/</loc>
-    <lastmod>2017-05-31T08:18:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>2017届校招总结</title>
-        <pubTime>2017-05-31T07:30:29.000Z</pubTime>
-        
-        <tag>校招</tag>
+        <tag>life</tag>
          
          
            
              
-              <breadCrumb title="生活" url="http://michael728.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+              <breadCrumb title="修养" url="http://michael728.github.io/categories/%E4%BF%AE%E5%85%BB/"/>
           
         </display>
     </data>
@@ -77,7 +345,7 @@
     
   <url>
     <loc>http://michael728.github.io/2016/07/25/life-about-intern-in-Shanghai/</loc>
-    <lastmod>2017-05-31T08:17:12.000Z</lastmod>
+    <lastmod>2018-03-11T04:13:46.908Z</lastmod>
     <data>
         <display>
         <title>在魔都上海的银联实习生活</title>
@@ -97,7 +365,7 @@
     
   <url>
     <loc>http://michael728.github.io/2015/12/20/life-20151220/</loc>
-    <lastmod>2017-05-31T08:17:10.000Z</lastmod>
+    <lastmod>2018-03-11T04:13:41.823Z</lastmod>
     <data>
         <display>
         <title>杂文-2015/12/20</title>
@@ -116,24 +384,207 @@
 
     
   <url>
-    <loc>http://michael728.github.io/2017/05/31/life-habits/</loc>
-    <lastmod>2017-05-31T07:29:56.000Z</lastmod>
+    <loc>http://michael728.github.io/2017/08/12/job-one-month/</loc>
+    <lastmod>2018-03-11T04:13:36.970Z</lastmod>
     <data>
         <display>
-        <title>习惯列表</title>
-        <pubTime>2017-05-31T07:11:36.000Z</pubTime>
+        <title>入职一个月的札记</title>
+        <pubTime>2017-08-11T17:44:12.000Z</pubTime>
         
-        <tag>life</tag>
+        <tag>job</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2015/11/30/hexo-gitcafe-github-dns-goddaddy-set/</loc>
+    <lastmod>2018-03-11T04:13:24.616Z</lastmod>
+    <data>
+        <display>
+        <title>hexo之github\gitcafe多线路托管博客，DNS域名设置</title>
+        <pubTime>2015-11-30T06:35:06.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>DNS</tag>
          
          
            
              
-              <breadCrumb title="修养" url="http://michael728.github.io/categories/%E4%BF%AE%E5%85%BB/"/>
+              <breadCrumb title="hexo" url="http://michael728.github.io/categories/hexo/"/>
           
         </display>
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://michael728.github.io/2015/11/30/hexo-gitcafe-github-deploy/</loc>
+    <lastmod>2018-03-11T04:13:16.078Z</lastmod>
+    <data>
+        <display>
+        <title>hexo之github\gitcafe多线路托管博客deploy及SSH设置问题</title>
+        <pubTime>2015-11-30T06:21:00.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://michael728.github.io/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2015/12/07/git-tutor/</loc>
+    <lastmod>2018-03-11T04:13:09.918Z</lastmod>
+    <data>
+        <display>
+        <title>Git入门私房菜</title>
+        <pubTime>2015-12-07T06:51:29.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>tools</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="http://michael728.github.io/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2017/05/31/experience-job-seek/</loc>
+    <lastmod>2018-03-11T04:13:02.852Z</lastmod>
+    <data>
+        <display>
+        <title>2017届校招总结</title>
+        <pubTime>2017-05-31T07:30:29.000Z</pubTime>
+        
+        <tag>校招</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="http://michael728.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2015/11/26/chrome-extentions/</loc>
+    <lastmod>2018-03-11T04:12:56.905Z</lastmod>
+    <data>
+        <display>
+        <title>Michael翔私藏-Chrome扩展插件整理合集,效率提高,爽！</title>
+        <pubTime>2015-11-26T08:22:29.000Z</pubTime>
+        
+        <tag>Chrome</tag>
+         
+        <tag>扩展</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="http://michael728.github.io/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2017/05/24/books-list-interesting/</loc>
+    <lastmod>2018-03-11T04:12:50.583Z</lastmod>
+    <data>
+        <display>
+        <title>有趣的在线电子书阅读列表</title>
+        <pubTime>2017-05-24T11:17:13.000Z</pubTime>
+        
+        <tag>电子书</tag>
+         
+         
+           
+             
+              <breadCrumb title="books" url="http://michael728.github.io/categories/books/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2016/02/26/books-list-2016/</loc>
+    <lastmod>2018-03-11T04:12:46.429Z</lastmod>
+    <data>
+        <display>
+        <title>2016读书-书单整理</title>
+        <pubTime>2016-02-26T05:50:14.000Z</pubTime>
+        
+        <tag>读书</tag>
+         
+         
+           
+             
+              <breadCrumb title="books" url="http://michael728.github.io/categories/books/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2016/09/03/blog-logfile/</loc>
+    <lastmod>2018-03-11T04:12:39.966Z</lastmod>
+    <data>
+        <display>
+        <title>博客建站日志</title>
+        <pubTime>2016-09-03T14:12:53.000Z</pubTime>
+        
+        <tag>blog</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://michael728.github.io/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://michael728.github.io/2018/03/11/tools-zsh-tutorial/</loc>
+    <lastmod>2018-03-11T04:12:20.884Z</lastmod>
+    <data>
+        <display>
+        <title>zsh tutorial</title>
+        <pubTime>2018-03-11T02:56:09.000Z</pubTime>
+        
+        <tag>tools</tag>
+         
+        <tag>Linux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://michael728.github.io/2017/04/25/blog-list-interesting/</loc>
@@ -173,26 +624,6 @@
 
     
   <url>
-    <loc>http://michael728.github.io/2017/05/24/books-list-interesting/</loc>
-    <lastmod>2017-05-24T11:44:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>有趣的在线电子书阅读列表</title>
-        <pubTime>2017-05-24T11:17:13.000Z</pubTime>
-        
-        <tag>电子书</tag>
-         
-         
-           
-             
-              <breadCrumb title="books" url="http://michael728.github.io/categories/books/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://michael728.github.io/tools/index.html</loc>
     <lastmod>2017-05-08T02:55:47.000Z</lastmod>
     <data>
@@ -225,371 +656,6 @@
 
     
   <url>
-    <loc>http://michael728.github.io/2017/05/05/movie-Perfect-Strangers/</loc>
-    <lastmod>2017-05-05T09:40:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>观影-完美陌生人-家庭-人性</title>
-        <pubTime>2017-05-05T09:23:45.000Z</pubTime>
-        
-        <tag>电影</tag>
-         
-        <tag>人性</tag>
-         
-         
-           
-             
-              <breadCrumb title="电影" url="http://michael728.github.io/categories/%E7%94%B5%E5%BD%B1/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2017/05/02/tutorial-duoshuo-migrate-to-disqus/</loc>
-    <lastmod>2017-05-02T09:44:52.000Z</lastmod>
-    <data>
-        <display>
-        <title>多说评论迁移到disqus评论的教程</title>
-        <pubTime>2017-05-02T08:40:19.000Z</pubTime>
-        
-        <tag>教程</tag>
-         
-        <tag>disqus</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2016/09/03/blog-logfile/</loc>
-    <lastmod>2017-05-02T07:39:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>博客建站日志</title>
-        <pubTime>2016-09-03T14:12:53.000Z</pubTime>
-        
-        <tag>blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://michael728.github.io/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2015/12/07/git-tutor/</loc>
-    <lastmod>2017-04-27T03:11:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>Git入门私房菜</title>
-        <pubTime>2015-12-07T06:51:29.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-        <tag>tools</tag>
-         
-         
-           
-             
-              <breadCrumb title="tools" url="http://michael728.github.io/categories/tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2016/11/08/tools-no-usb/</loc>
-    <lastmod>2017-04-27T03:11:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>Windows无法识别USB设备--移动硬盘/U盘 解决方法</title>
-        <pubTime>2016-11-08T11:25:18.000Z</pubTime>
-        
-        <tag>tools</tag>
-         
-         
-           
-             
-              <breadCrumb title="tools" url="http://michael728.github.io/categories/tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2015/12/01/tools-sublime-extensions/</loc>
-    <lastmod>2017-04-27T03:05:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>sublime常用插件及用法整理</title>
-        <pubTime>2015-12-01T11:37:28.000Z</pubTime>
-        
-        <tag>tools</tag>
-         
-        <tag>sublime</tag>
-         
-         
-           
-             
-              <breadCrumb title="tools" url="http://michael728.github.io/categories/tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2015/12/28/tools-sougoupinyin/</loc>
-    <lastmod>2017-04-27T03:05:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>搜狗输入法使用技巧整理</title>
-        <pubTime>2015-12-28T03:03:25.000Z</pubTime>
-        
-        <tag>tools</tag>
-         
-         
-           
-             
-              <breadCrumb title="tools" url="http://michael728.github.io/categories/tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2016/11/14/tools-batch-file-set-ip-mask-gateway/</loc>
-    <lastmod>2017-04-27T02:58:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>Windows下利用批命令修改IP设置</title>
-        <pubTime>2016-11-14T08:58:35.000Z</pubTime>
-        
-        <tag>tools</tag>
-         
-        <tag>小程序</tag>
-         
-         
-           
-             
-              <breadCrumb title="tools" url="http://michael728.github.io/categories/tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2015/11/26/python-pyenv-anaconda/</loc>
-    <lastmod>2017-04-27T02:55:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>Python多版本共存工具-Pyenv及Anaconda科学计算环境的配置</title>
-        <pubTime>2015-11-26T08:22:29.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>anaconda</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://michael728.github.io/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2015/12/23/python-pandas-basic/</loc>
-    <lastmod>2017-04-27T02:54:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>Python数据分析入门之pandas总结基础</title>
-        <pubTime>2015-12-23T10:44:29.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>pandas</tag>
-         
-        <tag>数据分析</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://michael728.github.io/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2016/05/14/python-matplotlib-basic/</loc>
-    <lastmod>2017-04-27T02:53:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>Python--matplotlib绘图可视化知识点整理</title>
-        <pubTime>2016-05-14T07:50:02.000Z</pubTime>
-        
-        <tag>matplotlib</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://michael728.github.io/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2015/12/16/python-machine-learning-list/</loc>
-    <lastmod>2017-04-27T02:51:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>python机器学习入门资料梳理</title>
-        <pubTime>2015-12-16T13:45:29.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>整理</tag>
-         
-        <tag>machine learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://michael728.github.io/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2015/12/29/python-encoding-error/</loc>
-    <lastmod>2017-04-27T02:49:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>Python编码问题总结</title>
-        <pubTime>2015-12-29T04:51:24.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>编码</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://michael728.github.io/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2016/05/03/SQL/</loc>
-    <lastmod>2017-04-27T02:40:33.000Z</lastmod>
-    <data>
-        <display>
-        <title>SQL基础语法笔记教程整理</title>
-        <pubTime>2016-05-03T08:55:41.000Z</pubTime>
-        
-        <tag>数据库</tag>
-         
-        <tag>SQL</tag>
-         
-         
-           
-             
-              <breadCrumb title="数据库" url="http://michael728.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2016/07/28/python-regx/</loc>
-    <lastmod>2017-04-27T02:31:52.000Z</lastmod>
-    <data>
-        <display>
-        <title>Python正则表达式学习摘要及资料</title>
-        <pubTime>2016-07-28T15:08:34.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>正则</tag>
-         
-         
-           
-             
-              <breadCrumb title="正则" url="http://michael728.github.io/categories/%E6%AD%A3%E5%88%99/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2015/11/26/chrome-extentions/</loc>
-    <lastmod>2017-04-27T02:30:29.000Z</lastmod>
-    <data>
-        <display>
-        <title>Michael翔私藏-Chrome扩展插件整理合集,效率提高,爽！</title>
-        <pubTime>2015-11-26T08:22:29.000Z</pubTime>
-        
-        <tag>Chrome</tag>
-         
-        <tag>扩展</tag>
-         
-         
-           
-             
-              <breadCrumb title="tools" url="http://michael728.github.io/categories/tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2016/02/26/books-list-2016/</loc>
-    <lastmod>2017-04-27T02:24:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>2016读书-书单整理</title>
-        <pubTime>2016-02-26T05:50:14.000Z</pubTime>
-        
-        <tag>读书</tag>
-         
-         
-           
-             
-              <breadCrumb title="books" url="http://michael728.github.io/categories/books/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://michael728.github.io/2015/12/24/algorithm-GA-basic/</loc>
     <lastmod>2017-04-27T02:16:45.000Z</lastmod>
     <data>
@@ -611,75 +677,9 @@
     </url>
 
     
-  <url>
-    <loc>http://michael728.github.io/2015/12/02/python-files-list/</loc>
-    <lastmod>2017-04-26T17:45:24.368Z</lastmod>
-    <data>
-        <display>
-        <title>Python入门资料大全(更新ing)</title>
-        <pubTime>2015-12-02T01:45:29.000Z</pubTime>
-        
-        <tag>list</tag>
-         
-        <tag>python</tag>
-         
-        <tag>整理</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://michael728.github.io/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
     
     
     
-    
-    
-  <url>
-    <loc>http://michael728.github.io/2015/11/30/hexo-gitcafe-github-dns-goddaddy-set/</loc>
-    <lastmod>2015-12-22T10:43:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>hexo之github\gitcafe多线路托管博客，DNS域名设置</title>
-        <pubTime>2015-11-30T06:35:06.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>DNS</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://michael728.github.io/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://michael728.github.io/2015/11/30/hexo-gitcafe-github-deploy/</loc>
-    <lastmod>2015-12-22T10:42:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>hexo之github\gitcafe多线路托管博客deploy及SSH设置问题</title>
-        <pubTime>2015-11-30T06:21:00.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://michael728.github.io/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
 </urlset>

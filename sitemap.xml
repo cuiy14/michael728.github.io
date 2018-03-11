@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://michael728.github.io/about/index.html</loc>
+    
+    <lastmod>2018-03-11T05:38:43.665Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://michael728.github.io/2017/05/02/tutorial-duoshuo-migrate-to-disqus/</loc>
     
     <lastmod>2018-03-11T04:15:56.186Z</lastmod>
@@ -194,13 +201,6 @@
     <loc>http://michael728.github.io/2018/03/11/tools-zsh-tutorial/</loc>
     
     <lastmod>2018-03-11T04:12:20.884Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://michael728.github.io/about/index.html</loc>
-    
-    <lastmod>2017-08-11T18:24:25.888Z</lastmod>
     
   </url>
   

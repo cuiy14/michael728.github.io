@@ -378,10 +378,6 @@
         
           <p>本文以CentOS 7 为例，介绍zsh的配置使用教程。</p>
 <h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><h3 id="查看当前环境shell"><a href="#查看当前环境shell" class="headerlink" title="查看当前环境shell"></a>查看当前环境shell</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="variable">$SHELL</span></div></pre></td></tr></table></figure>
-<h3 id="查看系统自带哪些shell"><a href="#查看系统自带哪些shell" class="headerlink" title="查看系统自带哪些shell"></a>查看系统自带哪些shell</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat <span class="regexp">/etc/</span>shells</div></pre></td></tr></table></figure>
-<h3 id="安装zsh"><a href="#安装zsh" class="headerlink" title="安装zsh"></a>安装zsh</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum <span class="keyword">install</span> zsh</div></pre></td></tr></table></figure>
-<h3 id="将zsh设置为默认shell"><a href="#将zsh设置为默认shell" class="headerlink" title="将zsh设置为默认shell"></a>将zsh设置为默认shell</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chsh -s <span class="regexp">/bin/</span>zsh</div></pre></td></tr></table></figure>
-<p>可以通过<code>echo $SHELL</code>查看当前默认的shell，如果没有改为<code>/bin/zsh</code>，那么需要重启shell。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/11/tools-zsh-tutorial/#more" rel="contents">

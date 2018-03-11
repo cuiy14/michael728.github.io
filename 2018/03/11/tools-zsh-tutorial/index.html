@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="本文以CentOS 7 为例，介绍zsh的配置使用教程。 zsh查看当前环境shell1echo $SHELL 查看系统自带哪些shell1cat /etc/shells 安装zsh1yum install zsh 将zsh设置为默认shell1chsh -s /bin/zsh 可以通过echo $SHELL查看当前默认的shell，如果没有改为/bin/zsh，那么需要重启shell。">
+<meta name="description" content="本文以CentOS 7 为例，介绍zsh的配置使用教程。 zsh查看当前环境shell1echo $SHELL">
 <meta name="keywords" content="tools,Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="zsh tutorial">
 <meta property="og:url" content="http://michael728.github.io/2018/03/11/tools-zsh-tutorial/index.html">
 <meta property="og:site_name" content="Michael翔的小窝">
-<meta property="og:description" content="本文以CentOS 7 为例，介绍zsh的配置使用教程。 zsh查看当前环境shell1echo $SHELL 查看系统自带哪些shell1cat /etc/shells 安装zsh1yum install zsh 将zsh设置为默认shell1chsh -s /bin/zsh 可以通过echo $SHELL查看当前默认的shell，如果没有改为/bin/zsh，那么需要重启shell。">
-<meta property="og:updated_time" content="2018-03-11T04:12:20.884Z">
+<meta property="og:description" content="本文以CentOS 7 为例，介绍zsh的配置使用教程。 zsh查看当前环境shell1echo $SHELL">
+<meta property="og:updated_time" content="2018-03-11T06:17:12.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zsh tutorial">
-<meta name="twitter:description" content="本文以CentOS 7 为例，介绍zsh的配置使用教程。 zsh查看当前环境shell1echo $SHELL 查看系统自带哪些shell1cat /etc/shells 安装zsh1yum install zsh 将zsh设置为默认shell1chsh -s /bin/zsh 可以通过echo $SHELL查看当前默认的shell，如果没有改为/bin/zsh，那么需要重启shell。">
+<meta name="twitter:description" content="本文以CentOS 7 为例，介绍zsh的配置使用教程。 zsh查看当前环境shell1echo $SHELL">
 
 
 
@@ -381,11 +381,11 @@
       
         <p>本文以CentOS 7 为例，介绍zsh的配置使用教程。</p>
 <h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><h3 id="查看当前环境shell"><a href="#查看当前环境shell" class="headerlink" title="查看当前环境shell"></a>查看当前环境shell</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="variable">$SHELL</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="查看系统自带哪些shell"><a href="#查看系统自带哪些shell" class="headerlink" title="查看系统自带哪些shell"></a>查看系统自带哪些shell</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat <span class="regexp">/etc/</span>shells</div></pre></td></tr></table></figure>
 <h3 id="安装zsh"><a href="#安装zsh" class="headerlink" title="安装zsh"></a>安装zsh</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum <span class="keyword">install</span> zsh</div></pre></td></tr></table></figure>
 <h3 id="将zsh设置为默认shell"><a href="#将zsh设置为默认shell" class="headerlink" title="将zsh设置为默认shell"></a>将zsh设置为默认shell</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chsh -s <span class="regexp">/bin/</span>zsh</div></pre></td></tr></table></figure>
 <p>可以通过<code>echo $SHELL</code>查看当前默认的shell，如果没有改为<code>/bin/zsh</code>，那么需要重启shell。</p>
-<a id="more"></a>
 <h2 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh-my-zsh"></a>oh-my-zsh</h2><p>配置zsh是一件麻烦的事儿，爱折腾的程序猿怎么可能忍受？！于是，<a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="external">oh-my-zsh</a>出现了，有了这个东东，zsh配置起来就方便多了！</p>
 <h3 id="安装oh-my-zsh"><a href="#安装oh-my-zsh" class="headerlink" title="安装oh-my-zsh"></a>安装oh-my-zsh</h3><p>有若干安装方式，介绍三种：<br>1.自动安装<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget https:<span class="regexp">//gi</span>thub.com<span class="regexp">/robbyrussell/</span>oh-my-zsh<span class="regexp">/raw/m</span>aster<span class="regexp">/tools/i</span>nstall.sh -O - | sh</div></pre></td></tr></table></figure></p>
 <p>2.手动安装<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git clone <span class="symbol">git:</span>/<span class="regexp">/github.com/robbyrussell</span><span class="regexp">/oh-my-zsh.git ~/</span>.oh-my-zsh</div><div class="line">cp ~<span class="regexp">/.oh-my-zsh/templates</span><span class="regexp">/zshrc.zsh-template ~/</span>.zshrc</div></pre></td></tr></table></figure></p>

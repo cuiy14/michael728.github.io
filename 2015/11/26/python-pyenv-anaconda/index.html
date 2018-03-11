@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="python,anaconda," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Michael翔的小窝" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="为了安装Anaconda科学计算环境，控制好python版本，今天上午总算折腾好了。  学习python有时希望在python2.7环境下，有时希望在python3.4环境下，该怎么办呢？ Anconda的包也不知道适合在什么环境下工作？  解决多python环境下，python版本切换的工具–pyenv应运而生。同时，另外一个工具virtualenv则提供了一种功能， 就是将一个目录建立为一个虚">
+<meta name="keywords" content="python,anaconda">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python多版本共存工具-Pyenv及Anaconda科学计算环境的配置">
+<meta property="og:url" content="http://michael728.github.io/2015/11/26/python-pyenv-anaconda/index.html">
+<meta property="og:site_name" content="Michael翔的小窝">
+<meta property="og:description" content="为了安装Anaconda科学计算环境，控制好python版本，今天上午总算折腾好了。  学习python有时希望在python2.7环境下，有时希望在python3.4环境下，该怎么办呢？ Anconda的包也不知道适合在什么环境下工作？  解决多python环境下，python版本切换的工具–pyenv应运而生。同时，另外一个工具virtualenv则提供了一种功能， 就是将一个目录建立为一个虚">
+<meta property="og:updated_time" content="2017-04-27T02:55:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python多版本共存工具-Pyenv及Anaconda科学计算环境的配置">
+<meta name="twitter:description" content="为了安装Anaconda科学计算环境，控制好python版本，今天上午总算折腾好了。  学习python有时希望在python2.7环境下，有时希望在python3.4环境下，该怎么办呢？ Anconda的包也不知道适合在什么环境下工作？  解决多python环境下，python版本切换的工具–pyenv应运而生。同时，另外一个工具virtualenv则提供了一种功能， 就是将一个目录建立为一个虚">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://michael728.github.io/2015/11/26/python-pyenv-anaconda/"/>
+
+
+
+
+
+  <title>Python多版本共存工具-Pyenv及Anaconda科学计算环境的配置 | Michael翔的小窝</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Michael翔的小窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">生命不息，折腾不止！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://michael728.github.io/2015/11/26/python-pyenv-anaconda/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Michael翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/large/6d9475f6ly1fe99p60lagj205k05k74u.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Michael翔的小窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python多版本共存工具-Pyenv及Anaconda科学计算环境的配置</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-11-26T16:22:29+08:00">
+                2015-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>为了安装Anaconda科学计算环境，控制好python版本，今天上午总算折腾好了。</p>
+<ul>
+<li>学习python有时希望在python2.7环境下，有时希望在python3.4环境下，该怎么办呢？</li>
+<li>Anconda的包也不知道适合在什么环境下工作？</li>
+</ul>
+<p>解决多python环境下，python版本切换的工具–pyenv应运而生。同时，另外一个工具virtualenv则提供了一种功能， 就是将一个目录建立为一个虚拟的python环境， 这样的话， 用户可以建立多个虚拟环境， 每个环境里面的python版本可以是不同的， 也可以是相同的， 而且环境之间相互独立。<br>下面简要介绍一下安装的过程：<br><a id="more"></a></p>
+<h1 id="Unix系统下pyenv安装与使用"><a href="#Unix系统下pyenv安装与使用" class="headerlink" title="Unix系统下pyenv安装与使用:"></a>Unix系统下pyenv安装与使用:</h1><h2 id="安装pyenv"><a href="#安装pyenv" class="headerlink" title="安装pyenv"></a>安装pyenv</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/yyuu/pyenv.git ~/.pyenv     <span class="comment">#使用 git 把 pyenv 下载到家目录</span></span></div><div class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="string">'export PYENV_ROOT="$HOME/.pyenv"'</span> &gt;&gt; ~/.bashrc     <span class="comment">#然后需要修改环境变量，使用 Bash Shell 的输入</span></span></div><div class="line"><span class="meta"></span></div><div class="line">$<span class="bash"> <span class="built_in">echo</span> <span class="string">'export PATH="$PYENV_ROOT/bin:$PATH"'</span> &gt;&gt; ~/.bashrc</span></div><div class="line"><span class="meta"></span></div><div class="line">$<span class="bash"> <span class="built_in">echo</span> <span class="string">'eval "$(pyenv init -)"'</span> &gt;&gt; ~/.bashrc     <span class="comment">#最后添加 pyenv init</span></span></div><div class="line"><span class="meta"></span></div><div class="line">$<span class="bash"> <span class="built_in">exec</span> <span class="variable">$SHELL</span> <span class="_">-l</span>     <span class="comment">#输入命令重启 Shell,然后就可以重启pyenv</span></span></div></pre></td></tr></table></figure>
+<h2 id="查看pyenv可安装的版本列表"><a href="#查看pyenv可安装的版本列表" class="headerlink" title="查看pyenv可安装的版本列表"></a>查看pyenv可安装的版本列表</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> pyenv install --list</span></div></pre></td></tr></table></figure>
+<p>該命令将列出pyenv可以安装的列表，单单列举几个咱们关心的python和anaconda把：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="number">2.7</span><span class="number">.8</span>   # Python <span class="number">2</span>最新版本 </div><div class="line"></div><div class="line"><span class="number">3.4</span><span class="number">.1</span>   # Python <span class="number">3</span>最新版本</div><div class="line"></div><div class="line">anaconda<span class="number">-2.4</span><span class="number">.0</span>  # 支持Python <span class="number">2.6</span>和<span class="number">2.7</span></div><div class="line"></div><div class="line">anaconda3<span class="number">-2.0</span><span class="number">.1</span> # 支持Python <span class="number">3.3</span>和<span class="number">3.4</span></div></pre></td></tr></table></figure>
+<h2 id="安装指定的python版本。"><a href="#安装指定的python版本。" class="headerlink" title="安装指定的python版本。"></a>安装指定的python版本。</h2><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pyenv install <span class="number">3.4</span><span class="number">.1</span></div></pre></td></tr></table></figure>
+<p>该命令会从github上下载python的源代码安装，但是，我这里主要是用来进行科学计算的环境安装，因此，最后选择安装<br>anaconda-2.4.0（python2.7环境） 和 anaconda3-2.4.0（python3.4环境）。可以选择都安装，之后可以使用pyenv进行版本的切换。<br>注：</p>
+<ul>
+<li>这里利用pyenv命令安装的python版本都安装在~.pyenv/versions文件夹下，当然，如果你从图形界面进入Ubuntu的用户主目录下可能看不见.pyenv文件夹，这时候，你可以使用<strong><code>ls -a</code></strong>看到隐藏的文件夹。</li>
+<li>使用<code>pip</code>安装的包完成之后，可能需要对数据库进行更新:<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv <span class="built_in">rehash</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="卸载指定的python版本"><a href="#卸载指定的python版本" class="headerlink" title="卸载指定的python版本"></a>卸载指定的python版本</h2><figure class="highlight llvm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv uninstall <span class="keyword">x</span>.<span class="keyword">x</span>.<span class="keyword">x</span></div></pre></td></tr></table></figure>
+<h2 id="python版本查看"><a href="#python版本查看" class="headerlink" title="python版本查看"></a>python版本查看</h2><p>查看当前已经安装了的python版本：<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">pyenv versions</span></div></pre></td></tr></table></figure></p>
+<p>输出结果如下：<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">*system (set by /home/michael/.pyenv/version)</div><div class="line"><span class="number">2.7</span><span class="number">.1</span></div><div class="line"><span class="number">3.4</span><span class="number">.1</span></div><div class="line">anaconda<span class="number">-2.4</span><span class="number">.0</span></div></pre></td></tr></table></figure></p>
+<p>system是指系统的python版本；*表示当前环境所处于的python版本</p>
+<h2 id="python版本切换"><a href="#python版本切换" class="headerlink" title="python版本切换"></a>python版本切换</h2><p>全局版本切换：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">pyenv</span> <span class="selector-tag">global</span> <span class="selector-tag">anaconda-2</span><span class="selector-class">.4</span><span class="selector-class">.0</span></div></pre></td></tr></table></figure></p>
+<p>全局切换为anaconda科学计算环境，因为，我现在也不做其他python开发，所以，无需再安装其他环境了。<br>查看现在的python版本：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">michael<span class="meta">@michael</span>-ThinkCentre-<span class="string">XXXX:</span>~$ pyenv versions</div><div class="line">system</div><div class="line"><span class="number">2.7</span><span class="number">.1</span></div><div class="line"><span class="number">3.4</span><span class="number">.1</span></div><div class="line">* anaconda<span class="number">-2.4</span><span class="number">.0</span> (set by <span class="regexp">/home/</span>michael<span class="regexp">/.pyenv/</span>version)</div></pre></td></tr></table></figure>
+<p>有全局版本切换，当然也会有局部环境的切换：<br>在test文件夹下希望切换到python3.4.1:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">pyenv</span> <span class="selector-tag">local</span> <span class="selector-tag">python3</span><span class="selector-class">.4</span><span class="selector-class">.1</span></div></pre></td></tr></table></figure></p>
+<h1 id="Anaconda科学计算包的使用："><a href="#Anaconda科学计算包的使用：" class="headerlink" title="Anaconda科学计算包的使用："></a>Anaconda科学计算包的使用：</h1><h2 id="使用conda-list查看anaconda安装自带的包："><a href="#使用conda-list查看anaconda安装自带的包：" class="headerlink" title="使用conda list查看anaconda安装自带的包："></a>使用<code>conda list</code>查看anaconda安装自带的包：</h2><figure class="highlight x86asm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">michael@michael-ThinkCentre-XXXX:~/<span class="keyword">test</span>$ conda list</div><div class="line"># packages <span class="keyword">in</span> environment <span class="meta">at</span> /home/michael/.pyenv/versions/anaconda-<span class="number">2.4</span><span class="meta">.0</span>:</div><div class="line">#</div><div class="line">abstract-rendering <span class="number">0.5</span><span class="meta">.1</span> np110py27_0 </div><div class="line">alabaster <span class="number">0.7</span><span class="meta">.6</span> py27_0 </div><div class="line">anaconda <span class="number">2.4</span><span class="meta">.0</span> np110py27_0 </div><div class="line">anaconda-client <span class="number">1.1</span><span class="meta">.0</span> py27_0 </div><div class="line">argcomplete <span class="number">1.0</span><span class="meta">.0</span> py27_1 </div><div class="line">astropy <span class="number">1.0</span><span class="meta">.5</span> np110py27_1 </div><div class="line">babel <span class="number">2.1</span><span class="meta">.1</span> py27_0 </div><div class="line">backports.ssl-match-hostname <span class="number">3.4</span><span class="meta">.0</span><span class="meta">.2</span> &lt;pip&gt;</div></pre></td></tr></table></figure>
+<p>注：</p>
+<ul>
+<li>使用<code>conda list</code>命令的环境时python版本切换到anaconda版本下，不然，这个命令无法来查询。</li>
+<li>看上面列表就能知道，anaconda的环境下，也是能使用系统<code>pip</code>命令安装的包的！</li>
+</ul>
+<h2 id="给anaconda安装包"><a href="#给anaconda安装包" class="headerlink" title="给anaconda安装包"></a>给anaconda安装包</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda <span class="keyword">install</span> ××××</div></pre></td></tr></table></figure>
+<h2 id="如果需要指定包的版本。"><a href="#如果需要指定包的版本。" class="headerlink" title="如果需要指定包的版本。"></a>如果需要指定包的版本。</h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[package-<span class="built_in">name</span>]=x.x   <span class="comment">#指定包的版本</span></div></pre></td></tr></table></figure>
+<h2 id="多个Python版本并存，尤其是2-x和3-x的并存。"><a href="#多个Python版本并存，尤其是2-x和3-x的并存。" class="headerlink" title="多个Python版本并存，尤其是2.x和3.x的并存。"></a>多个Python版本并存，尤其是2.x和3.x的并存。</h2><p>这个通过virtualenv可以做到。Anaconda也正是通过其实现的。下面用conda创建一个名叫python2的版本为python2.7的环境。</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda create -<span class="built_in">n</span> python2 python=<span class="number">2.7</span></div></pre></td></tr></table></figure>
+<p>这样就会在Anaconda安装目录下的envs目录下创建python2这个目录。<br>向其中安装扩展可以：</p>
+<p>直接用conda install并用-n指明安装到的环境，这里自然就是python2。<br>像virtualenv那样，先activate，然后在虚拟环境中安装。<br>注：</p>
+<ul>
+<li>关于<code>virtualenv</code>的使用，还需了解，可以参考python生态</li>
+<li>下面的操作，貌似会安装很多包，谨慎使用。</li>
+</ul>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda create -<span class="built_in">n</span> <span class="symbol">py34</span> python=<span class="number">3.4</span> anaconda</div></pre></td></tr></table></figure>
+<h1 id="利用Pycharm的版本切换功能-推荐！很方便！"><a href="#利用Pycharm的版本切换功能-推荐！很方便！" class="headerlink" title="利用Pycharm的版本切换功能~推荐！很方便！"></a>利用Pycharm的版本切换功能~推荐！很方便！</h1><p>可以选择安装anaconda 不同的版本，然后按照下面操作,切换版本。Windows/Linux下都有[Pycharm][1]。</p>
+<blockquote>
+<p>打开pycharm，打开preference –&gt; project –&gt; project interpreter–&gt;</p>
+</blockquote>
+<h1 id="Windows系统切换"><a href="#Windows系统切换" class="headerlink" title="Windows系统切换"></a>Windows系统切换</h1><p>首先当然是安装你需要的两个不同版本的python，我安装的是2.7和3.4的，两个版本安装顺序无所谓，但是后面安装的会变成默认的（因为我是后安装的python 3.4，它就变成了默认的python）。</p>
+<p>然后去python27 文件夹下面把python.exe改名python2.exe，然后就可以在命令行下通过python或者py来调用3.x，python2来调用2.x。</p>
+<p>另外pip的话直接使用 pip2 或者 pip3 就可以了。</p>
+<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><h2 id="pyenv"><a href="#pyenv" class="headerlink" title="pyenv"></a>pyenv</h2><ol>
+<li><a href="http://seisman.info/python-pyenv.html" target="_blank" rel="external">Python多版本共存之pyenv</a></li>
+<li><a href="https://github.com/yyuu/pyenv#installation" target="_blank" rel="external">yyuu/pyenv-github</a></li>
+<li><a href="http://www.cnblogs.com/npumenglei/p/3719412.html" target="_blank" rel="external">用pyenv 和 virtualenv 搭建单机多版本python 虚拟开发环境</a> </li>
+<li><a href="https://github.com/lixm/pybooklet/blob/master/install.md" target="_blank" rel="external">lixm/pybooklet-github</a></li>
+<li><a href="http://huangziwei.com/tech/setting-up-scientific-python-environment-in-os-x-10-10-using-miniconda/" target="_blank" rel="external">使用 pyenv 和 Miniconda 管理 Python 科学计算环境</a></li>
+<li><a href="http://zhangnew.com/2015-06-09-python-2-3-exist.html" target="_blank" rel="external">Python 2.X 3.X 多版本共存</a></li>
+<li><a href="http://codingpy.com/article/python-ecosystem-introduction/" target="_blank" rel="external">一篇文章入门Python生态系统</a></li>
+</ol>
+<h2 id="Anaconda"><a href="#Anaconda" class="headerlink" title="Anaconda"></a>Anaconda</h2><ol>
+<li><a href="https://www.continuum.io/downloads" target="_blank" rel="external">DOWNLOAD ANACONDA NOW</a></li>
+<li><a href="http://www.cnblogs.com/CodeCabin/p/3961118.html" target="_blank" rel="external">P]ython科学计算利器——Anaconda</a> </li>
+<li><a href="http://www.cnblogs.com/super-d2/p/4725818.html" target="_blank" rel="external">Python科学计算发行版—Anaconda</a> </li>
+</ol>
+<h2 id="Virtualenv-待续"><a href="#Virtualenv-待续" class="headerlink" title="Virtualenv(待续)"></a>Virtualenv(待续)</h2><ol>
+<li><a href="https://virtualenv.pypa.io/en/latest/installation.html" target="_blank" rel="external">https://virtualenv.pypa.io/en/latest/installation.html</a></li>
+</ol>
+<hr>
+<p>本文由 <strong><a href="http://michaelxiang.me/" target="_blank" rel="external">Michael翔</a></strong> 创作，采用 <strong><a href="http://creativecommons.org/licenses/by/3.0/cn/" target="_blank" rel="external">知识共享署名 3.0 中国大陆许可协议</a> </strong>进行许可。<br>可自由转载、引用，但需署名作者且注明文章出处。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>我知道是不会有人点的，但万一有人想不开呢？！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/微信.JPG" alt="Michael翔 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/支付宝.png" alt="Michael翔 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Michael翔
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://michael728.github.io/2015/11/26/python-pyenv-anaconda/" title="Python多版本共存工具-Pyenv及Anaconda科学计算环境的配置">http://michael728.github.io/2015/11/26/python-pyenv-anaconda/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/anaconda/" rel="tag"># anaconda</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/11/28/tools-list-win/" rel="next" title="Windows上那些值得推荐的良心软件-整理">
+                <i class="fa fa-chevron-left"></i> Windows上那些值得推荐的良心软件-整理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/11/26/chrome-extentions/" rel="prev" title="Michael翔私藏-Chrome扩展插件整理合集,效率提高,爽！">
+                Michael翔私藏-Chrome扩展插件整理合集,效率提高,爽！ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://ww1.sinaimg.cn/large/6d9475f6ly1fe99p60lagj205k05k74u.jpg"
+                alt="Michael翔" />
+            
+              <p class="site-author-name" itemprop="name">Michael翔</p>
+              <p class="site-description motion-element" itemprop="description">因上努力，果上随缘;爱折腾app、小众软件--Michael翔</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="http://weibo.com/xiangzai728/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.douban.com/people/51517255/" target="_blank" title="DouBan">
+                      
+                        <i class="fa fa-fw fa-globe"></i>DouBan</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/michaelXoX" target="_blank" title="ZhiHu">
+                      
+                        <i class="fa fa-fw fa-globe"></i>ZhiHu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Michael728" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/728_michael" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://zcheng.ren/" title="ZeeCoder" target="_blank">ZeeCoder</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://ehlxr.me/" title="ehlxr" target="_blank">ehlxr</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://michael728.github.io/2016/09/03/blog-logfile/" title="建站日志" target="_blank">建站日志</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Unix系统下pyenv安装与使用"><span class="nav-number">1.</span> <span class="nav-text">Unix系统下pyenv安装与使用:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装pyenv"><span class="nav-number">1.1.</span> <span class="nav-text">安装pyenv</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看pyenv可安装的版本列表"><span class="nav-number">1.2.</span> <span class="nav-text">查看pyenv可安装的版本列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装指定的python版本。"><span class="nav-number">1.3.</span> <span class="nav-text">安装指定的python版本。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#卸载指定的python版本"><span class="nav-number">1.4.</span> <span class="nav-text">卸载指定的python版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#python版本查看"><span class="nav-number">1.5.</span> <span class="nav-text">python版本查看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#python版本切换"><span class="nav-number">1.6.</span> <span class="nav-text">python版本切换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Anaconda科学计算包的使用："><span class="nav-number">2.</span> <span class="nav-text">Anaconda科学计算包的使用：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用conda-list查看anaconda安装自带的包："><span class="nav-number">2.1.</span> <span class="nav-text">使用conda list查看anaconda安装自带的包：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给anaconda安装包"><span class="nav-number">2.2.</span> <span class="nav-text">给anaconda安装包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果需要指定包的版本。"><span class="nav-number">2.3.</span> <span class="nav-text">如果需要指定包的版本。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多个Python版本并存，尤其是2-x和3-x的并存。"><span class="nav-number">2.4.</span> <span class="nav-text">多个Python版本并存，尤其是2.x和3.x的并存。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#利用Pycharm的版本切换功能-推荐！很方便！"><span class="nav-number">3.</span> <span class="nav-text">利用Pycharm的版本切换功能~推荐！很方便！</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows系统切换"><span class="nav-number">4.</span> <span class="nav-text">Windows系统切换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考："><span class="nav-number">5.</span> <span class="nav-text">参考：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#pyenv"><span class="nav-number">5.1.</span> <span class="nav-text">pyenv</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Anaconda"><span class="nav-number">5.2.</span> <span class="nav-text">Anaconda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Virtualenv-待续"><span class="nav-number">5.3.</span> <span class="nav-text">Virtualenv(待续)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Michael翔</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

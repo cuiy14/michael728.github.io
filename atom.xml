@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://michael728.github.io/"/>
-  <updated>2017-12-17T11:32:30.142Z</updated>
+  <updated>2018-03-11T02:58:19.976Z</updated>
   <id>http://michael728.github.io/</id>
   
   <author>
@@ -16,11 +16,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>zsh tutorial</title>
+    <link href="http://michael728.github.io/2018/03/11/tools-zsh-tutorial/"/>
+    <id>http://michael728.github.io/2018/03/11/tools-zsh-tutorial/</id>
+    <published>2018-03-11T02:56:09.000Z</published>
+    <updated>2018-03-11T02:58:19.976Z</updated>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;本文以CentOS 7 为例，介绍zsh的配置使用教程。&lt;/p&gt;
+&lt;h2 id=&quot;zsh&quot;&gt;&lt;a href=&quot;#zsh&quot; class=&quot;headerlink&quot; title=&quot;zsh&quot;&gt;&lt;/a&gt;zsh&lt;/h2&gt;&lt;h3 id=&quot;查看当前环境s
+    
+    </summary>
+    
+    
+      <category term="tools" scheme="http://michael728.github.io/tags/tools/"/>
+    
+      <category term="Linux" scheme="http://michael728.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>linux-ubuntu-for-python</title>
     <link href="http://michael728.github.io/2017/12/17/linux-ubuntu-for-python/"/>
     <id>http://michael728.github.io/2017/12/17/linux-ubuntu-for-python/</id>
     <published>2017-12-17T11:29:51.000Z</published>
-    <updated>2017-12-17T11:32:30.142Z</updated>
+    <updated>2017-12-17T11:32:30.143Z</updated>
     
     <summary type="html">
     
@@ -37,7 +59,7 @@
     <link href="http://michael728.github.io/2017/08/12/job-one-month/"/>
     <id>http://michael728.github.io/2017/08/12/job-one-month/</id>
     <published>2017-08-11T17:44:12.000Z</published>
-    <updated>2017-08-11T18:07:53.492Z</updated>
+    <updated>2017-08-11T18:07:53.493Z</updated>
     
     <summary type="html">
     
@@ -435,31 +457,6 @@
       <category term="算法" scheme="http://michael728.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="机器学习" scheme="http://michael728.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python数据分析入门之pandas总结基础</title>
-    <link href="http://michael728.github.io/2015/12/23/python-pandas-basic/"/>
-    <id>http://michael728.github.io/2015/12/23/python-pandas-basic/</id>
-    <published>2015-12-23T10:44:29.000Z</published>
-    <updated>2017-04-27T02:54:13.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Pandas–“大熊猫”基础&quot;&gt;&lt;a href=&quot;#Pandas–“大熊猫”基础&quot; class=&quot;headerlink&quot; title=&quot;Pandas–“大熊猫”基础&quot;&gt;&lt;/a&gt;Pandas–“大熊猫”基础&lt;/h1&gt;&lt;h2 id=&quot;Series&quot;&gt;&lt;a href=&quot;#Series&quot; class=&quot;headerlink&quot; title=&quot;Series&quot;&gt;&lt;/a&gt;Series&lt;/h2&gt;&lt;p&gt;Series: pandas的长枪(数据表中的一列或一行,观测向量,一维数组…)&lt;/p&gt;
-&lt;figure class=&quot;highlight maxima&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Series1 = pd.Series(&lt;span class=&quot;built_in&quot;&gt;np&lt;/span&gt;.&lt;span class=&quot;built_in&quot;&gt;random&lt;/span&gt;.randn(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;))&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; Series1,type(Series1) &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; Series1.index&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; Series1.&lt;span class=&quot;built_in&quot;&gt;values&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="python" scheme="http://michael728.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://michael728.github.io/tags/python/"/>
-    
-      <category term="pandas" scheme="http://michael728.github.io/tags/pandas/"/>
-    
-      <category term="数据分析" scheme="http://michael728.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
   </entry>
   

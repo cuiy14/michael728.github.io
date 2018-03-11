@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://michael728.github.io/2018/03/11/tools-zsh-tutorial/</loc>
+    
+    <lastmod>2018-03-11T02:58:19.976Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://michael728.github.io/2017/12/17/linux-ubuntu-for-python/</loc>
     
-    <lastmod>2017-12-17T11:32:30.142Z</lastmod>
+    <lastmod>2017-12-17T11:32:30.143Z</lastmod>
     
   </url>
   
@@ -18,7 +25,7 @@
   <url>
     <loc>http://michael728.github.io/2017/08/12/job-one-month/</loc>
     
-    <lastmod>2017-08-11T18:07:53.492Z</lastmod>
+    <lastmod>2017-08-11T18:07:53.493Z</lastmod>
     
   </url>
   
@@ -214,7 +221,7 @@
   <url>
     <loc>http://michael728.github.io/2015/12/02/python-files-list/</loc>
     
-    <lastmod>2017-04-26T17:45:24.367Z</lastmod>
+    <lastmod>2017-04-26T17:45:24.368Z</lastmod>
     
   </url>
   
@@ -228,14 +235,14 @@
   <url>
     <loc>http://michael728.github.io/tags/index.html</loc>
     
-    <lastmod>2017-04-26T16:47:35.248Z</lastmod>
+    <lastmod>2017-04-26T16:47:35.249Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://michael728.github.io/links/index.html</loc>
     
-    <lastmod>2017-04-26T16:27:28.235Z</lastmod>
+    <lastmod>2017-04-26T16:27:28.236Z</lastmod>
     
   </url>
   

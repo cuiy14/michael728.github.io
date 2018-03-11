@@ -4,8 +4,27 @@
 
     
   <url>
+    <loc>http://michael728.github.io/2018/03/11/tools-zsh-tutorial/</loc>
+    <lastmod>2018-03-11T02:58:19.976Z</lastmod>
+    <data>
+        <display>
+        <title>zsh tutorial</title>
+        <pubTime>2018-03-11T02:56:09.000Z</pubTime>
+        
+        <tag>tools</tag>
+         
+        <tag>Linux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://michael728.github.io/2017/12/17/linux-ubuntu-for-python/</loc>
-    <lastmod>2017-12-17T11:32:30.142Z</lastmod>
+    <lastmod>2017-12-17T11:32:30.143Z</lastmod>
     <data>
         <display>
         <title>linux-ubuntu-for-python</title>
@@ -21,7 +40,7 @@
     
   <url>
     <loc>http://michael728.github.io/2017/08/12/job-one-month/</loc>
-    <lastmod>2017-08-11T18:07:53.492Z</lastmod>
+    <lastmod>2017-08-11T18:07:53.493Z</lastmod>
     <data>
         <display>
         <title>入职一个月的札记</title>
@@ -446,9 +465,9 @@
         <title>python机器学习入门资料梳理</title>
         <pubTime>2015-12-16T13:45:29.000Z</pubTime>
         
-        <tag>整理</tag>
-         
         <tag>python</tag>
+         
+        <tag>整理</tag>
          
         <tag>machine learning</tag>
          
@@ -594,7 +613,7 @@
     
   <url>
     <loc>http://michael728.github.io/2015/12/02/python-files-list/</loc>
-    <lastmod>2017-04-26T17:45:24.367Z</lastmod>
+    <lastmod>2017-04-26T17:45:24.368Z</lastmod>
     <data>
         <display>
         <title>Python入门资料大全(更新ing)</title>
@@ -602,9 +621,9 @@
         
         <tag>list</tag>
          
-        <tag>整理</tag>
-         
         <tag>python</tag>
+         
+        <tag>整理</tag>
          
          
            
